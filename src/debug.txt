@@ -1,0 +1,2 @@
+Reading in results from LEF/DEF parser
+out_files:  ['out.nodes', 'out.nets', 'out.wts', 'out.pl', 'out.scl', 'out.shapes']
