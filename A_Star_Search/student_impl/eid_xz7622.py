@@ -152,11 +152,11 @@ class A_Star_Search(A_Star_Search_Base):
         node_record[source_node.pos] = source_node
         
         sink_node = GridAstarNode()
-        sink_node.pos = self.sink_node
+        # sink_node.pos = self.sink_node
 
         path = [] # closed list for nodes explored, red
 
-        connect_net = np.ndarray(shape = (0, 2))
+        # connect_net = np.ndarray(shape = (0, 2))
 
         while True:
             node = node_path.get() # get a priority node from queue based on f(n)
@@ -165,11 +165,18 @@ class A_Star_Search(A_Star_Search_Base):
                 self.visited_node_count += 1
 
             path.append(node.pos) # node is explored, red
-            connect_net = np.append(connect_net, [node.pos], axis = 0)
+            # connect_net = np.append(connect_net, [node.pos], axis = 0)
 
-            if node.pos == sink_node.pos: # if popped out node is sink node, done
-                sink_node = node
-                break
+            # if node.pos == sink_node.pos: # if popped out node is sink node, done
+            #     sink_node = node
+            #     break
+            node_pos_as_list = list(node.pos) # node position: tuple to list
+            sink_node_array_as_list = self.sink_node_array.tolist()
+            if node_pos_as_list in sink_node_array_as_list: # check if this node is in the sink array -> if this node is one of the sink nodes
+                self.sink_node_array = np.delete(self.sink_node_array, sink_node_array_as_list.index(node_pos_as_list), axis = 0) # remove the connected sink node from sink node arrays
+                if len(self.sink_node_array) == 0: # if all sink nodes have been visited and connected with source
+                    sink_node = node
+                    break
 
             self.find_neighbors(node) # find neighbors of the current node
             for i in range(0, len(node.neighbors)): # for each neighbor
@@ -186,7 +193,8 @@ class A_Star_Search(A_Star_Search_Base):
                         neighbor_copy.parent = node
                         neighbor_copy.bend_count = self.bend_count_number(neighbor_copy)
                         neighbor_copy.cost_g = self.compute_g(neighbor_copy)
-                        neighbor_copy.cost_f = self.compute_f(neighbor_copy)
+                        # neighbor_copy.cost_f = self.compute_f(neighbor_copy)
+                        neighbor_copy.cost_f = self.compute_f_array(neighbor_copy, self.sink_node_array)
 
                         if neighbor_copy.cost_g < node_record[neighbor.pos].cost_g: # if potentially a smaller cost_g
                             # update node
@@ -206,7 +214,8 @@ class A_Star_Search(A_Star_Search_Base):
                         neighbor.parent = node
                         neighbor.bend_count = self.bend_count_number(neighbor)
                         neighbor.cost_g = self.compute_g(neighbor)
-                        neighbor.cost_f = self.compute_f(neighbor)
+                        # neighbor.cost_f = self.compute_f(neighbor)
+                        neighbor.cost_f = self.compute_f_array(neighbor, self.sink_node_array)
                         neighbor.visited = True
                         node_path.put(neighbor) # add neighbor to open list, green
                         node_record[neighbor.pos] = neighbor
@@ -214,6 +223,6 @@ class A_Star_Search(A_Star_Search_Base):
         path_list = self._backtrack(sink_node)
         wirelength = len(path_list) - 1
 
-        print(connect_net)
+        # print(connect_net)
 
         return (self._merge_path(path_list), wirelength, [wirelength], [self.visited_node_count])
