@@ -34,22 +34,31 @@ class A_Star_Search(A_Star_Search_Base):
         # TODO initialize any auxiliary data structure you need
 
         self.visited_node_count = 0
-        self.source_node = (self.pin_pos_x[0], self.pin_pos_y[0]) # the first node in all nodes
+        self.source_node = (self.pin_pos_x[0], self.pin_pos_y[0]) # the first node in all nodes as the source
 
-        self.pin_positions = np.ndarray(shape = (self.n_pins, 2))
-        for i in range(self.n_pins):
-            self.pin_positions[i][0] = self.pin_pos_x[i]
-            self.pin_positions[i][1] = self.pin_pos_y[i]
-        print(self.pin_positions)
+        self.source_node_array = np.ndarray(shape = (1, 2))
+        self.source_node_array[0][0] = self.pin_pos_x[0]
+        self.source_node_array[0][1] = self.pin_pos_y[0]
+        print("source_node_array:", self.source_node_array)
+
+        self.sink_node_array = np.ndarray(shape = (self.n_pins - 1, 2)) # all other nodes as sinks
+        for i in range(1, self.n_pins):
+            self.sink_node_array[i - 1][0] = self.pin_pos_x[i]
+            self.sink_node_array[i - 1][1] = self.pin_pos_y[i]
+        print("sink_node_array:", self.sink_node_array)
         
         p1 = np.ndarray(shape = (1, 2))
-        p1[0][0] = 17
-        p1[0][1] = 1
-        print(p1)
+        p1[0][0] = 0
+        p1[0][1] = 8
+        print(p1 in self.sink_node_array)
 
-        self.pin_positions = np.append(self.pin_positions, p1, axis = 0)
+        # self.pin_positions = np.append(self.pin_positions, p1, axis = 0)
        
-        print(self._find_nearest_target_dist(p1, self.pin_positions))
+        # print(self._find_nearest_target_dist(p1, self.pin_positions))
+
+        p2 = GridAstarNode()
+        p2.pos = self.source_node
+        print(self.compute_f_array(p2, p1))
 
         self.sink_node = (self.pin_pos_x[1], self.pin_pos_y[1])
 
@@ -70,6 +79,13 @@ class A_Star_Search(A_Star_Search_Base):
     def compute_f(self, node: GridAstarNode) -> int: # compute f(n) = g(n) + h(n), node is (x, y) positions
         cost_f = self.compute_g(node) + self._find_manhattan_dist_to_target(node.pos, self.sink_node)
         return cost_f
+
+    def compute_f_array(self, source: GridAstarNode, target: np.ndarray): # source is always a single node
+        source_array = np.ndarray(shape = (1, 2))
+        source_array[0][0] = source.pos[0]
+        source_array[0][1] = source.pos[1]
+        cost_f_array = self.compute_g(source) + self._find_nearest_target_dist(source_array, target)
+        return cost_f_array
     
     def bend_count_number(self, node: GridAstarNode) -> int: # count bend numbers so far after propagation
         if node.parent is None: # no parent, must be the source node, no bending
@@ -127,7 +143,8 @@ class A_Star_Search(A_Star_Search_Base):
         source_node = GridAstarNode()
         source_node.pos = self.source_node
         source_node.cost_g = self.compute_g(source_node)
-        source_node.cost_f = self.compute_f(source_node)
+        # source_node.cost_f = self.compute_f(source_node)
+        source_node.cost_f = self.compute_f_array(source_node, self.sink_node_array)
         source_node.bend_count = self.bend_count_number(source_node)
         source_node.visited = True ##
 
@@ -139,6 +156,8 @@ class A_Star_Search(A_Star_Search_Base):
 
         path = [] # closed list for nodes explored, red
 
+        connect_net = np.ndarray(shape = (0, 2))
+
         while True:
             node = node_path.get() # get a priority node from queue based on f(n)
 
@@ -146,6 +165,7 @@ class A_Star_Search(A_Star_Search_Base):
                 self.visited_node_count += 1
 
             path.append(node.pos) # node is explored, red
+            connect_net = np.append(connect_net, [node.pos], axis = 0)
 
             if node.pos == sink_node.pos: # if popped out node is sink node, done
                 sink_node = node
@@ -193,5 +213,7 @@ class A_Star_Search(A_Star_Search_Base):
         
         path_list = self._backtrack(sink_node)
         wirelength = len(path_list) - 1
+
+        print(connect_net)
 
         return (self._merge_path(path_list), wirelength, [wirelength], [self.visited_node_count])
