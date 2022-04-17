@@ -1,3 +1,7 @@
 benchmark,passed,note,runtime,memory
-example_1.txt,False,PATH_NOT_MATCH,0.016810178756713867,0.0
-passed/total,0,1,-,-
+example_4.txt,False,N_VISITED_LIST_MISMATCH,0.00963144302368164,0.0
+example_2.txt,False,PATH_NOT_MATCH,0.018251800537109376,0.0
+example_3.txt,False,PATH_NOT_MATCH,0.010423707962036132,0.0
+example_1.txt,False,PATH_NOT_MATCH,0.01271977424621582,0.0
+example_0.txt,False,PATH_NOT_MATCH,0.012727642059326172,0.0
+passed/total,0,5,-,-

@@ -374,26 +374,34 @@ class A_Star_Search(A_Star_Search_Base):
                                 node_path.put(neighbor) # add neighbor to open list, green
                                 node_record[neighbor.pos] = neighbor
             
-            if j == 0:
-                # tracknode = self._backtrack(sink_node)
-                for k in range(len(tracknode)):
-                    path_list.append(tracknode[k])
-                wirelength_list.append(len(tracknode) - 1)
-            else:
+            # if j == 0:
+            #     # tracknode = self._backtrack(sink_node)
+            #     for k in range(len(tracknode)):
+            #         path_list.append(tracknode[k])
+            #     wirelength_list.append(len(tracknode) - 1)
+            if j != 0:
                 tracknode.reverse()
-                for k in range(len(tracknode)):
-                    path_list.append(tracknode[k])
-                wirelength_list.append(len(tracknode) - 1)
+
+            # for k in range(len(tracknode)):
+            #     path_list.append(tracknode[k])
+            for k in range(len(self._merge_path(tracknode))):
+                path_list.append(self._merge_path(tracknode)[k])
+            wirelength_list.append(len(tracknode) - 1)
+            # print("tracknode: ", tracknode)
+            # print("merge tracknode: ", self._merge_path(tracknode))
+            
 
             visited_node_list.append(visited_node)
 
                 # path_list.append(tracknode)
 
         # path_list = self._backtrack(sink_node)
-        wirelength = len(path_list) - 1
+        # wirelength = len(path_list) - 1
+        wirelength = sum(wirelength_list)
 
         # print(connect_net)
         # print("path list:", path_list)
         # print("merge path:", self._merge_path(path_list))
 
-        return (self._merge_path(path_list), wirelength, wirelength_list, visited_node_list)
+        # return (self._merge_path(path_list), wirelength, wirelength_list, visited_node_list)
+        return (path_list, wirelength, wirelength_list, visited_node_list)
