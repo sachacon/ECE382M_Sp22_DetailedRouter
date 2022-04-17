@@ -1,3 +1,3 @@
 benchmark,passed,note,runtime,memory
-example_1.txt,False,PATH_NOT_MATCH,0.04723820686340332,0.0
+example_1.txt,False,PATH_NOT_MATCH,0.016810178756713867,0.0
 passed/total,0,1,-,-
