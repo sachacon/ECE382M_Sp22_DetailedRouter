@@ -1,0 +1,12 @@
+- For test1, UNIT DISTANCE MICRONS = 2000, not needed for routing, only for debugging resulsts in Innovus GUI
+- Skip M1, start routing on M2 
+- For now route entire design on M2, add in vias and other layers later
+- For now only route nets that have Metal2 or Metal3 in routing guide 
+- for each net 
+    - see if routing guide has M2 region 
+    - need to get coordinates of nets 
+    - convert coordinates of nets 
+
+- 4/18 Version 0 for WL only 
+- Read in tracks for M2 layer 
+

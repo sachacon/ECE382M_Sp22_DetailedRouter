@@ -5,6 +5,7 @@
 import argparse 
 from read_inputs import * 
 from build_grids import * 
+from route_nets_alpha import * 
 
 def read_inputs():
     """read routing info from LEF, DEF, Guide"""
@@ -15,6 +16,7 @@ def read_inputs():
     global num_rows; global core_rows; 
     global instances
     global net_guides
+    global layers
 
     # Read in Routing Info 
     print("Reading in results from LEF/DEF parser and routing guide")
@@ -26,6 +28,7 @@ def read_inputs():
     net_names = read_out_wts(out_root)
     num_rows, core_rows = read_out_scl(out_root)
     net_guides = read_route_guide("ispd19_test1.guide")
+    layers = read_layers("ispd19_test1.input.def")
 
     return
 
@@ -54,8 +57,12 @@ def main():
 
 
     read_inputs()
-    build_grids()
-    route_nets()
+    #build_grids()
+    #route_nets()
+
+    # Early Version for WL only 
+    route_nets_alpha()
+
     write_def()
 
     return 

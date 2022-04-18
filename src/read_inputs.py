@@ -238,8 +238,10 @@ def read_route_guide(filename):
  
     return net_guides
 
-def read_layers(def_filename, num_layers):
+def read_layers(def_filename):
     
+    # inputs: def_filename 
+
     #direction = "HZ"
     direction = "VH" 
     num_layers = 9 
