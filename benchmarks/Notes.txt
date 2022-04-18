@@ -1,4 +1,0 @@
-ISPD2019
-- 10 test benchmarks, 4 sample benchmarks 
-ISPD2018
-- 10 test benchmarks, 3 sample benchmarks
