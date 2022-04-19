@@ -27,17 +27,23 @@ for i in range(0,1):
     # testbench_content = f_testbench.readlines()
 
     for j in range(1, len(solution_content)):
-        print(j)
+        solution_content[j] = solution_content[j].split()
+        # print(solution_content[j])
+        # print(j)
         if len(solution_content[j]) == 1:
             break
         else:
-            if solution_content[j][0] == solution_content[j][2]: # verticle path, size_x = 1,
-                new_block = "b1 " + str(solution_content[j][0]) + ' ' + str(min(solution_content[j][1], solution_content[j][3])) + ' 1 ' + str(abs(eval(solution_content[j][1]) - eval(solution_content[j][3])))
+            if solution_content[j][0] == solution_content[j][2]: # verticle path, size_x = 1, 0=2
+                # print(solution_content[j])
+                new_block = "b1 " + solution_content[j][0] + ' ' + str(min(solution_content[j][1], solution_content[j][3])) + ' 1 ' + str(abs(eval(solution_content[j][1]) - eval(solution_content[j][3]))) + ' \n'
+                # print(new_block)
             else: # horizontal path, size_y = 1, 1=3
-                # print(solution_content[j][0])
+                # for k in solution_content[j]:
+                #     print(k)
                 # print(min(solution_content[j][0], solution_content[j][2]))
                 # print(abs(eval(solution_content[j][0]) - eval(solution_content[j][2])))
-                new_block = "b1 " + str(min(solution_content[j][0], solution_content[j][2])) + ' ' + str(solution_content[j][1]) + ' ' + str(abs(eval(solution_content[j][0]) - eval(solution_content[j][2]))) + ' 1'
+                new_block = "b1 " + str(min(solution_content[j][0], solution_content[j][2])) + ' ' + solution_content[j][1] + ' ' + str(abs(eval(solution_content[j][0]) - eval(solution_content[j][2]))) + ' 1 \n'
+                # print(new_block)
             
             f_testbench.write(new_block)
     
