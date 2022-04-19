@@ -2,7 +2,9 @@ import os
 from student_impl.eid_xz7622 import A_Star_Search
 eid = "xz7622"
 
-for i in range(0,1):
+block = []
+
+for i in range(0,2):
     idx = i
     benchmark_path = f"benchmarks/example_{idx}.txt"
     output_root = "output"
@@ -45,7 +47,10 @@ for i in range(0,1):
                 new_block = "b1 " + str(min(solution_content[j][0], solution_content[j][2])) + ' ' + solution_content[j][1] + ' ' + str(abs(eval(solution_content[j][0]) - eval(solution_content[j][2]))) + ' 1 \n'
                 # print(new_block)
             
-            f_testbench.write(new_block)
+            # f_testbench.write(new_block)
+            block.append(new_block)
+    
+    f_testbench.writelines(block)
     
     f_solution.close()
     f_testbench.close()
