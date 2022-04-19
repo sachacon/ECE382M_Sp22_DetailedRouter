@@ -1,10 +1,12 @@
-Goals 
-- read lef and def documentation to understand files and design rules
-- decide on parts for the routing algorithm
-- go through sample benchmarks first 
-- start implementing basic router 
+- For test1, UNIT DISTANCE MICRONS = 2000, not needed for routing, only for debugging resulsts in Innovus GUI
+- Skip M1, start routing on M2 
+- For now route entire design on M2, add in vias and other layers later
+- For now only route nets that have Metal2 or Metal3 in routing guide 
+- for each net 
+    - see if routing guide has M2 region 
+    - need to get coordinates of nets 
+    - convert coordinates of nets 
 
-Procedure 
-- run parser on input.lef and input.def files 
-- run main detailed router program to take in parsed info and output defined DEF files with routed nets and minimize DRC violations
-- open Cadence Innovus and run report connectivity and report drc commands 
+- 4/18 Version 0 for WL only 
+- Read in tracks for M2 layer 
+
