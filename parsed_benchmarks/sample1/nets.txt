@@ -1,0 +1,35 @@
+NETS 11 ;
+- net1237
+  ( inst5638 A ) ( inst4678 Y )
+ ;
+- net1240
+  ( inst3502 A ) ( inst2015 Y )
+ ;
+- net1233
+  ( inst6050 A ) ( inst4189 Y )
+ ;
+- net1236
+  ( inst2908 D ) ( inst2591 Y )
+ ;
+- net1234
+  ( inst6458 Y ) ( inst4597 B )
+ ;
+- net1232
+  ( inst4382 C ) ( inst4062 Y )
+ ;
+- net1231
+  ( inst5821 B ) ( inst5275 Y )
+ ;
+- net1239
+  ( inst6286 Y ) ( inst5333 C0 )
+ ;
+- net1235
+  ( inst4183 A ) ( inst4132 Y )
+ ;
+- net1238
+  ( inst3444 Y ) ( inst3428 A )
+ ;
+- net1230
+  ( inst7234 Y ) ( inst5195 C0 )
+ ;
+END NETS

@@ -1,0 +1,39 @@
+UCLA nets 1.0
+# Created : Time
+
+NumNets : 11
+NumPins : 22
+
+NetDegree :        2	net1230
+	inst7234             O  : 0.5 0.5
+	inst5195             I  : 0.5 0.5
+NetDegree :        2	net1237
+	inst5638             I  : 0.5 0.5
+	inst4678             O  : 0.5 0.5
+NetDegree :        2	net1240
+	inst3502             I  : 0.5 0.5
+	inst2015             O  : 0.5 0.5
+NetDegree :        2	net1233
+	inst6050             I  : 0.5 0.5
+	inst4189             O  : 0.5 0.5
+NetDegree :        2	net1236
+	inst2908             I  : 0.5 0.5
+	inst2591             O  : 0.5 0.5
+NetDegree :        2	net1234
+	inst6458             O  : 0.5 0.5
+	inst4597             I  : 0.5 0.5
+NetDegree :        2	net1232
+	inst4382             I  : 0.5 0.5
+	inst4062             O  : 0.5 0.5
+NetDegree :        2	net1231
+	inst5821             I  : 0.5 0.5
+	inst5275             O  : 0.5 0.5
+NetDegree :        2	net1239
+	inst6286             O  : 0.5 0.5
+	inst5333             I  : 0.5 0.5
+NetDegree :        2	net1235
+	inst4183             I  : 0.5 0.5
+	inst4132             O  : 0.5 0.5
+NetDegree :        2	net1238
+	inst3444             O  : 0.5 0.5
+	inst3428             I  : 0.5 0.5

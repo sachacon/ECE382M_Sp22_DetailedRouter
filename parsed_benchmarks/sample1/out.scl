@@ -1,0 +1,50 @@
+UCLA scl 1.0
+# Created : Time
+
+NumRows : 5
+
+CoreRow Horizontal
+	Coordinate   : 189
+	Height       : 9
+	Sitewidth    : 1
+	Sitespacing  : 1
+	Siteorient   : N
+	Sitesymmetry : Y
+	SubrowOrigin : 209	NumSites : 52
+End
+CoreRow Horizontal
+	Coordinate   : 198
+	Height       : 9
+	Sitewidth    : 1
+	Sitespacing  : 1
+	Siteorient   : FS
+	Sitesymmetry : Y
+	SubrowOrigin : 209	NumSites : 52
+End
+CoreRow Horizontal
+	Coordinate   : 207
+	Height       : 9
+	Sitewidth    : 1
+	Sitespacing  : 1
+	Siteorient   : N
+	Sitesymmetry : Y
+	SubrowOrigin : 209	NumSites : 52
+End
+CoreRow Horizontal
+	Coordinate   : 216
+	Height       : 9
+	Sitewidth    : 1
+	Sitespacing  : 1
+	Siteorient   : FS
+	Sitesymmetry : Y
+	SubrowOrigin : 209	NumSites : 52
+End
+CoreRow Horizontal
+	Coordinate   : 225
+	Height       : 9
+	Sitewidth    : 1
+	Sitespacing  : 1
+	Siteorient   : N
+	Sitesymmetry : Y
+	SubrowOrigin : 209	NumSites : 52
+End

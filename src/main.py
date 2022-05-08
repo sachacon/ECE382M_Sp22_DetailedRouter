@@ -3,46 +3,15 @@
 # Sergio Chacon, Xiuhao Zhang
 
 import argparse 
-from read_inputs import * 
-from build_grids import * 
-from route_nets_alpha import * 
-
-def read_inputs():
-    """read routing info from LEF, DEF, Guide"""
-
-    global num_pins; global pins; 
-    global num_nets; global net_names; global nets
-    global num_nodes; global num_terminals
-    global num_rows; global core_rows; 
-    global instances
-    global net_guides
-    global layers
-
-    # Read in Routing Info 
-    print("Reading in results from LEF/DEF parser and routing guide")
-    out_root = "bookshelf_writer"  
-    # out_files = read_out_aux(out_root)
-    num_pins, num_nets, nets = read_out_nets(out_root)
-    num_nodes, num_terminals, pins = read_out_nodes(out_root)
-    instances = read_out_pl(out_root)
-    net_names = read_out_wts(out_root)
-    num_rows, core_rows = read_out_scl(out_root)
-    net_guides = read_route_guide("ispd19_test1.guide")
-    layers = read_layers("ispd19_test1.input.def")
-
-    return
+import globals
+import read_inputs 
+import build_grids 
+import route_nets 
 
 def build_grids():
     """store routing info in grid structures"""
     print("TODO: build and store routing info in data structures")
     return
-
-def route_nets():
-    """implement A* routing for local grids"""
-    print("TODO: extend A* search algorithm for routing")
-    # astar_search()
-    return
-
 
 def write_def():
     """write updated routing to new DEF file"""
@@ -53,16 +22,10 @@ def write_def():
 def main():
     """main function to route design"""
 
-    parser = argparse.ArgumentParser()
-
-
-    read_inputs()
+    globals.initialize()
+    read_inputs.read_inputs()
     #build_grids()
-    #route_nets()
-
-    # Early Version for WL only 
-    route_nets_alpha()
-
+    route_nets.route_nets()
     write_def()
 
     return 
