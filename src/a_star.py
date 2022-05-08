@@ -9,8 +9,7 @@ LastEditTime: 2022-03-08 16:04:28
 # Implementation of A Star Search
 # You need to implement initialize() and route_one_net()
 # All codes should be inside A Star Search class
-# Name: Xiuhao Zhang
-# UT EID: xz7622
+# Name: Xiuhao Zhang, Sergio Chacon
 #######################################################################
 
 import dis
