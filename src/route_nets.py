@@ -15,21 +15,41 @@ def route_nets():
     n_blockages = None 
     pin_pos_x = [] 
     pin_pos_y = []
-    blockage_pos_x = [] 
-    blockage_pos_y = []
-    blockages_size_x = []
-    blockages_size_y = []    
+
+    # Horizontal for sample1
+    m2_blockage_pos_x = [] 
+    m2_blockage_pos_y = []
+    m2_blockages_size_x = []
+    m2_blockages_size_y = []    
    
+    # Vertical for sample1
+    m3_blockage_pos_x = [] 
+    m3_blockage_pos_y = []
+    m3_blockages_size_x = []
+    m3_blockages_size_y = []
+
     for n in range(globals.num_nets):
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
         print("n_pins = ", n_pins)
         print("pin_pos_x = ", pin_pos_x)
         print("pin_pos_y = ", pin_pos_y)  
 
+        # A* search routing 
+        # If a pin position is (0,0), net isn't formatted correclty, skip routing that net
+
+        # update_blockages for m2 and m3 
         
     return 
 
+def isInsideGuideBox(layer, grid_coordinate)
+    # Expect layer to be integer for ex. 1 or 4 
+    # Expect grid_coordiante to be tuple for ex. (5, 5) or (21, 43) 
 
+    bool isInside = False;
+
+
+    return isInside 
+ 
 
 # - Get grid track system beforehand  
 # For each net:
