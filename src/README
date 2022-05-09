@@ -1,0 +1,7 @@
+How to run program
+- parsed benchmarks are in ../parsed_benchmarks 
+- to run sample1 benchmark from src directory
+
+rm bookshelf_writer/
+cp -r ../parsed_benchmarks/sample1/ bookshelf_writer/
+python3 main.py 

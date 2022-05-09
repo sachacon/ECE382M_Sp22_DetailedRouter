@@ -131,6 +131,7 @@ def read_out_aux(path):
 
 # DONE  
 def read_out_nets(path):
+    n_nets = 0;
     num_nets = 0; num_pins = 0; start = 0; nets = {} 
     pin_instances = []; pin_directions = []
     filename = os.path.join(path, "out.nets")
@@ -146,7 +147,9 @@ def read_out_nets(path):
                 if(start == 0):
                     start = 1
                 else:
-                    nets[name] = Net(int(degree), name, pin_instances, pin_directions, 0.5)
+                    #print("name = ", name, " pin_instances = ", pin_instances)
+                    if not(any("pin" in s for s in pin_instances)):
+                        nets[name] = Net(int(degree), name, pin_instances, pin_directions, 0.5)
                
                 # Start updating info for new net
                 pin_instances = []
@@ -159,9 +162,10 @@ def read_out_nets(path):
                 pin_directions.append(line[1])                  
 
     # Add last net info to list 
-    nets[name] = Net(int(degree), name, pin_instances, pin_directions, 0.5)
+    if not(any("pin" in s for s in pin_instances)):
+        nets[name] = Net(int(degree), name, pin_instances, pin_directions, 0.5)
 
-    return(int(num_nets), int(num_pins), nets)
+    return(len(nets.keys()), int(num_pins), nets)
 
 # DONE 
 def read_out_nodes(path):
@@ -249,7 +253,7 @@ def read_instance_type():
     pin_shapes_list = [] 
     pin_shapes = []
     filename = "bookshelf_writer/out.lef"
-    with open(filename, 'r') as f:
+    with open(filename, 'r', encoding="ISO-8859-1") as f:
         for line in f:
 
             # Instance Type 
@@ -318,7 +322,7 @@ def read_metal_layers():
     metal_layers = []
     grid_coordinates = []
     filename = "bookshelf_writer/out.lef"
-    with open(filename, 'r') as f:
+    with open(filename, 'r', encoding="ISO-8859-1") as f:
         for line in f:
             if("Metal" in line):
                 line = line.split()
@@ -398,26 +402,26 @@ def read_layers(def_filename):
     return 
 
 
-def update_instances(Instances):
+def update_instances():
     start = 0 
     filename = "bookshelf_writer/components.txt"
     with open(filename, 'r') as f:
         for line in f:
-            if("PLACED" in line):
+            if("PLACED" in line or "FIXED" in line):
                 line_ = line.split()
                 instance_name = line_[1]
                 instance_type = line_[2]
-                Instances[instance_name].instance_type = instance_type
+                globals.instances[instance_name].instance_type = instance_type
 
                 for i in range(len(line_)):
                     if("(" in line_[i]):
-                        Instances[instance_name].width = line_[i+1]
-                        Instances[instance_name].height = line_[i+2]
+                        globals.instances[instance_name].width = line_[i+1]
+                        globals.instances[instance_name].height = line_[i+2]
                 
 
     return
 
-def update_nets(Nets, num_nets):
+def update_nets():
     filename = "bookshelf_writer/nets.txt"
     with open(filename, 'r') as f:
         for line in f:
@@ -432,19 +436,20 @@ def update_nets(Nets, num_nets):
                         instance_name = tmp_line[i+1]
                         pin_name = tmp_line[i+2] 
                
-                        for j in range(Nets[net_name].degree):
-                            if(instance_name == Nets[net_name].pin_instances[j]):
-                                Nets[net_name].pin_directions[j] = pin_name 
-                                break
+                        if(net_name in globals.nets.keys()):
+                            for j in range(globals.nets[net_name].degree):
+                                if(instance_name == globals.nets[net_name].pin_instances[j]):
+                                    globals.nets[net_name].pin_directions[j] = pin_name 
+                                    break
  
-                        #for j in range(num_nets):
+                        #for j in range(globals.num_nets):
                         #    if(net_name == Nets[j].name):       
                         #        for k in range(Nets[j].degree):
                         #            if(instance_name == Nets[j].pin_instances[k]):
                         #                Nets[j].pin_directions[k] = pin_name
                         #        break
 
-    return Nets
+    return 
 
 def read_inputs():
     """read routing info from LEF, DEF, Guide"""
@@ -458,14 +463,14 @@ def read_inputs():
     print("Read nets")
     globals.num_nets, globals.num_pins, globals.nets = read_out_nets(out_root)
     print("Update nets")
-    globals.nets = update_nets(globals.nets, globals.num_nets)
+    update_nets()
 
     #globals.num_nodes, globals.num_terminals, globals.pins = read_out_nodes(out_root)
 
     print("Read instances")
     globals.instances = read_out_pl(out_root)
     print("Update instances")
-    update_instances(globals.instances)
+    update_instances()
 
     print("Read instance types")
     globals.instance_types = read_instance_type()
@@ -509,13 +514,13 @@ def read_inputs_test():
     instance_types = read_instance_type()
     for i in instance_types.keys():
          instance_type = instance_types[i]
-         print("instance_type = ", instance_type.instance_name)
+         #print("instance_type = ", instance_type.instance_name)
          for j in range(len(instance_type.pin_names)):
-             print("pin name = ", instance_type.pin_names[j])
+             #print("pin name = ", instance_type.pin_names[j])
              tmp_pin_shapes = instance_type.pin_shapes_list[j]
-             print("pin shape = ", instance_type.pin_shapes_list[j])
+             #print("pin shape = ", instance_type.pin_shapes_list[j])
 
-    nets = update_nets(nets, num_nets)
+    nets = update_nets()
     for i in range(len(nets)):
         net = nets[i]
         #print("\nnet.name = ", net.name, " net.degree = ", net.degree)

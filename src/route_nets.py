@@ -40,7 +40,12 @@ def route_nets():
     m9_blockage_map = []
 
     for n in globals.nets.keys():
+
+        #print("net name = ", globals.nets[n].name)
+
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
+
+
         #print("n_pins = ", n_pins)
         #print("pin_pos_x = ", pin_pos_x)
         #print("pin_pos_y = ", pin_pos_y)  
@@ -105,7 +110,10 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
 #     - Look up pin offset (lef.txt)
 #     - Calulate location = LL coordiante + pin offset
 #     - Find nearest point on grid of tracks
-#     - Final Output is Coordinate System  
+#     - Final Output is Coordinate System 
+
+# TODO Some nets have are connected to pins and not inst 
+ 
 def format_net(Net):
 
     #print("\nFormatting ", Net.name)
@@ -147,7 +155,9 @@ def format_net(Net):
         # Get Name of Instance for Pin  
         instance_name = Net.pin_instances[n]
         #print("instance_name = ", instance_name)
-
+        #print("instances[instance_name].instance_type = ", globals.instances[instance_name].instance_type)
+        #print("instances[instance_name].orientation = ", globals.instances[instance_name].orientation)
+       
         # Get Coordinates and Orientation of Instance 
         instance = globals.instances[instance_name]
         #print("instance.width = ", instance.width, "instance.height = ", instance.height)
@@ -159,6 +169,7 @@ def format_net(Net):
         # Get Type of Instance for Instance Name 
         inst_type = globals.instances[instance_name].instance_type
   
+        #print("inst_type = ", inst_type)
         #print("instance_types keys = ", globals.instance_types.keys())
         instance_type = globals.instance_types[inst_type]
         #print("instance_type = ", inst_type)
