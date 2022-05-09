@@ -78,7 +78,7 @@ def route_nets():
         # A* search routing 
         # If a pin position is (0,0), net isn't formatted correclty, skip routing that net
 
-        routing = a_star.A_Star_SearchA_Star_Search()
+        routing = a_star.A_Star_Search()
         routing.grid_size = list(globals.grid_size)
         routing.n_pins = n_pins
         # routing.n_blockages = 
