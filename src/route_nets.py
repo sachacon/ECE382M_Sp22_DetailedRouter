@@ -20,9 +20,7 @@ def route_nets():
     # m2_blockage_pos_x = [] 
     # m2_blockage_pos_y = []
     # m2_blockages_size_x = []
-    # m2_blockages_size_y = [] 
-
-    m2_blockage_map = []   
+    # m2_blockages_size_y = []   
    
     # Vertical for sample1
     # m3_blockage_pos_x = [] 
@@ -30,14 +28,29 @@ def route_nets():
     # m3_blockages_size_x = []
     # m3_blockages_size_y = []
 
-    m3_blockage_map = []
+    m2_blockage_map = [] # V
+    m3_blockage_map = [] # H
+    m4_blockage_map = [] # V
+    m5_blockage_map = [] # H
+    m6_blockage_map = [] # V
+    m7_blockage_map = [] # H
+    m8_blockage_map = [] # V
+    m9_blockage_map = [] # H
 
-    m4_blockage_map = []
-    m5_blockage_map = []
-    m6_blockage_map = []
-    m7_blockage_map = []
-    m8_blockage_map = []
-    m9_blockage_map = []
+    # build blockage map
+    blockage_map_row = []
+    for w in range(globals.grid_size[0]): # width
+        blockage_map_row.append(0) # no blockage
+
+    for h in range(globals.grid_size[1]): # height
+        m2_blockage_map.append(blockage_map_row)
+        m3_blockage_map.append(blockage_map_row)
+        m4_blockage_map.append(blockage_map_row)
+        m5_blockage_map.append(blockage_map_row)
+        m6_blockage_map.append(blockage_map_row)
+        m7_blockage_map.append(blockage_map_row)
+        m8_blockage_map.append(blockage_map_row)
+        m9_blockage_map.append(blockage_map_row)
 
     for n in globals.nets.keys():
 
