@@ -98,7 +98,9 @@ def route_nets():
         routing.initialize()
         (path_list, metal_list, wirelength, wirelength_list, visited_node_list) = routing.route_one_net()
 
-        # update_blockages for m2 and m3 
+        # update_blockages for metal
+        for m in range(len(metal_list)):
+            blockage_map[metal_list[m]][path_list[m][1]][path_list[m][0]] = 1
         
     return 
 
