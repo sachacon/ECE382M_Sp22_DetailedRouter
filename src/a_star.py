@@ -180,11 +180,13 @@ class A_Star_Search(A_Star_Search_Base):
         node.neighbors = neighbor_list
 
 
-    def route_one_net(self) -> Tuple[List[Tuple[Tuple[int], Tuple[int]]], int, List[int], List[int]]:
+    def route_one_net(self) -> Tuple[List[Tuple[int]], List[int], int, List[int], List[int]]:
         """route one multi-pin net using the A star search algorithm
 
         Return:
-            path (List[Tuple[Tuple[int], Tuple[int]]]): the vector-wise routing path described by a list of (src, dst) position pairs
+            # path (List[Tuple[Tuple[int], Tuple[int]]]): the vector-wise routing path described by a list of (src, dst) position pairs
+            path (List[Tuple[int]]): the point-wise routing path described by a list of node positions
+            metal_layer (List[int]): the point-wise metal layer of each node
             wl (int): total wirelength of the routing path
             wl_list (List[int]): a list of wirelength of each routing path
             n_visited_list (List[int]): the number of visited nodes in the grid in each iteration
@@ -196,6 +198,7 @@ class A_Star_Search(A_Star_Search_Base):
         
         sink_node = GridAstarNode() # initialize class
         path_list = [] # record path to output
+        metal_list = [] # record metal layer to output
         sink_node_array_as_list = self.sink_node_array.tolist()
         wirelength_list = [] # output
         visited_node_list = [] # output
@@ -206,6 +209,8 @@ class A_Star_Search(A_Star_Search_Base):
             node_record = {} # keep track of visited nodes, green node number
             path = [] # closed list for nodes explored, red
             visited_node = 0
+
+            trackmetal = []
 
             # if source_node.pos in sink_node_array_as_list:
             #     continue
@@ -237,10 +242,11 @@ class A_Star_Search(A_Star_Search_Base):
                         self.sink_node_array = np.delete(self.sink_node_array, sink_node_array_as_list.index(node_pos_as_list), axis = 0) # remove the connected sink node from sink node arrays
 
                         sink_node = node
-                        tracknode = self._backtrack(sink_node)
+                        tracknode = self._backtrack(sink_node) # connected path from source to sink
 
                         for k in range(0, len(tracknode)):
-                            connect_net = np.append(connect_net, [list(tracknode[k])], axis = 0)
+                            connect_net = np.append(connect_net, [list(tracknode[k])], axis = 0) # make connected net
+                            trackmetal.append(node_record[node.pos].layer) # record metal layer of the node
 
                         break
 
@@ -327,10 +333,11 @@ class A_Star_Search(A_Star_Search_Base):
                         self.sink_node_array = np.delete(self.sink_node_array, close_node, axis = 0) # remove the connected sink node from sink node arrays
 
                         sink_node = node
-                        tracknode = self._backtrack(sink_node)
+                        tracknode = self._backtrack(sink_node) # connected path from source to sink
 
                         for k in range(0, len(self._backtrack(sink_node)) - 1):
-                            connect_net = np.append(connect_net, [list(tracknode[k])], axis = 0)
+                            connect_net = np.append(connect_net, [list(tracknode[k])], axis = 0) # make connected net
+                            trackmetal.append(node_record[node.pos].layer) # record metal layer of the node
                         
                         break
 
@@ -375,22 +382,25 @@ class A_Star_Search(A_Star_Search_Base):
                                 node_record[neighbor.pos] = neighbor
             
             # path_list as point_wise output
-            # if j == 0:
-            #     for k in range(len(tracknode)):
-            #         path_list.append(tracknode[k])
-            #     wirelength_list.append(len(tracknode) - 1)
-            # else:
-            #     tracknode.reverse()
-            #     for k in range(len(tracknode)):
-            #         path_list.append(tracknode[k])
-            #     wirelength_list.append(len(tracknode) - 1)
-
-            if j != 0:
+            if j == 0:
+                for k in range(len(tracknode)):
+                    path_list.append(tracknode[k])
+                    metal_list.append(trackmetal[k])
+                wirelength_list.append(len(tracknode) - 1)
+            else:
                 tracknode.reverse()
+                trackmetal.reverse()
+                for k in range(len(tracknode)):
+                    path_list.append(tracknode[k])
+                    metal_list.append(trackmetal[k])
+                wirelength_list.append(len(tracknode) - 1)
 
-            for k in range(len(self._merge_path(tracknode))):
-                path_list.append(self._merge_path(tracknode)[k]) # path_list as vector-wise output
-            wirelength_list.append(len(tracknode) - 1)
+            # if j != 0:
+            #     tracknode.reverse()
+
+            # for k in range(len(self._merge_path(tracknode))):
+            #     path_list.append(self._merge_path(tracknode)[k]) # path_list as vector-wise output
+            # wirelength_list.append(len(tracknode) - 1)
 
             # print("tracknode: ", tracknode)
             # print("merge tracknode: ", self._merge_path(tracknode))
@@ -406,4 +416,5 @@ class A_Star_Search(A_Star_Search_Base):
         # print("merge path:", self._merge_path(path_list))
 
         # return (self._merge_path(path_list), wirelength, wirelength_list, visited_node_list) # point-wise
-        return (path_list, wirelength, wirelength_list, visited_node_list) # vector-wise
+        # return (path_list, wirelength, wirelength_list, visited_node_list) # vector-wise
+        return (path_list, metal_list, wirelength, wirelength_list, visited_node_list) # point-wise
