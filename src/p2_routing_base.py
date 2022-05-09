@@ -66,14 +66,14 @@ class A_Star_Search_Base(object):
             self.blockage_size_y,
         ) = [None] * 6
         (
-            self.m2_blockage_map,
-            self.m3_blockage_map,
-            self.m4_blockage_map,
-            self.m5_blockage_map,
-            self.m6_blockage_map,
-            self.m7_blockage_map,
-            self.m8_blockage_map,
-            self.m9_blockage_map,
+            self.m2_blockage_map, # V
+            self.m3_blockage_map, # H
+            self.m4_blockage_map, # V
+            self.m5_blockage_map, # H
+            self.m6_blockage_map, # V
+            self.m7_blockage_map, # H
+            self.m8_blockage_map, # V
+            self.m9_blockage_map, # H
         ) = [None] * 8
 
     # # Please do not override the method
