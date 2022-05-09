@@ -292,6 +292,9 @@ def read_instance_type():
 
     instance_types[instance_type] = InstanceType(instance_type,pin_names,pin_shapes_list)
 
+    
+    print(instance_type, " ", pin_names, " ", pin_shapes_list, "\n")
+
     return instance_types
  
 
@@ -305,16 +308,23 @@ def read_route_guide(filename):
                 start = 1 
                 net_name = line[0]
                 single_net_guide = []
-            elif("net" in line and start == 1):
+                continue 
+            if("net" in line and start == 1):
+                 net_guides[net_name] = NetGuide(net_name, single_net_guide)
                  line = line.split()
                  net_name = line[0]
-                 net_guides[net_name] = NetGuide(net_name, single_net_guide)
                  single_net_guide = [] 
+                 continue 
             else:
                  line = line.split()
                  if(len(line) == 5):
                      single_net_guide.append(line)
- 
+
+    net_guides[net_name] = NetGuide(net_name, single_net_guide)
+
+    print(net_guides.keys())
+    for key in net_guides.keys():
+        print("key = ", key, " net guide = ", net_guides[key].guide) 
     return net_guides
 
 
