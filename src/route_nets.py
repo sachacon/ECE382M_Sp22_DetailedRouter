@@ -51,6 +51,17 @@ def route_nets():
         m7_blockage_map.append(blockage_map_row)
         m8_blockage_map.append(blockage_map_row)
         m9_blockage_map.append(blockage_map_row)
+    
+    blockage_map = {}
+    blockage_map[2] = m2_blockage_map
+    blockage_map[3] = m3_blockage_map
+    blockage_map[4] = m4_blockage_map
+    blockage_map[5] = m5_blockage_map
+    blockage_map[6] = m6_blockage_map
+    blockage_map[7] = m7_blockage_map
+    blockage_map[8] = m8_blockage_map
+    blockage_map[9] = m9_blockage_map
+
 
     for n in globals.nets.keys():
 
@@ -65,6 +76,27 @@ def route_nets():
 
         # A* search routing 
         # If a pin position is (0,0), net isn't formatted correclty, skip routing that net
+
+        routing = A_Star_Search()
+        routing.grid_size = list(globals.grid_size)
+        routing.n_pins = n_pins
+        # routing.n_blockages = 
+        routing.pin_pos_x = pin_pos_x
+        routing.pin_pos_y = pin_pos_y
+
+        routing.m2_blockage_map = m2_blockage_map
+        routing.m3_blockage_map = m3_blockage_map
+        routing.m4_blockage_map = m4_blockage_map
+        routing.m5_blockage_map = m5_blockage_map
+        routing.m6_blockage_map = m6_blockage_map
+        routing.m7_blockage_map = m7_blockage_map
+        routing.m8_blockage_map = m8_blockage_map
+        routing.m9_blockage_map = m9_blockage_map
+
+        routing.net_name = n
+
+        routing.initialize()
+        (path_list, metal_list, wirelength, wirelength_list, visited_node_list) = routing.route_one_net()
 
         # update_blockages for m2 and m3 
         
