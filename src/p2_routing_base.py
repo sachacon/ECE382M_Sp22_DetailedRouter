@@ -29,6 +29,7 @@ class GridAstarNode:
         visited: bool = False,
         parent: Optional[object] = None,
         neighbors: List[object] = [],
+        layer: int = 2, # by default any given node is on metal 2
     ) -> None:
         self.pos = tuple(pos)
         self.cost_g = cost_g
@@ -37,6 +38,7 @@ class GridAstarNode:
         self.visited = visited
         self.parent = parent
         self.neighbors = neighbors
+        self.layer = layer
     ### This __eq__ and __lt__ function is to make the Node object comparable, so the priority queue knows how to sort nodes.
     ### A node with smaller cost_f will have higher priority.
     ### If two nodes have the same cost_f, a node with smaller bend_count will have higher priotity
@@ -66,7 +68,13 @@ class A_Star_Search_Base(object):
         (
             self.m2_blockage_map,
             self.m3_blockage_map,
-        ) = [None] * 2
+            self.m4_blockage_map,
+            self.m5_blockage_map,
+            self.m6_blockage_map,
+            self.m7_blockage_map,
+            self.m8_blockage_map,
+            self.m9_blockage_map,
+        ) = [None] * 8
 
     # # Please do not override the method
     # def read_benchmark(self, file_path: str):
