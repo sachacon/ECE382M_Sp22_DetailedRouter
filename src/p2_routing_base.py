@@ -233,11 +233,14 @@ class A_Star_Search_Base(object): # for one net
 
     def route_one_net(
         self,
-    ) -> Tuple[List[Tuple[Tuple[int, int], Tuple[int, int]]], int, List[int], List[int]]:
+        ) -> Tuple[List[Tuple[int]], List[int], int, List[int], List[int]]:
+    # ) -> Tuple[List[Tuple[Tuple[int, int], Tuple[int, int]]], int, List[int], List[int]]:
         """route one multi-pin net using the A star search algorithm
 
         Return:
-            path (List[Tuple[Tuple[int], Tuple[int]]]): the vector-wise routing path described by a list of (src, dst) position pairs
+            # path (List[Tuple[Tuple[int], Tuple[int]]]): the vector-wise routing path described by a list of (src, dst) position pairs
+            path (List[Tuple[int]]): the point-wise routing path described by a list of node positions
+            metal_layer (List[int]): the point-wise metal layer of each node
             wl (int): total wirelength of the routing path
             wl_list (List[int]): a list of wirelength of each routing path
             n_visited_list (List[int]): the number of visited nodes in the grid in each iteration
