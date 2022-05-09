@@ -66,7 +66,7 @@ def route_nets():
 
     for n in globals.nets.keys():
 
-        #print("net name = ", globals.nets[n].name)
+        print("net name = ", globals.nets[n].name)
 
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
 
@@ -103,13 +103,16 @@ def route_nets():
         for m in range(len(metal_list)):
             blockage_map[metal_list[m]][path_list[m][1]][path_list[m][0]] = 1
         
+        # print("block M2", blockage_map[2])
+        # print("block M3", blockage_map[3])
+        
     return 
 
 def isInsideGuideBox(net_name, layer, grid_coordinate):
     # Expect layer to be integer for ex. 1 or 4 
     # Expect grid_coordiante to be tuple for ex. (5, 5) or (21, 43) 
 
-    print(globals.net_guides.keys())
+    # print(globals.net_guides.keys())
 
     guide_boxes = globals.net_guides[net_name].guide
     isInside = True 
@@ -120,9 +123,10 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
             break
 
     for i in range(len(guide_boxes)):
-        tmp = guide_boxes[i].split()
+        tmp = guide_boxes[i]
+        # .split()
         tmp_layer = tmp[-1]
-        tmp_layer.replace("Metal","")
+        tmp_layer = tmp_layer.replace("Metal","")
         tmp_layer = int(tmp_layer)
        
         if(tmp_layer == layer):
@@ -146,6 +150,7 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
                 isInside = False
                 break 
 
+    # return True
     return isInside 
  
 
