@@ -1,7 +1,7 @@
 
 import globals
 import numpy as np
-#from eid_xz7622 import A_Star_Search 
+#from a_star import A_Star_Search 
 from read_inputs import * 
 
 def route_nets():
