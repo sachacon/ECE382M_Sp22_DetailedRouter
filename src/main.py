@@ -7,6 +7,7 @@ import globals
 import read_inputs 
 import build_grids 
 import route_nets 
+import time 
 
 def build_grids():
     """store routing info in grid structures"""
@@ -22,11 +23,16 @@ def write_def():
 def main():
     """main function to route design"""
 
+    start = time.time()
+    
     globals.initialize()
     read_inputs.read_inputs()
     #build_grids()
     route_nets.route_nets()
     # write_def()
+
+    end_time_inputs = time.time()
+    print("Elapsed Time = ", (end_time_inputs - start), " sec to route all nets") 
 
     return 
 

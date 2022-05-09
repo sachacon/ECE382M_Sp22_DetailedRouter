@@ -39,11 +39,11 @@ def route_nets():
     m8_blockage_map = []
     m9_blockage_map = []
 
-    for n in range(globals.num_nets):
+    for n in globals.nets.keys():
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
-        print("n_pins = ", n_pins)
-        print("pin_pos_x = ", pin_pos_x)
-        print("pin_pos_y = ", pin_pos_y)  
+        #print("n_pins = ", n_pins)
+        #print("pin_pos_x = ", pin_pos_x)
+        #print("pin_pos_y = ", pin_pos_y)  
 
         # A* search routing 
         # If a pin position is (0,0), net isn't formatted correclty, skip routing that net
@@ -52,13 +52,44 @@ def route_nets():
         
     return 
 
-def isInsideGuideBox(layer, grid_coordinate):
+def isInsideGuideBox(net_name, layer, grid_coordinate):
     # Expect layer to be integer for ex. 1 or 4 
     # Expect grid_coordiante to be tuple for ex. (5, 5) or (21, 43) 
 
-    # bool isInside = False;
-    isInside = False
+    guide_boxes = globals.net_guides[net_name].guide
+    isInside = True 
 
+    for m in range(len(globals.metal_layers)):
+        if(globals.metal_layers[m].layer == layer):
+            m_layer = globals.metal_layers[m]
+            break
+
+    for i in range(len(guide_boxes)):
+        tmp = guide_boxes[i].split()
+        tmp_layer = tmp[-1]
+        tmp_layer.replace("Metal","")
+        tmp_layer = int(tmp_layer)
+       
+        if(tmp_layer == layer):
+            # Grid Coordinate Must Be Within This Box Range
+            llx = int(tmp[0]) / 2000
+            lly = int(tmp[1]) / 2000
+            urx = int(tmp[2]) / 2000
+            ury = int(tmp[3]) / 2000
+
+            # Convert Grid Coordinate 
+            if(m_layer.direction == "H"):
+                grid_x = (m_layer.wrong_dir_start / 2000) + (grid_coordinate[0] *  m_layer.wrong_dir_step)
+                grid_y = (m_layer.pref_dir_start / 2000) + (grid_coordinate[1] * m_layer.pref_dir_step)
+            else: 
+                grid_y = (m_layer.wrong_dir_start / 2000) + (grid_coordinate[0] *  m_layer.wrong_dir_step)
+                grid_x = (m_layer.pref_dir_start / 2000) + (grid_coordinate[1] * m_layer.pref_dir_step)
+            
+            # Grid Coordinate has to be inside Box Range
+            # If that condition is NOT true, return False  
+            if( not((grid_x >= llx) and (grid_x <= urx) and (grid_y >= lly) and (grid_y <= ury)) ):
+                isInside = False
+                break 
 
     return isInside 
  
@@ -77,7 +108,7 @@ def isInsideGuideBox(layer, grid_coordinate):
 #     - Final Output is Coordinate System  
 def format_net(Net):
 
-    print("\nFormatting ", Net.name)
+    #print("\nFormatting ", Net.name)
 
     n_pins = Net.degree
     pin_pos_x = []; pin_pos_y = [];
@@ -97,7 +128,7 @@ def format_net(Net):
     wrong_dir_num = m1.wrong_dir_num
 
     if(m1.direction == 'H'):
-        print("Testing")
+        #print("Testing")
         grid_x = np.arange(start=wrong_dir_start, step=wrong_dir_step, stop=(wrong_dir_start + (wrong_dir_step*(wrong_dir_num))) ) 
         grid_y = np.arange(start=pref_dir_start, step=pref_dir_step, stop=(pref_dir_start + (pref_dir_step*(pref_dir_num) ) ) )
     else:
@@ -122,8 +153,8 @@ def format_net(Net):
         #print("instance.width = ", instance.width, "instance.height = ", instance.height)
         instance_coordinates = (int(instance.width)/2000, int(instance.height)/2000)
         instance_orientation = instance.orientation
-        print("instance_coordinates = ", instance_coordinates)
-        print("instance_orientation = ", instance_orientation)
+        #print("instance_coordinates = ", instance_coordinates)
+        #print("instance_orientation = ", instance_orientation)
 
         # Get Type of Instance for Instance Name 
         inst_type = globals.instances[instance_name].instance_type
@@ -159,10 +190,9 @@ def format_net(Net):
                 lly = (instance_coordinates[1] + globals.FS_Height) - (int(_pin_shape[3]) / 2000)   # bry
               
 
-            print("m = ", m, " llx = ", llx, " lly = ", lly, " urx = ", urx, " ury = ", ury)
-
-            print("len(grid_x)) = ", len(grid_x))
-            print("len(grid_y)) = ", len(grid_y))
+            #print("m = ", m, " llx = ", llx, " lly = ", lly, " urx = ", urx, " ury = ", ury)
+            #print("len(grid_x)) = ", len(grid_x))
+            #print("len(grid_y)) = ", len(grid_y))
 
             found = 0 
             for i in range(len(grid_x)):
@@ -172,7 +202,7 @@ def format_net(Net):
                             pos_x = i
                             pos_y = j
                             found = 1
-                            print("Found Track Point")
+                            #print("Found Track Point")
                         if(found == 1):
                             break
                 if(found == 1):

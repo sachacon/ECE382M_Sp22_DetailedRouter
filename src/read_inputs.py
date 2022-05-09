@@ -90,9 +90,9 @@ class NetGuide:
 class MetalLayer:
     def __init__(
         self,
-        layer,
-        direction,
-        pref_dir_start,
+        layer, # int type, 1 or 2 etc. 
+        direction, # "H" or "V"
+        pref_dir_start, 
         pref_dir_step,
         pref_dir_num,
         wrong_dir_start,
@@ -108,6 +108,15 @@ class MetalLayer:
         self.wrong_dir_step = wrong_dir_step
         self.wrong_dir_num = wrong_dir_num
 
+# Grid Coordiante (5,5) for A* search coordinate system
+# Routing Guide, need to divide by 2000, to get Innovus coordinate system
+# pref_dir_start + 5 * pref_dir_step to get Innovus coordinate system 
+# 
+
+#isInsideGuideBox(layer (int), coordinate (int,int) ) 
+
+#return True or False
+
 # DONE 
 def read_out_aux(path):
     filename = os.path.join(path, "out.aux")
@@ -122,7 +131,7 @@ def read_out_aux(path):
 
 # DONE  
 def read_out_nets(path):
-    num_nets = 0; num_pins = 0; start = 0; nets = [] 
+    num_nets = 0; num_pins = 0; start = 0; nets = {} 
     pin_instances = []; pin_directions = []
     filename = os.path.join(path, "out.nets")
     with open(filename, 'r') as f:
@@ -137,7 +146,7 @@ def read_out_nets(path):
                 if(start == 0):
                     start = 1
                 else:
-                    nets.append(Net(int(degree), name, pin_instances, pin_directions, 0.5))
+                    nets[name] = Net(int(degree), name, pin_instances, pin_directions, 0.5)
                
                 # Start updating info for new net
                 pin_instances = []
@@ -150,7 +159,7 @@ def read_out_nets(path):
                 pin_directions.append(line[1])                  
 
     # Add last net info to list 
-    nets.append(Net(int(degree), name, pin_instances, pin_directions, 0.5))
+    nets[name] = Net(int(degree), name, pin_instances, pin_directions, 0.5)
 
     return(int(num_nets), int(num_pins), nets)
 
@@ -239,7 +248,7 @@ def read_instance_type():
     pin_names = []
     pin_shapes_list = [] 
     pin_shapes = []
-    filename = "bookshelf_writer/lef.txt"
+    filename = "bookshelf_writer/out.lef"
     with open(filename, 'r') as f:
         for line in f:
 
@@ -283,7 +292,7 @@ def read_instance_type():
  
 
 def read_route_guide(filename):
-    net_guides = []; single_net_guide = []
+    net_guides = {}; single_net_guide = []
     start = 0; net_name = "" 
     with open(filename, 'r') as f:
         for line in f:
@@ -295,7 +304,7 @@ def read_route_guide(filename):
             elif("net" in line and start == 1):
                  line = line.split()
                  net_name = line[0]
-                 net_guides.append(NetGuide(net_name, single_net_guide))
+                 net_guides[net_name] = NetGuide(net_name, single_net_guide)
                  single_net_guide = [] 
             else:
                  line = line.split()
@@ -308,7 +317,7 @@ def read_route_guide(filename):
 def read_metal_layers():
     metal_layers = []
     grid_coordinates = []
-    filename = "bookshelf_writer/lef.txt"
+    filename = "bookshelf_writer/out.lef"
     with open(filename, 'r') as f:
         for line in f:
             if("Metal" in line):
@@ -333,8 +342,10 @@ def read_metal_layers():
                 # Create Metal Layer Object and Append 
                 metal_layers.append(MetalLayer(int(layer), direction, int(pref_dir_start), int(pref_dir_step), int(pref_dir_num), int(wrong_dir_start), int(wrong_dir_step), int(wrong_dir_num) )) 
 
+    print("len(metal_layers) = ", len(metal_layers))
     for n in range(len(metal_layers)):
         metal = metal_layers[n]
+        print("metal.layer = ", metal.layer)
         if(metal.layer == 1):
            grid_size = (metal.wrong_dir_num, metal.pref_dir_num)
            
@@ -420,13 +431,18 @@ def update_nets(Nets, num_nets):
                     if("(" in tmp_line[i]):
                         instance_name = tmp_line[i+1]
                         pin_name = tmp_line[i+2] 
-                
-                        for j in range(num_nets):
-                            if(net_name == Nets[j].name):       
-                                for k in range(Nets[j].degree):
-                                    if(instance_name == Nets[j].pin_instances[k]):
-                                        Nets[j].pin_directions[k] = pin_name
+               
+                        for j in range(Nets[net_name].degree):
+                            if(instance_name == Nets[net_name].pin_instances[j]):
+                                Nets[net_name].pin_directions[j] = pin_name 
                                 break
+ 
+                        #for j in range(num_nets):
+                        #    if(net_name == Nets[j].name):       
+                        #        for k in range(Nets[j].degree):
+                        #            if(instance_name == Nets[j].pin_instances[k]):
+                        #                Nets[j].pin_directions[k] = pin_name
+                        #        break
 
     return Nets
 
@@ -439,19 +455,27 @@ def read_inputs():
   
     # out_files = read_out_aux(out_root)
 
+    print("Read nets")
     globals.num_nets, globals.num_pins, globals.nets = read_out_nets(out_root)
+    print("Update nets")
     globals.nets = update_nets(globals.nets, globals.num_nets)
 
-    globals.num_nodes, globals.num_terminals, globals.pins = read_out_nodes(out_root)
+    #globals.num_nodes, globals.num_terminals, globals.pins = read_out_nodes(out_root)
+
+    print("Read instances")
     globals.instances = read_out_pl(out_root)
+    print("Update instances")
     update_instances(globals.instances)
 
+    print("Read instance types")
     globals.instance_types = read_instance_type()
 
     #net_names = read_out_wts(out_root)
     #num_rows, core_rows = read_out_scl(out_root)
     
+    print("Read routing guides")
     globals.net_guides = read_route_guide("bookshelf_writer/guide.txt")
+    print("Read metal layers")
     globals.metal_layers, globals.grid_size = read_metal_layers()
 
     return
