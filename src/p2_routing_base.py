@@ -51,7 +51,7 @@ class GridAstarNode:
         return (self.cost_f, self.bend_count) < (other.cost_f, other.bend_count)
 
 
-class A_Star_Search_Base(object):
+class A_Star_Search_Base(object): # for one net
     def __init__(self) -> None:
         super().__init__()
         self.grid_size = [0, 0]
@@ -75,6 +75,7 @@ class A_Star_Search_Base(object):
             self.m8_blockage_map, # V
             self.m9_blockage_map, # H
         ) = [None] * 8
+        self.net_name = None
 
     # # Please do not override the method
     # def read_benchmark(self, file_path: str):
