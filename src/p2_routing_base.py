@@ -63,6 +63,10 @@ class A_Star_Search_Base(object):
             self.blockage_size_x,
             self.blockage_size_y,
         ) = [None] * 6
+        (
+            self.m2_blockage_map,
+            self.m3_blockage_map,
+        ) = [None] * 2
 
     # # Please do not override the method
     # def read_benchmark(self, file_path: str):
