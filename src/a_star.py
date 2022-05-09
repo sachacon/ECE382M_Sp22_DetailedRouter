@@ -49,7 +49,7 @@ class A_Star_Search(A_Star_Search_Base):
         # print(self.sink_node_array_list)
         # print("sink_node_array:", self.sink_node_array)
 
-        self.sink_node = (self.pin_pos_x[1], self.pin_pos_y[1])
+        # self.sink_node = (self.pin_pos_x[1], self.pin_pos_y[1]) # for two pins only
 
     def if_node_outside_grid(self, node: Tuple[int]) -> bool: # check if the node is outside the grid map, node is (x, y) positions
         if node[0] < 0: # if outside the left border, x
@@ -65,9 +65,9 @@ class A_Star_Search(A_Star_Search_Base):
     def compute_g(self, node: GridAstarNode) -> int: # compute g using Manhattan distance, node is (x, y) positions
         return len(self._backtrack(node)) - 1
 
-    def compute_f(self, node: GridAstarNode) -> int: # compute f(n) = g(n) + h(n), node is (x, y) positions
-        cost_f = self.compute_g(node) + self._find_manhattan_dist_to_target(node.pos, self.sink_node)
-        return cost_f
+    # def compute_f(self, node: GridAstarNode) -> int: # compute f(n) = g(n) + h(n), node is (x, y) positions, for two pins only
+    #     cost_f = self.compute_g(node) + self._find_manhattan_dist_to_target(node.pos, self.sink_node)
+    #     return cost_f
 
     def compute_f_array(self, source: GridAstarNode, target: np.ndarray): # source is always a single node
         source_array = np.ndarray(shape = (1, 2))
