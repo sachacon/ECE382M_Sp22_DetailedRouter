@@ -64,51 +64,51 @@ class A_Star_Search_Base(object):
             self.blockage_size_y,
         ) = [None] * 6
 
-    # Please do not override the method
-    def read_benchmark(self, file_path: str):
-        """Read routing benchmark from file_path
+    # # Please do not override the method
+    # def read_benchmark(self, file_path: str):
+    #     """Read routing benchmark from file_path
 
-        Args:
-            file_path (str): path to the graph description file
+    #     Args:
+    #         file_path (str): path to the graph description file
 
-        Returns:
-            Tuple[List[List[int]], int, int]: array of nets (net to node map), number of nets, number of nodes
-        """
-        with open(file_path, "r") as f:
-            lines = f.readlines()
-            self.grid_size = [int(i) for i in lines[0].strip().split(" ")]
-            self.n_pins, self.n_blockages = [int(i) for i in lines[1].strip().split(" ")]
-            pin_pos = np.array(
-                [[int(j) for j in i.strip().split(" ")[1:]] for i in lines[2 : 2 + self.n_pins]]
-            )
-            self.pin_pos_x, self.pin_pos_y = pin_pos[..., 0], pin_pos[..., 1]
-            blockages = np.array(
-                [
-                    [int(j) for j in i.strip().split(" ")[1:]]
-                    for i in lines[2 + self.n_pins : 2 + self.n_pins + self.n_blockages]
-                ]
-            )
-            self.blockage_pos_x = blockages[..., 0]
-            self.blockage_pos_y = blockages[..., 1]
-            self.blockage_size_x = blockages[..., 2]
-            self.blockage_size_y = blockages[..., 3]
-            # print(self.grid_size, self.n_pins, self.n_blockages)
-        self.blockage_map = np.zeros([self.grid_size[1], self.grid_size[0]], dtype=np.bool)
-        for x, y, w, h in zip(
-            self.blockage_pos_x, self.blockage_pos_y, self.blockage_size_x, self.blockage_size_y
-        ):
-            self.blockage_map[y : y + h, x : x + w] = 1
-        return (
-            self.grid_size,
-            self.n_pins,
-            self.n_blockages,
-            self.pin_pos_x,
-            self.pin_pos_y,
-            self.blockage_pos_x,
-            self.blockage_pos_y,
-            self.blockage_size_x,
-            self.blockage_size_y,
-        )
+    #     Returns:
+    #         Tuple[List[List[int]], int, int]: array of nets (net to node map), number of nets, number of nodes
+    #     """
+    #     with open(file_path, "r") as f:
+    #         lines = f.readlines()
+    #         self.grid_size = [int(i) for i in lines[0].strip().split(" ")]
+    #         self.n_pins, self.n_blockages = [int(i) for i in lines[1].strip().split(" ")]
+    #         pin_pos = np.array(
+    #             [[int(j) for j in i.strip().split(" ")[1:]] for i in lines[2 : 2 + self.n_pins]]
+    #         )
+    #         self.pin_pos_x, self.pin_pos_y = pin_pos[..., 0], pin_pos[..., 1]
+    #         blockages = np.array(
+    #             [
+    #                 [int(j) for j in i.strip().split(" ")[1:]]
+    #                 for i in lines[2 + self.n_pins : 2 + self.n_pins + self.n_blockages]
+    #             ]
+    #         )
+    #         self.blockage_pos_x = blockages[..., 0]
+    #         self.blockage_pos_y = blockages[..., 1]
+    #         self.blockage_size_x = blockages[..., 2]
+    #         self.blockage_size_y = blockages[..., 3]
+    #         # print(self.grid_size, self.n_pins, self.n_blockages)
+    #     self.blockage_map = np.zeros([self.grid_size[1], self.grid_size[0]], dtype=np.bool)
+    #     for x, y, w, h in zip(
+    #         self.blockage_pos_x, self.blockage_pos_y, self.blockage_size_x, self.blockage_size_y
+    #     ):
+    #         self.blockage_map[y : y + h, x : x + w] = 1
+    #     return (
+    #         self.grid_size,
+    #         self.n_pins,
+    #         self.n_blockages,
+    #         self.pin_pos_x,
+    #         self.pin_pos_y,
+    #         self.blockage_pos_x,
+    #         self.blockage_pos_y,
+    #         self.blockage_size_x,
+    #         self.blockage_size_y,
+    #     )
 
     def initialize(self):
         """Initialize necessary data structures before starting solving the problem"""
@@ -231,116 +231,116 @@ class A_Star_Search_Base(object):
         """
         raise NotImplementedError
 
-    # Please do not override the method
-    def solve(self) -> Tuple[List[Tuple[Tuple[int, int], Tuple[int, int]]], int, List[int], List[int]]:
-        self.initialize()
-        return self.route_one_net()
+    # # Please do not override the method
+    # def solve(self) -> Tuple[List[Tuple[Tuple[int, int], Tuple[int, int]]], int, List[int], List[int]]:
+    #     self.initialize()
+    #     return self.route_one_net()
 
-    def plot_solution(
-        self,
-        sol: Tuple[List[Tuple[Tuple[int], Tuple[int]]], int, List[int], List[int]],
-        filepath: str = "solution_vis.png",
-        node_list: List[GridAstarNode]=None,
-    ):
-        path, wl = sol[0], sol[1]
-        grid = self.blockage_map.copy().astype(np.int32)
-        # grid[path[..., 1], path[..., 0]] = -1
-        for s, t in path:
-            xl, xh = min(s[0], t[0]), max(s[0], t[0])
-            yl, yh = min(s[1], t[1]), max(s[1], t[1])
-            grid[yl : yh + 1, xl : xh + 1] = -1
+    # def plot_solution(
+    #     self,
+    #     sol: Tuple[List[Tuple[Tuple[int], Tuple[int]]], int, List[int], List[int]],
+    #     filepath: str = "solution_vis.png",
+    #     node_list: List[GridAstarNode]=None,
+    # ):
+    #     path, wl = sol[0], sol[1]
+    #     grid = self.blockage_map.copy().astype(np.int32)
+    #     # grid[path[..., 1], path[..., 0]] = -1
+    #     for s, t in path:
+    #         xl, xh = min(s[0], t[0]), max(s[0], t[0])
+    #         yl, yh = min(s[1], t[1]), max(s[1], t[1])
+    #         grid[yl : yh + 1, xl : xh + 1] = -1
 
-        grid[self.pin_pos_y[0], self.pin_pos_x[0]] = 3
-        grid[self.pin_pos_y[1:], self.pin_pos_x[1:]] = 2
-        plt.imshow(grid, vmin=-1, vmax=3, cmap="RdBu_r")
-        ax = plt.gca()
-        ax.set_xticks(np.arange(0, len(self.blockage_map), 1))
-        ax.set_yticks(np.arange(0, len(self.blockage_map), 1))
-        ax.set_xticks(np.arange(-.5, len(self.blockage_map), 1), minor=True)
-        ax.set_yticks(np.arange(-.5, len(self.blockage_map), 1), minor=True)
-        plt.grid(which='minor', color='black', linestyle='-', linewidth=0.5)
-        if node_list is not None:
-            # print(node_list)
-            for node in node_list:
-                plt.annotate(f"f:{node.cost_f:d}\ng:{node.cost_g:d},b:{node.bend_count:d}\n{node.parent.pos if node.parent is not None else ''}", xy=(node.pos[0]-0.45, node.pos[1]+0.3), fontsize=3)
-        plt.title(os.path.basename(filepath)[:-4] + f" WL: {wl}")
-        plt.savefig(filepath, dpi=300)
+    #     grid[self.pin_pos_y[0], self.pin_pos_x[0]] = 3
+    #     grid[self.pin_pos_y[1:], self.pin_pos_x[1:]] = 2
+    #     plt.imshow(grid, vmin=-1, vmax=3, cmap="RdBu_r")
+    #     ax = plt.gca()
+    #     ax.set_xticks(np.arange(0, len(self.blockage_map), 1))
+    #     ax.set_yticks(np.arange(0, len(self.blockage_map), 1))
+    #     ax.set_xticks(np.arange(-.5, len(self.blockage_map), 1), minor=True)
+    #     ax.set_yticks(np.arange(-.5, len(self.blockage_map), 1), minor=True)
+    #     plt.grid(which='minor', color='black', linestyle='-', linewidth=0.5)
+    #     if node_list is not None:
+    #         # print(node_list)
+    #         for node in node_list:
+    #             plt.annotate(f"f:{node.cost_f:d}\ng:{node.cost_g:d},b:{node.bend_count:d}\n{node.parent.pos if node.parent is not None else ''}", xy=(node.pos[0]-0.45, node.pos[1]+0.3), fontsize=3)
+    #     plt.title(os.path.basename(filepath)[:-4] + f" WL: {wl}")
+    #     plt.savefig(filepath, dpi=300)
 
-    # Please do not override the method
-    def verify_solution(self, path: List[Tuple[Tuple[int, int], Tuple[int, int]]]) -> bool:
-        path = set(self._split_path(path))
-        if not all((x, y) in path for x, y in zip(self.pin_pos_x, self.pin_pos_y)):
-            print(f"Not all pins are connected")
-            return False, "NOT_ALL_PINS_CONNECTED"
-        if any(self.blockage_map[y, x] for (x, y) in path):
-            print(f"Path overlapped with blockages")
-            return False, "PATH_ON_BLOCKAGES"
-        if not all(0 <= x < self.grid_size[0] and 0 <= y < self.grid_size[1] for (x, y) in path):
-            print(f"Path outside grid")
-            return False, "PATH_OUTSIDE_GRID"
-        return True, "PASSED"
+    # # Please do not override the method
+    # def verify_solution(self, path: List[Tuple[Tuple[int, int], Tuple[int, int]]]) -> bool:
+    #     path = set(self._split_path(path))
+    #     if not all((x, y) in path for x, y in zip(self.pin_pos_x, self.pin_pos_y)):
+    #         print(f"Not all pins are connected")
+    #         return False, "NOT_ALL_PINS_CONNECTED"
+    #     if any(self.blockage_map[y, x] for (x, y) in path):
+    #         print(f"Path overlapped with blockages")
+    #         return False, "PATH_ON_BLOCKAGES"
+    #     if not all(0 <= x < self.grid_size[0] and 0 <= y < self.grid_size[1] for (x, y) in path):
+    #         print(f"Path outside grid")
+    #         return False, "PATH_OUTSIDE_GRID"
+    #     return True, "PASSED"
 
-    # Please do not override the method
-    def profile(self, n_runs: int = 10) -> Tuple[float, float]:
-        runtime = 0
-        for _ in range(n_runs):
-            start = time.time()
-            self.solve()
-            end = time.time()
-            runtime += end - start
-        runtime /= n_runs
+    # # Please do not override the method
+    # def profile(self, n_runs: int = 10) -> Tuple[float, float]:
+    #     runtime = 0
+    #     for _ in range(n_runs):
+    #         start = time.time()
+    #         self.solve()
+    #         end = time.time()
+    #         runtime += end - start
+    #     runtime /= n_runs
 
-        # start_mem = mp.memory_usage(max_usage=True)
-        # res = mp.memory_usage(proc=(self.solve, []), max_usage=True, retval=True)
-        # max_mem = res[0]
-        # used_mem = max_mem - start_mem
-        used_mem = 0  # no mem profile for now
-        return runtime, used_mem
+    #     # start_mem = mp.memory_usage(max_usage=True)
+    #     # res = mp.memory_usage(proc=(self.solve, []), max_usage=True, retval=True)
+    #     # max_mem = res[0]
+    #     # used_mem = max_mem - start_mem
+    #     used_mem = 0  # no mem profile for now
+    #     return runtime, used_mem
 
-    # Please do not override the method
-    def dump_output_file(
-        self,
-        path: List[Tuple[Tuple[int, int], Tuple[int, int]]],
-        wl: int,
-        wl_list: List[int],
-        n_visited_list: int,
-        runtime: float,
-        used_mem: float,
-        output_path: str,
-    ) -> None:
-        path = np.array(path).reshape(-1, 4).astype(str).tolist()
-        n_vec = len(path)
-        with open(output_path, "w") as f:
-            output = (
-                str(n_vec)
-                + "\n"
-                + "\n".join([" ".join(v) for v in path])
-                + "\n"
-                + str(wl)
-                + "\n"
-                + " ".join(map(str, wl_list))
-                + "\n"
-                + " ".join(map(str, n_visited_list))
-                + "\n"
-                + str(runtime)
-                + "\n"
-                + str(used_mem)
-            )
-            f.write(output)
+    # # Please do not override the method
+    # def dump_output_file(
+    #     self,
+    #     path: List[Tuple[Tuple[int, int], Tuple[int, int]]],
+    #     wl: int,
+    #     wl_list: List[int],
+    #     n_visited_list: int,
+    #     runtime: float,
+    #     used_mem: float,
+    #     output_path: str,
+    # ) -> None:
+    #     path = np.array(path).reshape(-1, 4).astype(str).tolist()
+    #     n_vec = len(path)
+    #     with open(output_path, "w") as f:
+    #         output = (
+    #             str(n_vec)
+    #             + "\n"
+    #             + "\n".join([" ".join(v) for v in path])
+    #             + "\n"
+    #             + str(wl)
+    #             + "\n"
+    #             + " ".join(map(str, wl_list))
+    #             + "\n"
+    #             + " ".join(map(str, n_visited_list))
+    #             + "\n"
+    #             + str(runtime)
+    #             + "\n"
+    #             + str(used_mem)
+    #         )
+    #         f.write(output)
 
-    # Please do not override the method
-    def load_solution(self, output_path: str):
-        with open(output_path, "r") as f:
-            lines = f.readlines()
-            n_vec = int(lines[0].strip())
-            path = []
-            for i in lines[1 : 1 + n_vec]:
-                i = i.strip().split(" ")
-                path.append(((int(i[0]), int(i[1])), (int(i[2]), int(i[3]))))
-            wl = int(lines[1 + n_vec].strip())
-            wl_list = [int(i) for i in lines[2 + n_vec].strip().split(" ")]
-            n_visited_list = [int(i) for i in lines[3 + n_vec].strip().split(" ")]
-            runtime = float(lines[4 + n_vec].strip())
-            used_mem = float(lines[5 + n_vec].strip())
-            # print(path, wl, wl_list, n_visited_list)
-        return path, wl, wl_list, n_visited_list, runtime, used_mem
+    # # Please do not override the method
+    # def load_solution(self, output_path: str):
+    #     with open(output_path, "r") as f:
+    #         lines = f.readlines()
+    #         n_vec = int(lines[0].strip())
+    #         path = []
+    #         for i in lines[1 : 1 + n_vec]:
+    #             i = i.strip().split(" ")
+    #             path.append(((int(i[0]), int(i[1])), (int(i[2]), int(i[3]))))
+    #         wl = int(lines[1 + n_vec].strip())
+    #         wl_list = [int(i) for i in lines[2 + n_vec].strip().split(" ")]
+    #         n_visited_list = [int(i) for i in lines[3 + n_vec].strip().split(" ")]
+    #         runtime = float(lines[4 + n_vec].strip())
+    #         used_mem = float(lines[5 + n_vec].strip())
+    #         # print(path, wl, wl_list, n_visited_list)
+    #     return path, wl, wl_list, n_visited_list, runtime, used_mem
