@@ -26,7 +26,7 @@ def main():
     read_inputs.read_inputs()
     #build_grids()
     route_nets.route_nets()
-    write_def()
+    # write_def()
 
     return 
 

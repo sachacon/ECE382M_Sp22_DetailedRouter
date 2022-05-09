@@ -25,7 +25,7 @@ class Net:
         offset,
     ) -> None: 
         self.degree = degree 
-        self.name = name 
+        self.name = name # string
         self.pin_instances = pin_instances
         self.pin_directions = pin_directions
         self.offset = offset 

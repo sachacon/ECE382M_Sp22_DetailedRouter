@@ -17,20 +17,27 @@ def route_nets():
     pin_pos_y = []
 
     # Horizontal for sample1
-    m2_blockage_pos_x = [] 
-    m2_blockage_pos_y = []
-    m2_blockages_size_x = []
-    m2_blockages_size_y = [] 
+    # m2_blockage_pos_x = [] 
+    # m2_blockage_pos_y = []
+    # m2_blockages_size_x = []
+    # m2_blockages_size_y = [] 
 
     m2_blockage_map = []   
    
     # Vertical for sample1
-    m3_blockage_pos_x = [] 
-    m3_blockage_pos_y = []
-    m3_blockages_size_x = []
-    m3_blockages_size_y = []
+    # m3_blockage_pos_x = [] 
+    # m3_blockage_pos_y = []
+    # m3_blockages_size_x = []
+    # m3_blockages_size_y = []
 
     m3_blockage_map = []
+
+    m4_blockage_map = []
+    m5_blockage_map = []
+    m6_blockage_map = []
+    m7_blockage_map = []
+    m8_blockage_map = []
+    m9_blockage_map = []
 
     for n in range(globals.num_nets):
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
