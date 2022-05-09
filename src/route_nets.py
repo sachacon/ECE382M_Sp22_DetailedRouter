@@ -1,7 +1,8 @@
 
 import globals
 import numpy as np
-from a_star import A_Star_Search 
+# from a_star import A_Star_Search 
+import a_star
 from read_inputs import * 
 
 def route_nets():
@@ -77,7 +78,7 @@ def route_nets():
         # A* search routing 
         # If a pin position is (0,0), net isn't formatted correclty, skip routing that net
 
-        routing = A_Star_Search()
+        routing = a_star.A_Star_SearchA_Star_Search()
         routing.grid_size = list(globals.grid_size)
         routing.n_pins = n_pins
         # routing.n_blockages = 

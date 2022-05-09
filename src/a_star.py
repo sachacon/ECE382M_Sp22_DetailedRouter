@@ -21,9 +21,12 @@ from xmlrpc.client import Boolean
 
 import numpy as np
 
-from route_nets import route_nets
+# from route_nets import route_nets
+import route_nets
 
-from .p2_routing_base import A_Star_Search_Base, GridAstarNode, PriorityQueue
+# from .p2_routing_base import A_Star_Search_Base, GridAstarNode, PriorityQueue
+from p2_routing_base import A_Star_Search_Base, GridAstarNode, PriorityQueue
+
 
 __all__ = ["A_Star_Search"]
 
