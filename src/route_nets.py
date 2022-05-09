@@ -20,13 +20,17 @@ def route_nets():
     m2_blockage_pos_x = [] 
     m2_blockage_pos_y = []
     m2_blockages_size_x = []
-    m2_blockages_size_y = []    
+    m2_blockages_size_y = [] 
+
+    m2_blockage_map = []   
    
     # Vertical for sample1
     m3_blockage_pos_x = [] 
     m3_blockage_pos_y = []
     m3_blockages_size_x = []
     m3_blockages_size_y = []
+
+    m3_blockage_map = []
 
     for n in range(globals.num_nets):
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
@@ -41,11 +45,12 @@ def route_nets():
         
     return 
 
-def isInsideGuideBox(layer, grid_coordinate)
+def isInsideGuideBox(layer, grid_coordinate):
     # Expect layer to be integer for ex. 1 or 4 
     # Expect grid_coordiante to be tuple for ex. (5, 5) or (21, 43) 
 
-    bool isInside = False;
+    # bool isInside = False;
+    isInside = False
 
 
     return isInside 
