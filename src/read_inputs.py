@@ -292,9 +292,9 @@ def read_instance_type():
 
             prev_line = line 
 
-    print("instance type keys", instance_types.keys())
-    print("AO22XL", instance_types['AO22XL'].pin_shapes.keys())
-    print("AO22XL Pin Y shapes", instance_types['AO22XL'].pin_shapes['Y'])
+    # print("instance type keys", instance_types.keys())
+    # print("AO22XL", instance_types['AO22XL'].pin_shapes.keys())
+    # print("AO22XL Pin Y shapes", instance_types['AO22XL'].pin_shapes['Y'])
 
     return instance_types
  

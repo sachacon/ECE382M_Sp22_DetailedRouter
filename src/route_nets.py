@@ -90,9 +90,9 @@ def route_nets():
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
 
 
-        #print("n_pins = ", n_pins)
-        #print("pin_pos_x = ", pin_pos_x)
-        #print("pin_pos_y = ", pin_pos_y)  
+        # print("n_pins = ", n_pins)
+        # print("pin_pos_x = ", pin_pos_x)
+        # print("pin_pos_y = ", pin_pos_y)  
 
         # A* search routing 
         # If a pin position is (0,0), net isn't formatted correclty, skip routing that net
@@ -127,8 +127,8 @@ def route_nets():
         for m in range(len(metal_list)):
             blockage_map[metal_list[m]][path_list[m][1]][path_list[m][0]] = 1
         
-        print("path list: ", path_list)
-        print("metal list: ", metal_list)
+        # print("path list: ", path_list)
+        # print("metal list: ", metal_list)
         
         # print("block M2: ", blockage_map[2])
         # print("block M3: ", blockage_map[3])
@@ -137,7 +137,7 @@ def route_nets():
 
         # print(blockage_map[2] == blockage_map[3])
 
-        break
+        # break
         
     return 
 

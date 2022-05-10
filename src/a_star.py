@@ -295,6 +295,8 @@ class A_Star_Search(A_Star_Search_Base):
 
             trackmetal = []
 
+            print("j: ", j)
+
             # if source_node.pos in sink_node_array_as_list:
             #     continue
 
@@ -420,9 +422,11 @@ class A_Star_Search(A_Star_Search_Base):
                         sink_node = node
                         tracknode = self._backtrack(sink_node) # connected path from source to sink
 
+                        for k in range(0, len(tracknode)):
+                            trackmetal.append(node_record[node.pos].layer) # record metal layer of the node
+
                         for k in range(0, len(self._backtrack(sink_node)) - 1):
                             connect_net = np.append(connect_net, [list(tracknode[k])], axis = 0) # make connected net
-                            trackmetal.append(node_record[node.pos].layer) # record metal layer of the node
                         
                         break
 
@@ -467,6 +471,10 @@ class A_Star_Search(A_Star_Search_Base):
                                 node_record[neighbor.pos] = neighbor
             
             # path_list as point_wise output
+
+            # print("path: ", tracknode, len(tracknode))
+            # print("metal: ", trackmetal, len(trackmetal))
+
             if j == 0:
                 for k in range(len(tracknode)):
                     path_list.append(tracknode[k])
@@ -475,6 +483,7 @@ class A_Star_Search(A_Star_Search_Base):
             else:
                 tracknode.reverse()
                 trackmetal.reverse()
+
                 for k in range(len(tracknode)):
                     path_list.append(tracknode[k])
                     metal_list.append(trackmetal[k])
