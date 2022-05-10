@@ -333,7 +333,7 @@ class A_Star_Search(A_Star_Search_Base):
 
                         for k in range(0, len(tracknode)):
                             connect_net = np.append(connect_net, [list(tracknode[k])], axis = 0) # make connected net
-                            trackmetal.append(node_record[node.pos].layer) # record metal layer of the node
+                            trackmetal.append(node_record[tracknode[k]].layer) # record metal layer of the node
 
                         break
 
@@ -353,6 +353,7 @@ class A_Star_Search(A_Star_Search_Base):
                                 neighbor_copy.bend_count = self.bend_count_number(neighbor_copy)
                                 neighbor_copy.cost_g = self.compute_g(neighbor_copy)
                                 neighbor_copy.cost_f = self.compute_f_array(neighbor_copy, self.sink_node_array)
+                                neighbor_copy.layer = neighbor.layer
 
                                 if neighbor_copy.cost_g < node_record[neighbor.pos].cost_g: # if potentially a smaller cost_g
                                     # update node
@@ -361,6 +362,7 @@ class A_Star_Search(A_Star_Search_Base):
                                     node_record[neighbor.pos].bend_count = neighbor_copy.bend_count
                                     node_record[neighbor.pos].cost_g = neighbor_copy.cost_g
                                     node_record[neighbor.pos].cost_f = neighbor_copy.cost_f
+                                    node_record[neighbor.pos].layer = neighbor_copy.layer
                                 else:
                                     if neighbor_copy.cost_g == node_record[neighbor.pos].cost_g:
                                         if neighbor_copy.bend_count < node_record[neighbor.pos].bend_count: # if potentially a smaller bend
@@ -368,6 +370,7 @@ class A_Star_Search(A_Star_Search_Base):
                                             #
                                             node_record[neighbor.pos].parent = neighbor_copy.parent
                                             node_record[neighbor.pos].bend_count = neighbor_copy.bend_count
+                                            node_record[neighbor.pos].layer = neighbor_copy.layer
                             else: # if neighbor.visited == False, didn't go into the queue before
                                 neighbor.parent = node
                                 neighbor.bend_count = self.bend_count_number(neighbor)
@@ -423,7 +426,7 @@ class A_Star_Search(A_Star_Search_Base):
                         tracknode = self._backtrack(sink_node) # connected path from source to sink
 
                         for k in range(0, len(tracknode)):
-                            trackmetal.append(node_record[node.pos].layer) # record metal layer of the node
+                            trackmetal.append(node_record[tracknode[k]].layer) # record metal layer of the node
 
                         for k in range(0, len(self._backtrack(sink_node)) - 1):
                             connect_net = np.append(connect_net, [list(tracknode[k])], axis = 0) # make connected net
@@ -446,6 +449,7 @@ class A_Star_Search(A_Star_Search_Base):
                                 neighbor_copy.bend_count = self.bend_count_number(neighbor_copy)
                                 neighbor_copy.cost_g = self.compute_g(neighbor_copy)
                                 neighbor_copy.cost_f = self.compute_f_array(neighbor_copy, connect_net)
+                                neighbor_copy.layer = neighbor.layer
 
                                 if neighbor_copy.cost_g < node_record[neighbor.pos].cost_g: # if potentially a smaller cost_g
                                     # update node
@@ -454,6 +458,7 @@ class A_Star_Search(A_Star_Search_Base):
                                     node_record[neighbor.pos].bend_count = neighbor_copy.bend_count
                                     node_record[neighbor.pos].cost_g = neighbor_copy.cost_g
                                     node_record[neighbor.pos].cost_f = neighbor_copy.cost_f
+                                    node_record[neighbor.pos].layer = neighbor_copy.layer
                                 else:
                                     if neighbor_copy.cost_g == node_record[neighbor.pos].cost_g:
                                         if neighbor_copy.bend_count < node_record[neighbor.pos].bend_count: # if potentially a smaller bend
@@ -461,6 +466,7 @@ class A_Star_Search(A_Star_Search_Base):
                                             #
                                             node_record[neighbor.pos].parent = neighbor_copy.parent
                                             node_record[neighbor.pos].bend_count = neighbor_copy.bend_count
+                                            node_record[neighbor.pos].layer = neighbor_copy.layer
                             else: # if neighbor.visited == False, didn't go into the queue before
                                 neighbor.parent = node
                                 neighbor.bend_count = self.bend_count_number(neighbor)
