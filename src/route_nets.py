@@ -237,8 +237,8 @@ def format_net(Net):
         grid_x = np.arange(start=wrong_dir_start, step=wrong_dir_step, stop=(wrong_dir_start + (wrong_dir_step*(wrong_dir_num))) ) 
         grid_y = np.arange(start=pref_dir_start, step=pref_dir_step, stop=(pref_dir_start + (pref_dir_step*(pref_dir_num) ) ) )
     else:
-        grid_x = np.arange(start=wrong_dir_start, step=wrong_dir_step, stop=(wrong_dir_start + (wrong_dir_step*(wrong_dir_num))) ) 
-        grid_y = np.arange(start=pref_dir_start, step=pref_dir_step, stop=(pref_dir_start + (pref_dir_step*(pref_dir_num) ) ) )
+        grid_y = np.arange(start=wrong_dir_start, step=wrong_dir_step, stop=(wrong_dir_start + (wrong_dir_step*(wrong_dir_num))) ) 
+        grid_x = np.arange(start=pref_dir_start, step=pref_dir_step, stop=(pref_dir_start + (pref_dir_step*(pref_dir_num) ) ) )
 
     #print("grid_x = ", grid_x)
     #print("grid_y = ", grid_y) 
