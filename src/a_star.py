@@ -81,7 +81,7 @@ class A_Star_Search(A_Star_Search_Base):
         source_array = np.ndarray(shape = (1, 2))
         source_array[0][0] = source.pos[0]
         source_array[0][1] = source.pos[1]
-        cost_f_array = self.compute_g(source) + 50 * self._find_nearest_target_dist(source_array, target)
+        cost_f_array = self.compute_g(source) + 10 * self._find_nearest_target_dist(source_array, target)
         return cost_f_array
     
     def bend_count_number(self, node: GridAstarNode) -> int: # count bend numbers so far after propagation
@@ -324,8 +324,8 @@ class A_Star_Search(A_Star_Search_Base):
                     # if (counter % 200 == 0):
                     #     print("counter: ", counter)
 
-                    # if self.net_name == "net202":
-                    #     print("1st node pos: ", node.pos, "1st node metal: ", node.layer)
+                    #if self.net_name == "net374":
+                    #    print("1st node pos: ", node.pos, "1st node metal: ", node.layer)
 
                     #print("1st node pos: ", node.pos, "1st node metal: ", node.layer)
 
@@ -425,8 +425,9 @@ class A_Star_Search(A_Star_Search_Base):
                     # if (counter % 200 == 0):
                     #     print("counter: ", counter)
 
-                    # if self.net_name == "net202":
-                    #     print("2nd node pos: ", node.pos, "2nd node metal: ", node.layer)
+                    #if self.net_name == "net374":
+                    #    print("2nd node pos: ", node.pos, "2nd node metal: ", node.layer)
+                    #    print("queue length: ", node_path.qsize())
 
                     #print("2nd node pos: ", node.pos, "2nd node metal: ", node.layer)
 
@@ -453,10 +454,15 @@ class A_Star_Search(A_Star_Search_Base):
                             connect_net = np.append(connect_net, [list(tracknode[k])], axis = 0) # make connected net
                         
                         break
+                    #if node.pos == (1464, 580):
+                    #        print('hi')
 
                     self.find_neighbors(node) # find neighbors of the current node
                     for i in range(0, len(node.neighbors)): # for each neighbor
                         neighbor = node.neighbors[i]
+                         
+                        #if node.pos == (1464, 580):
+                        #        print("neighbor pos: ", node.neighbors[i].pos)
 
                         if neighbor.pos in path: # if the neighbor is in the closed list, meaning the neighbor has been explored, red
                             continue # move onto the next neighbor

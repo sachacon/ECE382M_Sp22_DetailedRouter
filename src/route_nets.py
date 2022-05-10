@@ -88,11 +88,11 @@ def route_nets():
         print("net name = ", globals.nets[n].name)
 
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
-        # if n_pins != 2:
-        #     continue
+        if n_pins == 1:
+             continue
 
-        # if globals.nets[n].name != "net202":
-        #     continue
+        #if globals.nets[n].name != "net374":
+        #    continue
         # print("net name = ", globals.nets[n].name)
 
         # print("n_pins = ", n_pins)
@@ -316,11 +316,12 @@ def format_net(Net):
                     break 
             if(found == 1):
                 break
-        
+          
+       
         if(found == 0):
             pos_x = (np.abs(grid_x - llx)).argmin()
             pos_y = (np.abs(grid_y - lly)).argmin()
-       
+        
         pin_pos_x.append(pos_x)
         pin_pos_y.append(pos_y)
 
