@@ -316,7 +316,6 @@ def format_net(Net):
                     break 
             if(found == 1):
                 break
-          
        
         if(found == 0):
             pos_x = (np.abs(grid_x - llx)).argmin()
@@ -324,6 +323,5 @@ def format_net(Net):
         
         pin_pos_x.append(pos_x)
         pin_pos_y.append(pos_y)
-
 
     return n_pins, pin_pos_x, pin_pos_y
