@@ -1,12 +1,29 @@
 Reading in results from LEF/DEF parser and routing guide ...
 
+Read nets
+Update nets
+Read instances
+Update instances
+Read instance types
+instance type keys dict_keys(['AOI221X2', 'NAND3X2', 'AOI222X1', 'NOR4X4', 'NOR4X2', 'NAND4X2', 'BUFX3', 'AOI22X2', 'OR4X1', 'NAND3X1', 'NOR2X1', 'AOI221X1', 'NAND4X1', 'AOI22X1', 'BUFX6', 'AO22XL'])
+Read routing guides
+Read metal layers
+len(metal_layers) =  9
+metal.layer =  1
+metal.layer =  2
+metal.layer =  3
+metal.layer =  4
+metal.layer =  5
+metal.layer =  6
+metal.layer =  7
+metal.layer =  8
+metal.layer =  9
 Routing Nets ...
 
 grid_size =  (52, 51)
 num_nets =  11
 
 Formatting  net1230
-Testing
 grid_x =  [41.9 42.1 42.3 42.5 42.7 42.9 43.1 43.3 43.5 43.7 43.9 44.1 44.3 44.5
  44.7 44.9 45.1 45.3 45.5 45.7 45.9 46.1 46.3 46.5 46.7 46.9 47.1 47.3
  47.5 47.7 47.9 48.1 48.3 48.5 48.7 48.9 49.1 49.3 49.5 49.7 49.9 50.1
@@ -17,6 +34,7 @@ grid_y =  [36.005 36.195 36.385 36.575 36.765 36.955 37.145 37.335 37.525 37.715
  41.705 41.895 42.085 42.275 42.465 42.655 42.845 43.035 43.225 43.415
  43.605 43.795 43.985 44.175 44.365 44.555 44.745 44.935 45.125 45.315
  45.505]
-m =  0  llx =  46.6  lly =  41.04  urx =  49.2  ury =  41.1
-Found Track Point
-m =  0  llx =  46.864999999999995  lly =  36.724999999999994  urx =  47.364999999999995  ury =  36.805
+pin_name =  Y
+instance_name =  inst7234
+instances[instance_name].instance_type =  AO22XL
+instance_coordinates =  (46.6, 41.04)

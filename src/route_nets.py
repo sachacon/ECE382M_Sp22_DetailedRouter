@@ -145,6 +145,7 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
     # Expect layer to be integer for ex. 1 or 4 
     # Expect grid_coordiante to be tuple for ex. (5, 5) or (21, 43) 
 
+
     # print(globals.net_guides.keys())
 
     guide_boxes = globals.net_guides[net_name].guide
@@ -183,8 +184,10 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
                 isInside = False
                 break 
 
+
     return True
     # return isInside 
+
  
 
 # - Get grid track system beforehand  
@@ -248,7 +251,6 @@ def format_net(Net):
        
         # Get Coordinates and Orientation of Instance 
         instance = globals.instances[instance_name]
-        #print("instance.width = ", instance.width, "instance.height = ", instance.height)
         instance_coordinates = (int(instance.width)/2000, int(instance.height)/2000)
         instance_orientation = instance.orientation
         #print("instance_coordinates = ", instance_coordinates)
@@ -263,16 +265,16 @@ def format_net(Net):
         #print("instance_type = ", inst_type)
 
         # Get Pin Shapes  
-        for m in range(len(instance_type.pin_names)):
-            if(instance_type.pin_names[m] == pin_name):
-                pin_shapes_list = instance_type.pin_shapes_list[m]
+        for m in instance_type.pin_shapes.keys():
+            if(m == pin_name):
+                pin_shapes = instance_type.pin_shapes[m]
                 break    
-        #print("pin_shapes_list = ", pin_shapes_list)
+        #print("pin_shapes = ", pin_shapes)
 
         # Convert Pin Shapes
         found = 0 
-        for m in range(len(pin_shapes_list)):
-            _pin_shape = pin_shapes_list[m]
+        for m in range(len(pin_shapes)):
+            _pin_shape = pin_shapes[m]
             _pin_shape = _pin_shape.replace(","," ")
             _pin_shape = _pin_shape.split()
 

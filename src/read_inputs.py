@@ -47,13 +47,11 @@ class Instance :
 class InstanceType :
     def __init__(
         self,
-        instance_name, 
-        pin_names, 
-        pin_shapes_list
+        instance_name,  
+        pin_shapes
     ) -> None: 
         self.instance_name = instance_name 
-        self.pin_names = pin_names
-        self.pin_shapes_list = pin_shapes_list
+        self.pin_shapes = pin_shapes
 
 class CoreRow:
     def __init__(
@@ -247,38 +245,38 @@ def read_out_scl(path):
  
 def read_instance_type():
     prev_line = None
-    start = 0 
+    start = 0; start2 = 0; 
     instance_types = {} 
-    pin_names = []
-    pin_shapes_list = [] 
+    pin_shapes_dict = {} 
     pin_shapes = []
+    pin_name = None
+      
     filename = "bookshelf_writer/out.lef"
     with open(filename, 'r', encoding="ISO-8859-1") as f:
         for line in f:
 
             # Instance Type 
             if("--pins" in line):
-
                 # Create Object For Previous Instance Type 
                 if(start == 1):
-                    #print("pin_shapes_list = ", pin_shapes_list)
-                    instance_types[instance_type] = InstanceType(instance_type,pin_names,pin_shapes_list)
-                    pin_names = []
-                    #pin_shapes_list = []
+                    pin_shapes_dict[pin_name] = pin_shapes
+                    instance_types[instance_type] = InstanceType(instance_type,pin_shapes_dict)
+                    pin_shapes_dict = {}
+                    start2 = 0 
                 start = 1 
                 tmp_line = prev_line.split()
                 instance_type = tmp_line[0]
 
             # Pin Name 
             if("use" in line):
+                if(start2 == 1):
+                    pin_shapes_dict[pin_name] = pin_shapes
+                start2= 1
                 tmp_line = prev_line.split()
-                pin_names.append(tmp_line[0])
-                #print("instance_type = ", instance_type, " pin_name = ", tmp_line[0])
- 
+                pin_name = tmp_line[0]
+                 
             if("shape" in line):
-                if(len(pin_shapes) != 0):
-                    pin_shapes_list.append(pin_shapes)
-                    pin_shapes = [] 
+                pin_shapes = []      
                  
             if(": 0" in line):
                 tmp_line = line.replace(": 0","")
@@ -288,12 +286,15 @@ def read_instance_type():
                 tmp_line = tmp_line.replace("\n","")
                 pin_shapes.append(tmp_line)
 
+            if("Metal" in line):
+                pin_shapes_dict[pin_name] = pin_shapes
+                instance_types[instance_type] = InstanceType(instance_type,pin_shapes_dict)
+
             prev_line = line 
 
-    instance_types[instance_type] = InstanceType(instance_type,pin_names,pin_shapes_list)
-
-    
-    print(instance_type, " ", pin_names, " ", pin_shapes_list, "\n")
+    print("instance type keys", instance_types.keys())
+    print("AO22XL", instance_types['AO22XL'].pin_shapes.keys())
+    print("AO22XL Pin Y shapes", instance_types['AO22XL'].pin_shapes['Y'])
 
     return instance_types
  
@@ -322,9 +323,6 @@ def read_route_guide(filename):
 
     net_guides[net_name] = NetGuide(net_name, single_net_guide)
 
-    print(net_guides.keys())
-    for key in net_guides.keys():
-        print("key = ", key, " net guide = ", net_guides[key].guide) 
     return net_guides
 
 
