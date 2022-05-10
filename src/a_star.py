@@ -92,8 +92,8 @@ class A_Star_Search(A_Star_Search_Base):
         return count
     
     def find_neighbors(self, node: GridAstarNode): # find neighbors of current node of Class GridAstarNode, considering bonding box
-        # left, right -> horizontal: m3, 5, 7, 9
-        # top, bottom -> vertical: m2, 4, 6, 8
+        # left, right -> horizontal: m3, 5, 7, 9 > m2, 4, 6, 8, for horizontal routing, metal 3, 5, 7, 9 have higher priority over metal 2, 4, 6, 8
+        # top, bottom -> vertical: m2, 4, 6, 8 > m3, 5, 7, 9, for vertical routing, metal 2, 4, 6, 8 have higher priority over metal 3, 5, 7, 9
         neighbor_list = []
         if not(self.if_node_outside_grid((node.pos[0] - 1, node.pos[1]))): # left neighbor (x - 1, y) isn't outside grid
             if not(self.m3_blockage_map[node.pos[1]][node.pos[0] - 1]) and route_nets.isInsideGuideBox(self.net_name, 3, (node.pos[0] - 1, node.pos[1])): # no metal 3 blockage and is inside metal 3 bonding box 
@@ -116,6 +116,26 @@ class A_Star_Search(A_Star_Search_Base):
                 left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
                 left_neighbor.layer = 9
                 neighbor_list.append(left_neighbor)
+            elif not(self.m2_blockage_map[node.pos[1]][node.pos[0] - 1]) and route_nets.isInsideGuideBox(self.net_name, 2, (node.pos[0] - 1, node.pos[1])): # no metal 2 blockage and is inside metal 2 bonding box 
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 2
+                neighbor_list.append(left_neighbor)
+            elif not(self.m4_blockage_map[node.pos[1]][node.pos[0] - 1]) and route_nets.isInsideGuideBox(self.net_name, 4, (node.pos[0] - 1, node.pos[1])): # no metal 4 blockage and is inside metal 4 bonding box 
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 4
+                neighbor_list.append(left_neighbor)
+            elif not(self.m6_blockage_map[node.pos[1]][node.pos[0] - 1]) and route_nets.isInsideGuideBox(self.net_name, 6, (node.pos[0] - 1, node.pos[1])): # no metal 6 blockage and is inside metal 6 bonding box 
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 6
+                neighbor_list.append(left_neighbor)
+            elif not(self.m8_blockage_map[node.pos[1]][node.pos[0] - 1]) and route_nets.isInsideGuideBox(self.net_name, 8, (node.pos[0] - 1, node.pos[1])): # no metal 8 blockage and is inside metal 8 bonding box 
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 8
+                neighbor_list.append(left_neighbor)
         if not(self.if_node_outside_grid((node.pos[0], node.pos[1] - 1))): # top neighbor (x, y - 1) isn't outside grid
             if not(self.m2_blockage_map[node.pos[1] - 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 2, (node.pos[0], node.pos[1] - 1)): # no metal 2 blockage and is inside metal 2 bonding box
                 top_neighbor = GridAstarNode()
@@ -136,6 +156,26 @@ class A_Star_Search(A_Star_Search_Base):
                 top_neighbor = GridAstarNode()
                 top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
                 top_neighbor.layer = 8
+                neighbor_list.append(top_neighbor)
+            elif not(self.m3_blockage_map[node.pos[1] - 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 3, (node.pos[0], node.pos[1] - 1)): # no metal 3 blockage and is inside metal 3 bonding box
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 3
+                neighbor_list.append(top_neighbor)
+            elif not(self.m5_blockage_map[node.pos[1] - 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 5, (node.pos[0], node.pos[1] - 1)): # no metal 5 blockage and is inside metal 5 bonding box
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 5
+                neighbor_list.append(top_neighbor)
+            elif not(self.m7_blockage_map[node.pos[1] - 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 7, (node.pos[0], node.pos[1] - 1)): # no metal 7 blockage and is inside metal 7 bonding box
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 7
+                neighbor_list.append(top_neighbor)
+            elif not(self.m9_blockage_map[node.pos[1] - 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 9, (node.pos[0], node.pos[1] - 1)): # no metal 9 blockage and is inside metal 9 bonding box
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 9
                 neighbor_list.append(top_neighbor)
         if not(self.if_node_outside_grid((node.pos[0] + 1, node.pos[1]))): # right neighbor (x + 1, y) isn't outside grid
             if not(self.m3_blockage_map[node.pos[1]][node.pos[0] + 1]) and route_nets.isInsideGuideBox(self.net_name, 3, (node.pos[0] + 1, node.pos[1])): # no metal 3 blockage and is inside metal 3 bonding box
@@ -158,6 +198,26 @@ class A_Star_Search(A_Star_Search_Base):
                 right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
                 right_neighbor.layer = 9
                 neighbor_list.append(right_neighbor)
+            elif not(self.m2_blockage_map[node.pos[1]][node.pos[0] + 1]) and route_nets.isInsideGuideBox(self.net_name, 2, (node.pos[0] + 1, node.pos[1])): # no metal 2 blockage and is inside metal 2 bonding box
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 2
+                neighbor_list.append(right_neighbor)
+            elif not(self.m4_blockage_map[node.pos[1]][node.pos[0] + 1]) and route_nets.isInsideGuideBox(self.net_name, 4, (node.pos[0] + 1, node.pos[1])): # no metal 4 blockage and is inside metal 4 bonding box
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 4
+                neighbor_list.append(right_neighbor)
+            elif not(self.m6_blockage_map[node.pos[1]][node.pos[0] + 1]) and route_nets.isInsideGuideBox(self.net_name, 6, (node.pos[0] + 1, node.pos[1])): # no metal 6 blockage and is inside metal 6 bonding box
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 6
+                neighbor_list.append(right_neighbor)
+            elif not(self.m8_blockage_map[node.pos[1]][node.pos[0] + 1]) and route_nets.isInsideGuideBox(self.net_name, 8, (node.pos[0] + 1, node.pos[1])): # no metal 8 blockage and is inside metal 8 bonding box
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 8
+                neighbor_list.append(right_neighbor)
         if not(self.if_node_outside_grid((node.pos[0], node.pos[1] + 1))): # bottom neighbor (x, y + 1) isn't outside grid
             if not(self.m2_blockage_map[node.pos[1] + 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 2, (node.pos[0], node.pos[1] + 1)): # no metal 2 blockage and is inside metal 2 bonding box
                 bottom_neighbor = GridAstarNode()
@@ -178,6 +238,26 @@ class A_Star_Search(A_Star_Search_Base):
                 bottom_neighbor = GridAstarNode()
                 bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
                 bottom_neighbor.layer = 8
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m3_blockage_map[node.pos[1] + 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 3, (node.pos[0], node.pos[1] + 1)): # no metal 3 blockage and is inside metal 3 bonding box
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 3
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m5_blockage_map[node.pos[1] + 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 5, (node.pos[0], node.pos[1] + 1)): # no metal 5 blockage and is inside metal 5 bonding box
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 5
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m7_blockage_map[node.pos[1] + 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 7, (node.pos[0], node.pos[1] + 1)): # no metal 7 blockage and is inside metal 7 bonding box
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 7
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m9_blockage_map[node.pos[1] + 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 9, (node.pos[0], node.pos[1] + 1)): # no metal 9 blockage and is inside metal 9 bonding box
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 9
                 neighbor_list.append(bottom_neighbor)
 
         node.neighbors = neighbor_list
@@ -231,6 +311,8 @@ class A_Star_Search(A_Star_Search_Base):
 
                 while True:
                     node = node_path.get() # get a priority node from queue based on f(n)
+
+                    # print("1st node pos: ", node.pos, "1st node metal: ", node.layer)
 
                     if node.pos not in path:
                         visited_node += 1
@@ -320,7 +402,7 @@ class A_Star_Search(A_Star_Search_Base):
                 while True:
                     node = node_path.get() # get a priority node from queue based on f(n)
 
-                    # print("node pos:", node.pos)
+                    # print("2nd node pos: ", node.pos, "2nd node metal: ", node.layer)
 
                     if node.pos not in path:
                         visited_node += 1

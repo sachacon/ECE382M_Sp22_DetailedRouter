@@ -39,19 +39,38 @@ def route_nets():
     m9_blockage_map = [] # H
 
     # build blockage map
-    blockage_map_row = []
-    for w in range(globals.grid_size[0]): # width
-        blockage_map_row.append(0) # no blockage
+
+    # blockage_map_row = []
+    # for w in range(globals.grid_size[0]): # width
+    #     blockage_map_row.append(0) # no blockage
 
     for h in range(globals.grid_size[1]): # height
-        m2_blockage_map.append(blockage_map_row)
-        m3_blockage_map.append(blockage_map_row)
-        m4_blockage_map.append(blockage_map_row)
-        m5_blockage_map.append(blockage_map_row)
-        m6_blockage_map.append(blockage_map_row)
-        m7_blockage_map.append(blockage_map_row)
-        m8_blockage_map.append(blockage_map_row)
-        m9_blockage_map.append(blockage_map_row)
+        # m2_blockage_map.append(blockage_map_row)
+        # m3_blockage_map.append(blockage_map_row)
+        # m4_blockage_map.append(blockage_map_row)
+        # m5_blockage_map.append(blockage_map_row)
+        # m6_blockage_map.append(blockage_map_row)
+        # m7_blockage_map.append(blockage_map_row)
+        # m8_blockage_map.append(blockage_map_row)
+        # m9_blockage_map.append(blockage_map_row)
+
+        m2_blockage_map.append([0] * globals.grid_size[0])
+        m3_blockage_map.append([0] * globals.grid_size[0])
+        m4_blockage_map.append([0] * globals.grid_size[0])
+        m5_blockage_map.append([0] * globals.grid_size[0])
+        m6_blockage_map.append([0] * globals.grid_size[0])
+        m7_blockage_map.append([0] * globals.grid_size[0])
+        m8_blockage_map.append([0] * globals.grid_size[0])
+        m9_blockage_map.append([0] * globals.grid_size[0])
+
+    # m2_blockage_map.append([[0] * globals.grid_size[0]] * globals.grid_size[1])
+    # m3_blockage_map.append([[0] * globals.grid_size[0]] * globals.grid_size[1])
+    # m4_blockage_map.append([[0] * globals.grid_size[0]] * globals.grid_size[1])
+    # m5_blockage_map.append([[0] * globals.grid_size[0]] * globals.grid_size[1])
+    # m6_blockage_map.append([[0] * globals.grid_size[0]] * globals.grid_size[1])
+    # m7_blockage_map.append([[0] * globals.grid_size[0]] * globals.grid_size[1])
+    # m8_blockage_map.append([[0] * globals.grid_size[0]] * globals.grid_size[1])
+    # m9_blockage_map.append([[0] * globals.grid_size[0]] * globals.grid_size[1])
     
     blockage_map = {}
     blockage_map[2] = m2_blockage_map
@@ -94,6 +113,11 @@ def route_nets():
         routing.m8_blockage_map = m8_blockage_map
         routing.m9_blockage_map = m9_blockage_map
 
+        # print("block M2: ", blockage_map[2])
+        # print("block M3: ", blockage_map[3])
+        # print("block M4: ", blockage_map[4])
+        # print("block M5: ", blockage_map[5])
+
         routing.net_name = n
 
         routing.initialize()
@@ -103,8 +127,17 @@ def route_nets():
         for m in range(len(metal_list)):
             blockage_map[metal_list[m]][path_list[m][1]][path_list[m][0]] = 1
         
-        # print("block M2", blockage_map[2])
-        # print("block M3", blockage_map[3])
+        print("path list: ", path_list)
+        print("metal list: ", metal_list)
+        
+        # print("block M2: ", blockage_map[2])
+        # print("block M3: ", blockage_map[3])
+        # print("block M4: ", blockage_map[4])
+        # print("block M5: ", blockage_map[5])
+
+        # print(blockage_map[2] == blockage_map[3])
+
+        break
         
     return 
 
@@ -150,8 +183,8 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
                 isInside = False
                 break 
 
-    # return True
-    return isInside 
+    return True
+    # return isInside 
  
 
 # - Get grid track system beforehand  
