@@ -319,10 +319,13 @@ class A_Star_Search(A_Star_Search_Base):
                 while True:
                     node = node_path.get() # get a priority node from queue based on f(n)
 
-                    counter += 1
+                    # counter += 1
                     
-                    #if (counter % 200 == 0):
-                     #   print("counter: ", counter)
+                    # if (counter % 200 == 0):
+                    #     print("counter: ", counter)
+
+                    if self.net_name == "net202":
+                        print("1st node pos: ", node.pos, "1st node metal: ", node.layer)
 
                     #print("1st node pos: ", node.pos, "1st node metal: ", node.layer)
 
@@ -416,6 +419,14 @@ class A_Star_Search(A_Star_Search_Base):
 
                 while True:
                     node = node_path.get() # get a priority node from queue based on f(n)
+
+                    # counter += 1
+                    
+                    # if (counter % 200 == 0):
+                    #     print("counter: ", counter)
+
+                    if self.net_name == "net202":
+                        print("2nd node pos: ", node.pos, "2nd node metal: ", node.layer)
 
                     #print("2nd node pos: ", node.pos, "2nd node metal: ", node.layer)
 

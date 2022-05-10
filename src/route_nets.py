@@ -88,8 +88,12 @@ def route_nets():
         print("net name = ", globals.nets[n].name)
 
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
-        #if n_pins != 2:
-         #       continue
+        # if n_pins != 2:
+        #     continue
+
+        # if globals.nets[n].name != "net202":
+        #     continue
+        # print("net name = ", globals.nets[n].name)
 
         # print("n_pins = ", n_pins)
         # print("pin_pos_x = ", pin_pos_x)
