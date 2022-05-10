@@ -359,8 +359,11 @@ def read_metal_layers():
         metal = metal_layers[n]
         print("metal.layer = ", metal.layer)
         if(metal.layer == 1):
-           grid_size = (metal.wrong_dir_num, metal.pref_dir_num)
-           
+           if(metal.direction == 'H'):
+               grid_size = (metal.wrong_dir_num, metal.pref_dir_num)
+           else:
+               grid_size = (metal.pref_dir_num, metal.wrong_dir_num)
+                
     return metal_layers, grid_size
 
 
