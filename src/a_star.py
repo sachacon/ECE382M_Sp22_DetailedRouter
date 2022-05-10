@@ -13,9 +13,9 @@ LastEditTime: 2022-03-08 16:04:28
 #######################################################################
 
 import dis
-from importlib.resources import path
-from tkinter import Grid
-from turtle import hideturtle
+#from importlib.resources import path
+#from tkinter import Grid
+#from turtle import hideturtle
 from typing import List, Tuple
 from xmlrpc.client import Boolean
 
@@ -52,9 +52,12 @@ class A_Star_Search(A_Star_Search_Base):
             self.sink_node_array[i - 1][1] = self.pin_pos_y[i]
         self.sink_node_array_list = self.sink_node_array.tolist()
         # print(self.sink_node_array_list)
-        # print("sink_node_array:", self.sink_node_array)
+        #print("sink_node_array:", self.sink_node_array)
 
-        # self.sink_node = (self.pin_pos_x[1], self.pin_pos_y[1]) # for two pins only
+        self.sink_node = (self.pin_pos_x[1], self.pin_pos_y[1]) # for two pins only
+
+        #print("source: ", self.source_node)
+        #print("sink: ", self.sink_node)
 
     def if_node_outside_grid(self, node: Tuple[int]) -> bool: # check if the node is outside the grid map, node is (x, y) positions
         if node[0] < 0: # if outside the left border, x
@@ -78,7 +81,7 @@ class A_Star_Search(A_Star_Search_Base):
         source_array = np.ndarray(shape = (1, 2))
         source_array[0][0] = source.pos[0]
         source_array[0][1] = source.pos[1]
-        cost_f_array = self.compute_g(source) + self._find_nearest_target_dist(source_array, target)
+        cost_f_array = self.compute_g(source) + 50 * self._find_nearest_target_dist(source_array, target)
         return cost_f_array
     
     def bend_count_number(self, node: GridAstarNode) -> int: # count bend numbers so far after propagation
@@ -286,6 +289,8 @@ class A_Star_Search(A_Star_Search_Base):
         wirelength_list = [] # output
         visited_node_list = [] # output
         connect_net = np.ndarray(shape = (0, 2)) # record routed paths
+        
+        counter = 0
 
         for j in range(0, self.n_pins - 1):
             node_path = PriorityQueue() # open list for nodes to be visited, green
@@ -295,7 +300,7 @@ class A_Star_Search(A_Star_Search_Base):
 
             trackmetal = []
 
-            print("j: ", j)
+           # print("j: ", j)
 
             # if source_node.pos in sink_node_array_as_list:
             #     continue
@@ -314,7 +319,12 @@ class A_Star_Search(A_Star_Search_Base):
                 while True:
                     node = node_path.get() # get a priority node from queue based on f(n)
 
-                    # print("1st node pos: ", node.pos, "1st node metal: ", node.layer)
+                    counter += 1
+                    
+                    #if (counter % 200 == 0):
+                     #   print("counter: ", counter)
+
+                    #print("1st node pos: ", node.pos, "1st node metal: ", node.layer)
 
                     if node.pos not in path:
                         visited_node += 1
@@ -407,7 +417,7 @@ class A_Star_Search(A_Star_Search_Base):
                 while True:
                     node = node_path.get() # get a priority node from queue based on f(n)
 
-                    # print("2nd node pos: ", node.pos, "2nd node metal: ", node.layer)
+                    #print("2nd node pos: ", node.pos, "2nd node metal: ", node.layer)
 
                     if node.pos not in path:
                         visited_node += 1

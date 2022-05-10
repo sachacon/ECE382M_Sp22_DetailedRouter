@@ -88,7 +88,8 @@ def route_nets():
         print("net name = ", globals.nets[n].name)
 
         n_pins, pin_pos_x, pin_pos_y = format_net(globals.nets[n])
-
+        #if n_pins != 2:
+         #       continue
 
         # print("n_pins = ", n_pins)
         # print("pin_pos_x = ", pin_pos_x)
@@ -121,6 +122,7 @@ def route_nets():
         routing.net_name = n
 
         routing.initialize()
+        #break
         (path_list, metal_list, wirelength, wirelength_list, visited_node_list) = routing.route_one_net()
 
         # update_blockages for metal
