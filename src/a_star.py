@@ -139,6 +139,46 @@ class A_Star_Search(A_Star_Search_Base):
                 left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
                 left_neighbor.layer = 8
                 neighbor_list.append(left_neighbor)
+            elif not(self.m3_blockage_map[node.pos[1]][node.pos[0] - 1]): # no metal 3 blockage 
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 3
+                neighbor_list.append(left_neighbor)
+            elif not(self.m5_blockage_map[node.pos[1]][node.pos[0] - 1]): # no metal 5 blockage
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 5
+                neighbor_list.append(left_neighbor)
+            elif not(self.m7_blockage_map[node.pos[1]][node.pos[0] - 1]): # no metal 7 blockage
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 7
+                neighbor_list.append(left_neighbor)
+            elif not(self.m9_blockage_map[node.pos[1]][node.pos[0] - 1]): # no metal 9 blockage
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 9
+                neighbor_list.append(left_neighbor)
+            elif not(self.m2_blockage_map[node.pos[1]][node.pos[0] - 1]): # no metal 2 blockage
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 2
+                neighbor_list.append(left_neighbor)
+            elif not(self.m4_blockage_map[node.pos[1]][node.pos[0] - 1]): # no metal 4 blockage
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 4
+                neighbor_list.append(left_neighbor)
+            elif not(self.m6_blockage_map[node.pos[1]][node.pos[0] - 1]): # no metal 6 blockage
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 6
+                neighbor_list.append(left_neighbor)
+            elif not(self.m8_blockage_map[node.pos[1]][node.pos[0] - 1]): # no metal 8 blockage
+                left_neighbor = GridAstarNode()
+                left_neighbor.pos = (node.pos[0] - 1, node.pos[1])
+                left_neighbor.layer = 8
+                neighbor_list.append(left_neighbor)
         if not(self.if_node_outside_grid((node.pos[0], node.pos[1] - 1))): # top neighbor (x, y - 1) isn't outside grid
             if not(self.m2_blockage_map[node.pos[1] - 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 2, (node.pos[0], node.pos[1] - 1)): # no metal 2 blockage and is inside metal 2 bonding box
                 top_neighbor = GridAstarNode()
@@ -176,6 +216,46 @@ class A_Star_Search(A_Star_Search_Base):
                 top_neighbor.layer = 7
                 neighbor_list.append(top_neighbor)
             elif not(self.m9_blockage_map[node.pos[1] - 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 9, (node.pos[0], node.pos[1] - 1)): # no metal 9 blockage and is inside metal 9 bonding box
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 9
+                neighbor_list.append(top_neighbor)
+            elif not(self.m2_blockage_map[node.pos[1] - 1][node.pos[0]]): # no metal 2 blockage
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 2
+                neighbor_list.append(top_neighbor)
+            elif not(self.m4_blockage_map[node.pos[1] - 1][node.pos[0]]): # no metal 4 blockage
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 4
+                neighbor_list.append(top_neighbor)
+            elif not(self.m6_blockage_map[node.pos[1] - 1][node.pos[0]]): # no metal 6 blockage
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 6
+                neighbor_list.append(top_neighbor)
+            elif not(self.m8_blockage_map[node.pos[1] - 1][node.pos[0]]): # no metal 8 blockage
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 8
+                neighbor_list.append(top_neighbor)
+            elif not(self.m3_blockage_map[node.pos[1] - 1][node.pos[0]]): # no metal 3 blockage
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 3
+                neighbor_list.append(top_neighbor)
+            elif not(self.m5_blockage_map[node.pos[1] - 1][node.pos[0]]): # no metal 5 blockage
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 5
+                neighbor_list.append(top_neighbor)
+            elif not(self.m7_blockage_map[node.pos[1] - 1][node.pos[0]]): # no metal 7 blockage
+                top_neighbor = GridAstarNode()
+                top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
+                top_neighbor.layer = 7
+                neighbor_list.append(top_neighbor)
+            elif not(self.m9_blockage_map[node.pos[1] - 1][node.pos[0]]): # no metal 9 blockage
                 top_neighbor = GridAstarNode()
                 top_neighbor.pos = (node.pos[0], node.pos[1] - 1)
                 top_neighbor.layer = 9
@@ -221,6 +301,46 @@ class A_Star_Search(A_Star_Search_Base):
                 right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
                 right_neighbor.layer = 8
                 neighbor_list.append(right_neighbor)
+            elif not(self.m3_blockage_map[node.pos[1]][node.pos[0] + 1]): # no metal 3 blockage
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 3
+                neighbor_list.append(right_neighbor)
+            elif not(self.m5_blockage_map[node.pos[1]][node.pos[0] + 1]): # no metal 5 blockage
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 5
+                neighbor_list.append(right_neighbor)
+            elif not(self.m7_blockage_map[node.pos[1]][node.pos[0] + 1]): # no metal 7 blockage
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 7
+                neighbor_list.append(right_neighbor)
+            elif not(self.m9_blockage_map[node.pos[1]][node.pos[0] + 1]): # no metal 9 blockage
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 9
+                neighbor_list.append(right_neighbor)
+            elif not(self.m2_blockage_map[node.pos[1]][node.pos[0] + 1]): # no metal 2 blockage
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 2
+                neighbor_list.append(right_neighbor)
+            elif not(self.m4_blockage_map[node.pos[1]][node.pos[0] + 1]): # no metal 4 blockage
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 4
+                neighbor_list.append(right_neighbor)
+            elif not(self.m6_blockage_map[node.pos[1]][node.pos[0] + 1]): # no metal 6 blockage
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 6
+                neighbor_list.append(right_neighbor)
+            elif not(self.m8_blockage_map[node.pos[1]][node.pos[0] + 1]): # no metal 8 blockage
+                right_neighbor = GridAstarNode()
+                right_neighbor.pos = (node.pos[0] + 1, node.pos[1])
+                right_neighbor.layer = 8
+                neighbor_list.append(right_neighbor)
         if not(self.if_node_outside_grid((node.pos[0], node.pos[1] + 1))): # bottom neighbor (x, y + 1) isn't outside grid
             if not(self.m2_blockage_map[node.pos[1] + 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 2, (node.pos[0], node.pos[1] + 1)): # no metal 2 blockage and is inside metal 2 bonding box
                 bottom_neighbor = GridAstarNode()
@@ -258,6 +378,46 @@ class A_Star_Search(A_Star_Search_Base):
                 bottom_neighbor.layer = 7
                 neighbor_list.append(bottom_neighbor)
             elif not(self.m9_blockage_map[node.pos[1] + 1][node.pos[0]]) and route_nets.isInsideGuideBox(self.net_name, 9, (node.pos[0], node.pos[1] + 1)): # no metal 9 blockage and is inside metal 9 bonding box
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 9
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m2_blockage_map[node.pos[1] + 1][node.pos[0]]): # no metal 2 blockage
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 2
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m4_blockage_map[node.pos[1] + 1][node.pos[0]]): # no metal 4 blockage
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 4
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m6_blockage_map[node.pos[1] + 1][node.pos[0]]): # no metal 6 blockage
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 6
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m8_blockage_map[node.pos[1] + 1][node.pos[0]]): # no metal 8 blockage
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 8
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m3_blockage_map[node.pos[1] + 1][node.pos[0]]): # no metal 3 blockage
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 3
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m5_blockage_map[node.pos[1] + 1][node.pos[0]]): # no metal 5 blockage
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 5
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m7_blockage_map[node.pos[1] + 1][node.pos[0]]): # no metal 7 blockage
+                bottom_neighbor = GridAstarNode()
+                bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
+                bottom_neighbor.layer = 7
+                neighbor_list.append(bottom_neighbor)
+            elif not(self.m9_blockage_map[node.pos[1] + 1][node.pos[0]]): # no metal 9 blockage
                 bottom_neighbor = GridAstarNode()
                 bottom_neighbor.pos = (node.pos[0], node.pos[1] + 1)
                 bottom_neighbor.layer = 9
