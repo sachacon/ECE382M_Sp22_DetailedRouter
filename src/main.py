@@ -8,6 +8,7 @@ import read_inputs
 import build_grids 
 import route_nets 
 import time 
+import tracemalloc
 
 def build_grids():
     """store routing info in grid structures"""
@@ -19,12 +20,12 @@ def write_def():
     print("TODO: write A* star results back to new DEF file")
     return 
 
-
 def main():
     """main function to route design"""
 
     start = time.time()
-    
+    tracemalloc.start()    
+
     globals.initialize()
     read_inputs.read_inputs()
     #build_grids()
@@ -33,6 +34,8 @@ def main():
 
     end_time_inputs = time.time()
     print("Elapsed Time = ", (end_time_inputs - start), " sec to route all nets") 
+    print("TraceMalloc (Current, Peak) = ", tracemalloc.get_traced_memory())
+    tracemalloc.stop()
 
     return 
 

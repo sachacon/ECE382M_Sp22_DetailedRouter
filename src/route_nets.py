@@ -151,7 +151,7 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
     # Expect layer to be integer for ex. 1 or 4 
     # Expect grid_coordiante to be tuple for ex. (5, 5) or (21, 43) 
 
-    print("\nnet name = ", net_name, "metal layer = ", layer, "grid_xy = ", grid_coordinate)
+    #print("\nnet name = ", net_name, "metal layer = ", layer, "grid_xy = ", grid_coordinate)
 
     guide_boxes = globals.net_guides[net_name].guide
     isInside = False 
