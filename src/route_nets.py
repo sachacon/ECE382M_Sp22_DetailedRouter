@@ -151,20 +151,21 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
     # Expect layer to be integer for ex. 1 or 4 
     # Expect grid_coordiante to be tuple for ex. (5, 5) or (21, 43) 
 
-
-    # print(globals.net_guides.keys())
+    print("\nnet name = ", net_name, "metal layer = ", layer, "grid_xy = ", grid_coordinate)
 
     guide_boxes = globals.net_guides[net_name].guide
-    isInside = True 
+    isInside = False 
+
+    if(layer > 3):
+        return True 
 
     for m in range(len(globals.metal_layers)):
-        if(globals.metal_layers[m].layer == layer):
+        if(globals.metal_layers[m].layer == 1):
             m_layer = globals.metal_layers[m]
             break
 
     for i in range(len(guide_boxes)):
         tmp = guide_boxes[i]
-        # .split()
         tmp_layer = tmp[-1]
         tmp_layer = tmp_layer.replace("Metal","")
         tmp_layer = int(tmp_layer)
@@ -178,21 +179,24 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
 
             # Convert Grid Coordinate 
             if(m_layer.direction == "H"):
-                grid_x = (m_layer.wrong_dir_start / 2000) + (grid_coordinate[0] *  m_layer.wrong_dir_step)
-                grid_y = (m_layer.pref_dir_start / 2000) + (grid_coordinate[1] * m_layer.pref_dir_step)
+                grid_x = (m_layer.wrong_dir_start / 2000) + (grid_coordinate[0] *  (m_layer.wrong_dir_step/2000))
+                grid_y = (m_layer.pref_dir_start / 2000) + (grid_coordinate[1] * (m_layer.pref_dir_step/2000))
             else: 
-                grid_y = (m_layer.wrong_dir_start / 2000) + (grid_coordinate[0] *  m_layer.wrong_dir_step)
-                grid_x = (m_layer.pref_dir_start / 2000) + (grid_coordinate[1] * m_layer.pref_dir_step)
-            
+                grid_y = (m_layer.wrong_dir_start / 2000) + (grid_coordinate[1] *  (m_layer.wrong_dir_step/2000))
+                grid_x = (m_layer.pref_dir_start / 2000) + (grid_coordinate[0] * (m_layer.pref_dir_step/2000))
+     
+            #print("grid_x = ", grid_x, " grid_y = ", grid_y)
+            #print("llx = ", llx, " lly = ", lly, " urx = ", urx, " ury = ", ury)       
             # Grid Coordinate has to be inside Box Range
-            # If that condition is NOT true, return False  
-            if( not((grid_x >= llx) and (grid_x <= urx) and (grid_y >= lly) and (grid_y <= ury)) ):
-                isInside = False
+            # Has to be inside at least one guide box  
+            if( (grid_x >= llx) and (grid_x <= urx) and (grid_y >= lly) and (grid_y <= ury) ):
+                isInside = True
                 break 
+    
+    #print("isInside = ", isInside)
 
-
-    return True
-    # return isInside 
+    # return True
+    return isInside 
 
  
 
