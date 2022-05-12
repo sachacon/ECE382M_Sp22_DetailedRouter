@@ -165,7 +165,8 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
     isInside = False 
 
     # if(layer > 3):
-    #     return True 
+    #     # return True
+    #     return False # prioritize lower metal
 
     for m in range(len(globals.metal_layers)):
         if(globals.metal_layers[m].layer == 1):
