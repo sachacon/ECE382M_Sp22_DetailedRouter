@@ -150,7 +150,7 @@ def route_nets():
         # print(blockage_map[2] == blockage_map[3])
 
         # break
-    print("wirelength: ", total_wirelength)
+    print("wirelength: ", total_wirelength * 200 * 1.01)
     print("via count: ", total_via_count)
 
     return 
