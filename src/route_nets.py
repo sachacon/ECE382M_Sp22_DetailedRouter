@@ -164,8 +164,8 @@ def isInsideGuideBox(net_name, layer, grid_coordinate):
     guide_boxes = globals.net_guides[net_name].guide
     isInside = False 
 
-    if(layer > 3):
-        return True 
+    # if(layer > 3):
+    #     return True 
 
     for m in range(len(globals.metal_layers)):
         if(globals.metal_layers[m].layer == 1):
