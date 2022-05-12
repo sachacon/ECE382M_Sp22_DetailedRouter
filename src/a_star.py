@@ -426,7 +426,7 @@ class A_Star_Search(A_Star_Search_Base):
         node.neighbors = neighbor_list
 
 
-    def route_one_net(self) -> Tuple[List[Tuple[int]], List[int], int, List[int], List[int]]:
+    def route_one_net(self) -> Tuple[List[Tuple[int]], List[int], int, int, List[int], List[int]]:
         """route one multi-pin net using the A star search algorithm
 
         Return:
@@ -434,6 +434,7 @@ class A_Star_Search(A_Star_Search_Base):
             path (List[Tuple[int]]): the point-wise routing path described by a list of node positions
             metal_layer (List[int]): the point-wise metal layer of each node
             wl (int): total wirelength of the routing path
+            via count (int): total via count
             wl_list (List[int]): a list of wirelength of each routing path
             n_visited_list (List[int]): the number of visited nodes in the grid in each iteration
         """
@@ -451,6 +452,8 @@ class A_Star_Search(A_Star_Search_Base):
         connect_net = np.ndarray(shape = (0, 2)) # record routed paths
         
         counter = 0
+
+        via_list = []
 
         for j in range(0, self.n_pins - 1):
             node_path = PriorityQueue() # open list for nodes to be visited, green
@@ -672,8 +675,18 @@ class A_Star_Search(A_Star_Search_Base):
                 for k in range(len(tracknode)):
                     path_list.append(tracknode[k])
                     metal_list.append(trackmetal[k])
+                    if k == 0:
+                        via_list.append(node_record[tracknode[k]].layer - 1) # source node layer - m1
+                    else:
+                        via_list.append(abs(node_record[tracknode[k]].layer - node_record[tracknode[k]].parent.layer))
                 wirelength_list.append(len(tracknode) - 1)
             else:
+                for k in range(len(tracknode)):
+                    if k == 0:
+                        via_list.append(node_record[tracknode[k]].layer - 1) # sink node layer - m1
+                    else:
+                        via_list.append(abs(node_record[tracknode[k]].layer - node_record[tracknode[k]].parent.layer))
+
                 tracknode.reverse()
                 trackmetal.reverse()
 
@@ -697,6 +710,7 @@ class A_Star_Search(A_Star_Search_Base):
 
         # wirelength = len(path_list) - 1 # point-wise
         wirelength = sum(wirelength_list) # vector-wise
+        via_count = sum(via_list)
 
         # print(connect_net)
         # print("path list:", path_list)
@@ -704,4 +718,4 @@ class A_Star_Search(A_Star_Search_Base):
 
         # return (self._merge_path(path_list), wirelength, wirelength_list, visited_node_list) # point-wise
         # return (path_list, wirelength, wirelength_list, visited_node_list) # vector-wise
-        return (path_list, metal_list, wirelength, wirelength_list, visited_node_list) # point-wise
+        return (path_list, metal_list, wirelength, via_count, wirelength_list, visited_node_list) # point-wise

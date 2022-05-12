@@ -10,6 +10,9 @@ def route_nets():
     print("Routing Nets ...\n")
     print("grid_size = ", globals.grid_size)
     print("num_nets = ", globals.num_nets)
+
+    total_wirelength = 0
+    total_via_count = 0
  
     blockages = []
     n_pins = None 
@@ -127,7 +130,10 @@ def route_nets():
 
         routing.initialize()
         #break
-        (path_list, metal_list, wirelength, wirelength_list, visited_node_list) = routing.route_one_net()
+        (path_list, metal_list, wirelength, via_count, wirelength_list, visited_node_list) = routing.route_one_net()
+
+        total_wirelength += wirelength
+        total_via_count += via_count
 
         # update_blockages for metal
         for m in range(len(metal_list)):
@@ -144,7 +150,9 @@ def route_nets():
         # print(blockage_map[2] == blockage_map[3])
 
         # break
-        
+    print("wirelength: ", total_wirelength)
+    print("via count: ", total_via_count)
+
     return 
 
 def isInsideGuideBox(net_name, layer, grid_coordinate):
