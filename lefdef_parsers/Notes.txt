@@ -1,3 +1,5 @@
 2 Parsers 
 - ispd2019_opensource parser 
 - jinwookyungs lef def parser
+
+Parsers were used well before and results of parsers were stored in the parsed_benchmarks/ directory 
