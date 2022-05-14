@@ -1,0 +1,5002 @@
+h7
+--pins(158)
+FE_OFN1038_g64577_p
+use : 0
+dir : o
+shape : 
+(3650,53490):(3750,54000) : 1
+FE_OFN1047_g64577_p
+use : 0
+dir : o
+shape : 
+(15250,53490):(15350,54000) : 1
+FE_OFN1052_g64577_p
+use : 0
+dir : o
+shape : 
+(0,33975):(255,34175) : 2
+FE_OFN1057_g64577_p
+use : 0
+dir : o
+shape : 
+(17650,53490):(17750,54000) : 1
+FE_OFN1058_g64577_p
+use : 0
+dir : o
+shape : 
+(5450,53490):(5550,54000) : 1
+g62724_db
+use : 0
+dir : o
+shape : 
+(0,32625):(510,32725) : 2
+g62724_sb
+use : 0
+dir : o
+shape : 
+(0,34825):(510,34925) : 2
+g62776_sb
+use : 0
+dir : o
+shape : 
+(8050,53490):(8150,54000) : 1
+g62799_db
+use : 0
+dir : o
+shape : 
+(2050,53490):(2150,54000) : 1
+g62805_da
+use : 0
+dir : o
+shape : 
+(5650,53490):(5750,54000) : 1
+g62806_da
+use : 0
+dir : o
+shape : 
+(30450,53490):(30550,54000) : 1
+g62813_db
+use : 0
+dir : o
+shape : 
+(3050,53490):(3150,54000) : 1
+g62817_da
+use : 0
+dir : o
+shape : 
+(1850,53490):(1950,54000) : 1
+g62826_db
+use : 0
+dir : o
+shape : 
+(0,24225):(510,24325) : 2
+g63015_da
+use : 0
+dir : o
+shape : 
+(24450,53490):(24550,54000) : 1
+g63072_sb
+use : 0
+dir : o
+shape : 
+(8250,53490):(8350,54000) : 1
+g63105_db
+use : 0
+dir : o
+shape : 
+(3850,53490):(3950,54000) : 1
+g64152_sb
+use : 0
+dir : o
+shape : 
+(0,45025):(510,45125) : 2
+g64158_da
+use : 0
+dir : o
+shape : 
+(0,30625):(510,30725) : 2
+g64184_da
+use : 0
+dir : o
+shape : 
+(0,42025):(510,42125) : 2
+g64211_db
+use : 0
+dir : o
+shape : 
+(3250,53490):(3350,54000) : 1
+g64235_da
+use : 0
+dir : o
+shape : 
+(0,44025):(510,44125) : 2
+g64235_db
+use : 0
+dir : o
+shape : 
+(0,45225):(510,45325) : 2
+g64273_da
+use : 0
+dir : o
+shape : 
+(14850,53490):(14950,54000) : 1
+g64273_db
+use : 0
+dir : o
+shape : 
+(15450,53490):(15550,54000) : 1
+g64313_da
+use : 0
+dir : o
+shape : 
+(7050,53490):(7150,54000) : 1
+g64313_db
+use : 0
+dir : o
+shape : 
+(0,45425):(510,45525) : 2
+n_14060
+use : 0
+dir : o
+shape : 
+(0,42625):(510,42725) : 2
+n_14091
+use : 0
+dir : o
+shape : 
+(0,45625):(510,45725) : 2
+n_14092
+use : 0
+dir : o
+shape : 
+(3450,53490):(3550,54000) : 1
+n_14216
+use : 0
+dir : o
+shape : 
+(0,38225):(510,38325) : 2
+n_14596
+use : 0
+dir : o
+shape : 
+(0,45825):(510,45925) : 2
+n_14603
+use : 0
+dir : o
+shape : 
+(27450,53490):(27550,54000) : 1
+n_14608
+use : 0
+dir : o
+shape : 
+(22050,53490):(22150,54000) : 1
+n_14610
+use : 0
+dir : o
+shape : 
+(26250,53490):(26350,54000) : 1
+n_14611
+use : 0
+dir : o
+shape : 
+(0,32825):(510,32925) : 2
+n_16247
+use : 0
+dir : o
+shape : 
+(21850,53490):(21950,54000) : 1
+n_16252
+use : 0
+dir : o
+shape : 
+(21650,53490):(21750,54000) : 1
+n_3825
+use : 0
+dir : o
+shape : 
+(6450,53490):(6550,54000) : 1
+n_3938
+use : 0
+dir : o
+shape : 
+(19450,53490):(19550,54000) : 1
+n_3977
+use : 0
+dir : o
+shape : 
+(0,26425):(510,26525) : 2
+n_3983
+use : 0
+dir : o
+shape : 
+(0,46025):(510,46125) : 2
+n_4010
+use : 0
+dir : o
+shape : 
+(0,47025):(510,47125) : 2
+n_4077
+use : 0
+dir : o
+shape : 
+(0,35025):(510,35125) : 2
+n_5012
+use : 0
+dir : o
+shape : 
+(4650,53490):(4750,54000) : 1
+n_5136
+use : 0
+dir : o
+shape : 
+(23450,53490):(23550,54000) : 1
+n_5376
+use : 0
+dir : o
+shape : 
+(0,46225):(510,46325) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_0__28__Q
+use : 0
+dir : o
+shape : 
+(15850,53490):(15950,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_1__28__Q
+use : 0
+dir : o
+shape : 
+(8450,53490):(8550,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_4__15__Q
+use : 0
+dir : o
+shape : 
+(5050,53490):(5150,54000) : 3
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_4__18__Q
+use : 0
+dir : o
+shape : 
+(0,43825):(510,43925) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_6__15__Q
+use : 0
+dir : o
+shape : 
+(0,40225):(510,40325) : 2
+pci_target_unit_wbm_sm_pciw_fifo_addr_data_in_51
+use : 0
+dir : o
+shape : 
+(99050,53490):(99150,54000) : 1
+pci_target_unit_wbm_sm_pciw_fifo_addr_data_in_63
+use : 0
+dir : o
+shape : 
+(73850,53490):(73950,54000) : 1
+FE_OCP_RBN2037_FE_OCPN2000_n_13743
+use : 0
+dir : i
+shape : 
+(15650,53490):(15750,54000) : 1
+FE_OCP_RBN2086_FE_OFN1756_n_13997
+use : 0
+dir : i
+shape : 
+(32600,53745):(32800,54000) : 3
+FE_OFN1015_g64577_p
+use : 0
+dir : i
+shape : 
+(11450,53490):(11550,54000) : 1
+FE_OFN1027_g64577_p
+use : 0
+dir : i
+shape : 
+(0,37775):(255,37975) : 2
+FE_OFN1034_g64577_p
+use : 0
+dir : i
+shape : 
+(11200,53745):(11400,54000) : 3
+FE_OFN1043_g64577_p
+use : 0
+dir : i
+shape : 
+(33650,53490):(33750,54000) : 1
+FE_OFN1046_g64577_p
+use : 0
+dir : i
+shape : 
+(34200,53745):(34400,54000) : 3
+FE_OFN1054_g64577_p
+use : 0
+dir : i
+shape : 
+(32200,53745):(32400,54000) : 3
+FE_OFN1464_n_13736
+use : 0
+dir : i
+shape : 
+(0,39775):(255,39975) : 2
+FE_OFN1465_n_13736
+use : 0
+dir : i
+shape : 
+(23050,53490):(23150,54000) : 1
+FE_OFN1466_n_13736
+use : 0
+dir : i
+shape : 
+(43400,53745):(43600,54000) : 3
+FE_OFN1469_n_13741
+use : 0
+dir : i
+shape : 
+(0,34625):(510,34725) : 2
+FE_OFN1470_n_13741
+use : 0
+dir : i
+shape : 
+(28250,53490):(28350,54000) : 1
+FE_OFN1471_n_13741
+use : 0
+dir : i
+shape : 
+(4050,53490):(4150,54000) : 1
+FE_OFN1478_n_13995
+use : 0
+dir : i
+shape : 
+(24050,53490):(24150,54000) : 1
+FE_OFN1479_n_13995
+use : 0
+dir : i
+shape : 
+(7850,53490):(7950,54000) : 1
+FE_OFN1522_n_4730
+use : 0
+dir : i
+shape : 
+(15800,53745):(16000,54000) : 3
+FE_OFN1523_n_4730
+use : 0
+dir : i
+shape : 
+(35400,53745):(35600,54000) : 3
+FE_OFN1524_n_4730
+use : 0
+dir : i
+shape : 
+(0,33175):(255,33375) : 2
+FE_OFN1557_n_4732
+use : 0
+dir : i
+shape : 
+(0,38575):(255,38775) : 2
+FE_OFN1558_n_4732
+use : 0
+dir : i
+shape : 
+(33400,53745):(33600,54000) : 3
+FE_OFN1559_n_4732
+use : 0
+dir : i
+shape : 
+(7650,53490):(7750,54000) : 1
+FE_OFN1581_n_16657
+use : 0
+dir : i
+shape : 
+(0,41575):(255,41775) : 2
+FE_OFN1583_n_16657
+use : 0
+dir : i
+shape : 
+(31800,53745):(32000,54000) : 3
+FE_OFN1584_n_16657
+use : 0
+dir : i
+shape : 
+(0,39375):(255,39575) : 2
+FE_OFN1612_n_4740
+use : 0
+dir : i
+shape : 
+(0,40575):(255,40775) : 2
+FE_OFN1613_n_4740
+use : 0
+dir : i
+shape : 
+(5250,53490):(5350,54000) : 1
+FE_OFN1614_n_4740
+use : 0
+dir : i
+shape : 
+(6250,53490):(6350,54000) : 1
+FE_OFN1757_n_13997
+use : 0
+dir : i
+shape : 
+(7250,53490):(7350,54000) : 1
+FE_OFN1761_n_14054
+use : 0
+dir : i
+shape : 
+(4250,53490):(4350,54000) : 1
+FE_OFN1762_n_14054
+use : 0
+dir : i
+shape : 
+(0,42975):(255,43175) : 2
+FE_OFN1764_n_14054
+use : 0
+dir : i
+shape : 
+(12050,53490):(12150,54000) : 1
+FE_OFN1770_n_13800
+use : 0
+dir : i
+shape : 
+(8850,53490):(8950,54000) : 1
+FE_OFN1771_n_13800
+use : 0
+dir : i
+shape : 
+(11650,53490):(11750,54000) : 1
+FE_OFN1772_n_13800
+use : 0
+dir : i
+shape : 
+(0,31625):(510,31725) : 2
+FE_OFN1776_n_13971
+use : 0
+dir : i
+shape : 
+(33800,53745):(34000,54000) : 3
+FE_OFN1777_n_13971
+use : 0
+dir : i
+shape : 
+(32450,53490):(32550,54000) : 1
+FE_OFN854_n_4736
+use : 0
+dir : i
+shape : 
+(15050,53490):(15150,54000) : 1
+FE_OFN855_n_4736
+use : 0
+dir : i
+shape : 
+(33000,53745):(33200,54000) : 3
+FE_OFN859_n_4734
+use : 0
+dir : i
+shape : 
+(6850,53490):(6950,54000) : 1
+FE_OFN860_n_4734
+use : 0
+dir : i
+shape : 
+(0,38975):(255,39175) : 2
+FE_OFN868_n_4725
+use : 0
+dir : i
+shape : 
+(0,28175):(255,28375) : 2
+FE_OFN951_n_4725
+use : 0
+dir : i
+shape : 
+(31050,53490):(31150,54000) : 1
+FE_OFN952_n_4725
+use : 0
+dir : i
+shape : 
+(0,37375):(255,37575) : 2
+FE_OFN975_n_4727
+use : 0
+dir : i
+shape : 
+(24200,53745):(24400,54000) : 3
+FE_OFN976_n_4727
+use : 0
+dir : i
+shape : 
+(43000,53745):(43200,54000) : 3
+g62803_da
+use : 0
+dir : i
+shape : 
+(2850,53490):(2950,54000) : 1
+g62805_sb
+use : 0
+dir : i
+shape : 
+(6050,53490):(6150,54000) : 1
+g62862_sb
+use : 0
+dir : i
+shape : 
+(4450,53490):(4550,54000) : 1
+g63015_sb
+use : 0
+dir : i
+shape : 
+(24850,53490):(24950,54000) : 1
+g63057_sb
+use : 0
+dir : i
+shape : 
+(22850,53490):(22950,54000) : 1
+g63058_da
+use : 0
+dir : i
+shape : 
+(16450,53490):(16550,54000) : 1
+g63072_da
+use : 0
+dir : i
+shape : 
+(0,44825):(510,44925) : 2
+g63122_da
+use : 0
+dir : i
+shape : 
+(4850,53490):(4950,54000) : 1
+g64078_da
+use : 0
+dir : i
+shape : 
+(0,34425):(510,34525) : 2
+g64158_sb
+use : 0
+dir : i
+shape : 
+(0,30425):(510,30525) : 2
+g64217_db
+use : 0
+dir : i
+shape : 
+(30050,53490):(30150,54000) : 1
+g64217_sb
+use : 0
+dir : i
+shape : 
+(29250,53490):(29350,54000) : 1
+g64296_db
+use : 0
+dir : i
+shape : 
+(0,26225):(510,26325) : 2
+ispd_clk
+use : 0
+dir : i
+shape : 
+(0,43375):(255,43575) : 2
+n_13891
+use : 0
+dir : i
+shape : 
+(0,44625):(510,44725) : 2
+n_13901
+use : 0
+dir : i
+shape : 
+(0,31175):(255,31375) : 2
+n_13987
+use : 0
+dir : i
+shape : 
+(26850,53490):(26950,54000) : 1
+n_13993
+use : 0
+dir : i
+shape : 
+(19050,53490):(19150,54000) : 1
+n_14001
+use : 0
+dir : i
+shape : 
+(13650,53490):(13750,54000) : 1
+n_14458
+use : 0
+dir : i
+shape : 
+(27250,53490):(27350,54000) : 1
+n_14472
+use : 0
+dir : i
+shape : 
+(11850,53490):(11950,54000) : 1
+n_14594
+use : 0
+dir : i
+shape : 
+(100050,53490):(100150,54000) : 1
+n_14956
+use : 0
+dir : i
+shape : 
+(0,32425):(510,32525) : 2
+n_16244
+use : 0
+dir : i
+shape : 
+(22650,53490):(22750,54000) : 1
+n_16621
+use : 0
+dir : i
+shape : 
+(27650,53490):(27750,54000) : 1
+n_3923
+use : 0
+dir : i
+shape : 
+(14650,53490):(14750,54000) : 1
+n_3958
+use : 0
+dir : i
+shape : 
+(2250,53490):(2350,54000) : 1
+n_4013
+use : 0
+dir : i
+shape : 
+(0,44425):(510,44525) : 2
+n_5351
+use : 0
+dir : i
+shape : 
+(0,41025):(510,41125) : 2
+n_5371
+use : 0
+dir : i
+shape : 
+(7450,53490):(7550,54000) : 1
+n_5388
+use : 0
+dir : i
+shape : 
+(0,42425):(510,42525) : 2
+pci_target_unit_fifos_pciw_addr_data_in_128
+use : 0
+dir : i
+shape : 
+(6650,53490):(6750,54000) : 1
+pci_target_unit_fifos_pciw_addr_data_in_132
+use : 0
+dir : i
+shape : 
+(0,30825):(510,30925) : 2
+pci_target_unit_fifos_pciw_addr_data_in_133
+use : 0
+dir : i
+shape : 
+(32850,53490):(32950,54000) : 1
+pci_target_unit_fifos_pciw_addr_data_in_134
+use : 0
+dir : i
+shape : 
+(12250,53490):(12350,54000) : 1
+pci_target_unit_fifos_pciw_addr_data_in_135
+use : 0
+dir : i
+shape : 
+(35250,53490):(35350,54000) : 1
+pci_target_unit_fifos_pciw_addr_data_in_136
+use : 0
+dir : i
+shape : 
+(16850,53490):(16950,54000) : 1
+pci_target_unit_fifos_pciw_addr_data_in_138
+use : 0
+dir : i
+shape : 
+(26650,53490):(26750,54000) : 1
+pci_target_unit_fifos_pciw_addr_data_in_141
+use : 0
+dir : i
+shape : 
+(32250,53490):(32350,54000) : 1
+pci_target_unit_fifos_pciw_addr_data_in_142
+use : 0
+dir : i
+shape : 
+(0,41225):(510,41325) : 2
+pci_target_unit_fifos_pciw_addr_data_in_148
+use : 0
+dir : i
+shape : 
+(14450,53490):(14550,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_0__13__Q
+use : 0
+dir : i
+shape : 
+(24250,53490):(24350,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_0__16__Q
+use : 0
+dir : i
+shape : 
+(21450,53490):(21550,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_1__13__Q
+use : 0
+dir : i
+shape : 
+(23250,53490):(23350,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_2__22__Q
+use : 0
+dir : i
+shape : 
+(5850,53490):(5950,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_2__8__Q
+use : 0
+dir : i
+shape : 
+(0,46825):(510,46925) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_3__8__Q
+use : 0
+dir : i
+shape : 
+(0,46625):(510,46725) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_4__12__Q
+use : 0
+dir : i
+shape : 
+(0,30225):(510,30325) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_4__17__Q
+use : 0
+dir : i
+shape : 
+(2450,53490):(2550,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_4__28__Q
+use : 0
+dir : i
+shape : 
+(0,44225):(510,44325) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_5__14__Q
+use : 0
+dir : i
+shape : 
+(5050,53490):(5150,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_5__21__Q
+use : 0
+dir : i
+shape : 
+(28450,53490):(28550,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_5__28__Q
+use : 0
+dir : i
+shape : 
+(0,46425):(510,46525) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_6__13__Q
+use : 0
+dir : i
+shape : 
+(0,33625):(510,33725) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_6__22__Q
+use : 0
+dir : i
+shape : 
+(2650,53490):(2750,54000) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_7__12__Q
+use : 0
+dir : i
+shape : 
+(0,29225):(510,29325) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_7__13__Q
+use : 0
+dir : i
+shape : 
+(0,32225):(510,32325) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_7__15__Q
+use : 0
+dir : i
+shape : 
+(0,42225):(510,42325) : 2
+h8
+--pins(268)
+FE_OCP_RBN2089_FE_OFN1433_n_12042
+use : _
+dir : o
+shape : 
+(0,26900):(510,27000) : 2
+FE_OCP_RBN2094_FE_OCPN1856_n_12030
+use : 0
+dir : o
+shape : 
+(20050,49490):(20150,50000) : 1
+FE_OFN1124_n_6935
+use : 0
+dir : o
+shape : 
+(19450,49490):(19550,50000) : 1
+FE_OFN1204_n_4097
+use : 0
+dir : o
+shape : 
+(54000,49745):(54200,50000) : 3
+FE_OFN1205_n_4097
+use : 0
+dir : o
+shape : 
+(24850,49490):(24950,50000) : 1
+FE_OFN1206_n_4097
+use : 0
+dir : o
+shape : 
+(35400,49745):(35600,50000) : 3
+FE_OFN1207_n_4097
+use : 0
+dir : o
+shape : 
+(0,36850):(255,37050) : 2
+FE_OFN1238_n_6436
+use : 0
+dir : o
+shape : 
+(23450,49490):(23550,50000) : 1
+FE_OFN1450_n_10780
+use : z
+dir : o
+shape : 
+(14250,49490):(14350,50000) : 1
+FE_OFN1723_n_16317
+use : z
+dir : o
+shape : 
+(0,25500):(510,25600) : 2
+FE_OFN647_n_4460
+use : z
+dir : o
+shape : 
+(32050,49490):(32150,50000) : 1
+FE_OFN652_n_4417
+use : z
+dir : o
+shape : 
+(29200,0):(29400,255) : 3
+FE_OFN658_n_4438
+use : z
+dir : o
+shape : 
+(22250,49490):(22350,50000) : 1
+FE_RN_199_0
+use : z
+dir : o
+shape : 
+(17250,0):(17350,510) : 1
+FE_RN_216_0
+use : z
+dir : o
+shape : 
+(21650,49490):(21750,50000) : 1
+g54587_p
+use : z
+dir : o
+shape : 
+(26050,49490):(26150,50000) : 1
+g62336_da
+use : 0
+dir : o
+shape : 
+(19250,49490):(19350,50000) : 1
+g62386_db
+use : 0
+dir : o
+shape : 
+(16650,49490):(16750,50000) : 1
+g62426_db
+use : 0
+dir : o
+shape : 
+(23250,49490):(23350,50000) : 1
+g62540_db
+use : 0
+dir : o
+shape : 
+(21850,49490):(21950,50000) : 1
+g62582_da
+use : 0
+dir : o
+shape : 
+(0,26100):(510,26200) : 2
+g62675_da
+use : 0
+dir : o
+shape : 
+(22450,49490):(22550,50000) : 1
+g62685_da
+use : 0
+dir : o
+shape : 
+(49050,49490):(49150,50000) : 1
+g62980_da
+use : 0
+dir : o
+shape : 
+(70450,49490):(70550,50000) : 1
+g62980_db
+use : 0
+dir : o
+shape : 
+(71250,49490):(71350,50000) : 1
+g64765_db
+use : 0
+dir : o
+shape : 
+(18650,49490):(18750,50000) : 1
+g64908_sb
+use : 0
+dir : o
+shape : 
+(27850,49490):(27950,50000) : 1
+g64949_da
+use : 0
+dir : o
+shape : 
+(0,28100):(510,28200) : 2
+g64974_db
+use : 0
+dir : o
+shape : 
+(14850,49490):(14950,50000) : 1
+g64993_db
+use : 0
+dir : o
+shape : 
+(0,21700):(510,21800) : 2
+g65004_db
+use : 0
+dir : o
+shape : 
+(0,31100):(510,31200) : 2
+g65047_sb
+use : 0
+dir : o
+shape : 
+(18850,49490):(18950,50000) : 1
+g65328_db
+use : 0
+dir : o
+shape : 
+(15250,49490):(15350,50000) : 1
+g65394_sb
+use : 0
+dir : o
+shape : 
+(72850,49490):(72950,50000) : 1
+n_11898
+use : 0
+dir : o
+shape : 
+(16850,49490):(16950,50000) : 1
+n_11899
+use : 0
+dir : o
+shape : 
+(15650,49490):(15750,50000) : 1
+n_11988
+use : 0
+dir : o
+shape : 
+(0,26300):(510,26400) : 2
+n_12002
+use : 0
+dir : o
+shape : 
+(0,28300):(510,28400) : 2
+n_12011
+use : 0
+dir : o
+shape : 
+(0,30900):(510,31000) : 2
+n_12041
+use : 0
+dir : o
+shape : 
+(60050,49490):(60150,50000) : 1
+n_12049
+use : 0
+dir : o
+shape : 
+(70850,49490):(70950,50000) : 1
+n_12052
+use : 0
+dir : o
+shape : 
+(27450,49490):(27550,50000) : 1
+n_12089
+use : 0
+dir : o
+shape : 
+(0,31500):(510,31600) : 2
+n_12102
+use : 0
+dir : o
+shape : 
+(48050,49490):(48150,50000) : 1
+n_12118
+use : 0
+dir : o
+shape : 
+(56250,49490):(56350,50000) : 1
+n_12196
+use : 0
+dir : o
+shape : 
+(24250,49490):(24350,50000) : 1
+n_12351
+use : 0
+dir : o
+shape : 
+(15850,49490):(15950,50000) : 1
+n_12406
+use : 0
+dir : o
+shape : 
+(0,29700):(510,29800) : 2
+n_12427
+use : 0
+dir : o
+shape : 
+(43850,49490):(43950,50000) : 1
+n_12449
+use : 0
+dir : o
+shape : 
+(0,30700):(510,30800) : 2
+n_12459
+use : 0
+dir : o
+shape : 
+(0,26500):(510,26600) : 2
+n_12473
+use : 0
+dir : o
+shape : 
+(14650,49490):(14750,50000) : 1
+n_12483
+use : 0
+dir : o
+shape : 
+(40050,49490):(40150,50000) : 1
+n_12492
+use : 0
+dir : o
+shape : 
+(0,28500):(510,28600) : 2
+n_12746
+use : 0
+dir : o
+shape : 
+(38050,49490):(38150,50000) : 1
+n_12749
+use : 0
+dir : o
+shape : 
+(65250,49490):(65350,50000) : 1
+n_12817
+use : 0
+dir : o
+shape : 
+(47850,49490):(47950,50000) : 1
+n_12886
+use : 0
+dir : o
+shape : 
+(0,30500):(510,30600) : 2
+n_12934
+use : 0
+dir : o
+shape : 
+(48250,49490):(48350,50000) : 1
+n_13128
+use : 0
+dir : o
+shape : 
+(0,26700):(510,26800) : 2
+n_13139
+use : 0
+dir : o
+shape : 
+(17050,49490):(17150,50000) : 1
+n_14311
+use : 0
+dir : o
+shape : 
+(28050,49490):(28150,50000) : 1
+n_14314
+use : 0
+dir : o
+shape : 
+(28650,49490):(28750,50000) : 1
+n_14381
+use : 0
+dir : o
+shape : 
+(25450,49490):(25550,50000) : 1
+n_16409
+use : 0
+dir : o
+shape : 
+(62250,49490):(62350,50000) : 1
+n_3744
+use : 0
+dir : o
+shape : 
+(38600,49745):(38800,50000) : 3
+n_3749
+use : 0
+dir : o
+shape : 
+(20850,49490):(20950,50000) : 1
+n_3761
+use : 0
+dir : o
+shape : 
+(23650,49490):(23750,50000) : 1
+n_4473
+use : 0
+dir : o
+shape : 
+(17250,49490):(17350,50000) : 1
+n_4478
+use : 0
+dir : o
+shape : 
+(32450,49490):(32550,50000) : 1
+n_5975
+use : 0
+dir : o
+shape : 
+(16050,49490):(16150,50000) : 1
+n_6231
+use : 0
+dir : o
+shape : 
+(27850,0):(27950,510) : 1
+n_6348
+use : 0
+dir : o
+shape : 
+(20450,49490):(20550,50000) : 3
+n_6935
+use : 0
+dir : o
+shape : 
+(23850,49490):(23950,50000) : 1
+parchk_pci_ad_out_in_1179
+use : 0
+dir : o
+shape : 
+(36250,49490):(36350,50000) : 1
+parchk_pci_ad_out_in_1181
+use : 0
+dir : o
+shape : 
+(25250,49490):(25350,50000) : 1
+parchk_pci_ad_out_in_1182
+use : 0
+dir : o
+shape : 
+(39050,49490):(39150,50000) : 1
+wbs_wbb3_2_wbb2_dat_o_i_105
+use : 0
+dir : o
+shape : 
+(14850,0):(14950,510) : 1
+wbs_wbb3_2_wbb2_dat_o_i_116
+use : 0
+dir : o
+shape : 
+(18850,0):(18950,510) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_0__18__Q
+use : 0
+dir : o
+shape : 
+(22650,49490):(22750,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_0__37__Q
+use : 0
+dir : o
+shape : 
+(35050,49490):(35150,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_10__11__Q
+use : 0
+dir : o
+shape : 
+(62850,49490):(62950,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_10__26__Q
+use : 0
+dir : o
+shape : 
+(29250,49490):(29350,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_13__12__Q
+use : 0
+dir : o
+shape : 
+(19050,49490):(19150,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_13__6__Q
+use : 0
+dir : o
+shape : 
+(14450,49490):(14550,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_15__25__Q
+use : 0
+dir : o
+shape : 
+(20450,49490):(20550,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_1__26__Q
+use : 0
+dir : o
+shape : 
+(34850,49490):(34950,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_1__28__Q
+use : 0
+dir : o
+shape : 
+(0,31700):(510,31800) : 2
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_3__28__Q
+use : 0
+dir : o
+shape : 
+(0,19900):(510,20000) : 2
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_4__24__Q
+use : 0
+dir : o
+shape : 
+(30650,49490):(30750,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_4__5__Q
+use : 0
+dir : o
+shape : 
+(45450,49490):(45550,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_5__8__Q
+use : 0
+dir : o
+shape : 
+(0,23500):(510,23600) : 2
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_7__11__Q
+use : 0
+dir : o
+shape : 
+(40250,49490):(40350,50000) : 1
+FE_OCPN1856_n_12030
+use : 0
+dir : i
+shape : 
+(20650,49490):(20750,50000) : 1
+FE_OCPN1857_n_12030
+use : 0
+dir : i
+shape : 
+(0,29300):(510,29400) : 2
+FE_OCPN1885_FE_OFN1454_n_12028
+use : 0
+dir : i
+shape : 
+(64400,49745):(64600,50000) : 3
+FE_OFN1120_n_6935
+use : 0
+dir : i
+shape : 
+(69600,49745):(69800,50000) : 3
+FE_OFN1127_n_4090
+use : 0
+dir : i
+shape : 
+(24050,49490):(24150,50000) : 1
+FE_OFN1128_n_4090
+use : 0
+dir : i
+shape : 
+(0,19450):(255,19650) : 2
+FE_OFN1132_n_6356
+use : 0
+dir : i
+shape : 
+(52800,49745):(53000,50000) : 3
+FE_OFN1135_n_4151
+use : 0
+dir : i
+shape : 
+(0,31450):(255,31650) : 4
+FE_OFN1140_n_6886
+use : 0
+dir : i
+shape : 
+(60850,49490):(60950,50000) : 1
+FE_OFN1147_n_6391
+use : 0
+dir : i
+shape : 
+(0,20250):(255,20450) : 2
+FE_OFN1148_n_6391
+use : 0
+dir : i
+shape : 
+(0,40450):(255,40650) : 2
+FE_OFN1156_n_6391
+use : 0
+dir : i
+shape : 
+(71800,49745):(72000,50000) : 3
+FE_OFN1159_n_6391
+use : 0
+dir : i
+shape : 
+(54800,0):(55000,255) : 3
+FE_OFN1162_n_6391
+use : 0
+dir : i
+shape : 
+(38200,49745):(38400,50000) : 3
+FE_OFN1167_n_4092
+use : 0
+dir : i
+shape : 
+(23200,0):(23400,255) : 3
+FE_OFN1174_n_4093
+use : 0
+dir : i
+shape : 
+(0,16650):(255,16850) : 2
+FE_OFN1177_n_4143
+use : 0
+dir : i
+shape : 
+(38650,49490):(38750,50000) : 1
+FE_OFN1184_n_4143
+use : 0
+dir : i
+shape : 
+(0,38850):(255,39050) : 2
+FE_OFN1185_n_4143
+use : 0
+dir : i
+shape : 
+(37800,49745):(38000,50000) : 3
+FE_OFN1189_n_4095
+use : 0
+dir : i
+shape : 
+(36000,0):(36200,255) : 3
+FE_OFN1190_n_4095
+use : 0
+dir : i
+shape : 
+(56600,49745):(56800,50000) : 3
+FE_OFN1193_n_4095
+use : 0
+dir : i
+shape : 
+(33400,0):(33600,255) : 3
+FE_OFN1198_n_4096
+use : 0
+dir : i
+shape : 
+(0,32850):(255,33050) : 2
+FE_OFN119_n_12502
+use : 0
+dir : i
+shape : 
+(0,31300):(510,31400) : 2
+FE_OFN1213_n_4098
+use : 0
+dir : i
+shape : 
+(40200,0):(40400,255) : 3
+FE_OFN1225_n_6624
+use : 0
+dir : i
+shape : 
+(0,38450):(255,38650) : 2
+FE_OFN1226_n_6624
+use : 0
+dir : i
+shape : 
+(39400,0):(39600,255) : 3
+FE_OFN1231_n_6624
+use : 0
+dir : i
+shape : 
+(36400,0):(36600,255) : 3
+FE_OFN1233_n_6624
+use : 0
+dir : i
+shape : 
+(59000,49745):(59200,50000) : 3
+FE_OFN1235_n_6436
+use : 0
+dir : i
+shape : 
+(25850,49490):(25950,50000) : 1
+FE_OFN130_n_12104
+use : 0
+dir : i
+shape : 
+(47450,49490):(47550,50000) : 1
+FE_OFN1431_n_12104
+use : 0
+dir : i
+shape : 
+(16250,49490):(16350,50000) : 1
+FE_OFN1435_n_12042
+use : 0
+dir : i
+shape : 
+(73000,49745):(73200,50000) : 3
+FE_OFN1441_n_12502
+use : 0
+dir : i
+shape : 
+(28450,49490):(28550,50000) : 1
+FE_OFN1445_n_12502
+use : 0
+dir : i
+shape : 
+(70800,49745):(71000,50000) : 3
+FE_OFN1449_n_10780
+use : 0
+dir : i
+shape : 
+(21250,49490):(21350,50000) : 1
+FE_OFN1455_n_12028
+use : 0
+dir : i
+shape : 
+(0,37250):(255,37450) : 2
+FE_OFN1458_n_12306
+use : 0
+dir : i
+shape : 
+(24450,49490):(24550,50000) : 1
+FE_OFN1461_n_12306
+use : 0
+dir : i
+shape : 
+(17850,49490):(17950,50000) : 1
+FE_OFN1474_n_14995
+use : 0
+dir : i
+shape : 
+(39250,49490):(39350,50000) : 1
+FE_OFN1475_n_14995
+use : 0
+dir : i
+shape : 
+(15050,49490):(15150,50000) : 1
+FE_OFN1507_n_4460
+use : 0
+dir : i
+shape : 
+(31450,49490):(31550,50000) : 1
+FE_OFN1511_n_4460
+use : 0
+dir : i
+shape : 
+(0,30050):(255,30250) : 2
+FE_OFN1515_n_4677
+use : 0
+dir : i
+shape : 
+(16200,0):(16400,255) : 3
+FE_OFN1547_n_4501
+use : 0
+dir : i
+shape : 
+(0,37650):(255,37850) : 2
+FE_OFN1548_n_4501
+use : 0
+dir : i
+shape : 
+(35250,49490):(35350,50000) : 1
+FE_OFN1549_n_4501
+use : 0
+dir : i
+shape : 
+(54600,49745):(54800,50000) : 3
+FE_OFN1653_n_4868
+use : 0
+dir : i
+shape : 
+(37400,49745):(37600,50000) : 3
+FE_OFN1654_n_4868
+use : 0
+dir : i
+shape : 
+(12600,49745):(12800,50000) : 3
+FE_OFN1718_n_16317
+use : 0
+dir : i
+shape : 
+(26450,49490):(26550,50000) : 1
+FE_OFN1726_n_14987
+use : 0
+dir : i
+shape : 
+(44050,49490):(44150,50000) : 1
+FE_OFN1733_n_11019
+use : 0
+dir : i
+shape : 
+(26250,0):(26350,510) : 1
+FE_OFN1745_n_12086
+use : 0
+dir : i
+shape : 
+(0,32500):(510,32600) : 2
+FE_OFN1751_n_11027
+use : 0
+dir : i
+shape : 
+(0,29500):(510,29600) : 4
+FE_OFN1755_n_12681
+use : 0
+dir : i
+shape : 
+(16650,0):(16750,510) : 1
+FE_OFN1794_n_4508
+use : 0
+dir : i
+shape : 
+(0,31050):(255,31250) : 4
+FE_OFN1797_n_4508
+use : 0
+dir : i
+shape : 
+(0,39850):(255,40050) : 2
+FE_OFN1804_n_3741
+use : 0
+dir : i
+shape : 
+(0,27450):(255,27650) : 2
+FE_OFN1826_n_4490
+use : 0
+dir : i
+shape : 
+(57000,49745):(57200,50000) : 3
+FE_OFN325_g66125_p
+use : 0
+dir : i
+shape : 
+(23050,49490):(23150,50000) : 1
+FE_OFN589_n_4490
+use : 0
+dir : i
+shape : 
+(53600,49745):(53800,50000) : 3
+FE_OFN590_n_4490
+use : 0
+dir : i
+shape : 
+(0,41050):(255,41250) : 2
+FE_OFN591_n_4490
+use : 0
+dir : i
+shape : 
+(39000,49745):(39200,50000) : 3
+FE_OFN595_n_4409
+use : 0
+dir : i
+shape : 
+(29200,49745):(29400,50000) : 3
+FE_OFN596_n_4409
+use : 0
+dir : i
+shape : 
+(0,28050):(255,28250) : 4
+FE_OFN597_n_4409
+use : 0
+dir : i
+shape : 
+(57400,49745):(57600,50000) : 3
+FE_OFN599_n_4454
+use : 0
+dir : i
+shape : 
+(36200,49745):(36400,50000) : 3
+FE_OFN600_n_4454
+use : 0
+dir : i
+shape : 
+(0,34450):(255,34650) : 2
+FE_OFN607_n_4669
+use : 0
+dir : i
+shape : 
+(35800,49745):(36000,50000) : 3
+FE_OFN612_n_4497
+use : 0
+dir : i
+shape : 
+(0,35450):(255,35650) : 2
+FE_OFN613_n_4497
+use : 0
+dir : i
+shape : 
+(69200,49745):(69400,50000) : 3
+FE_OFN614_n_4497
+use : 0
+dir : i
+shape : 
+(0,22050):(255,22250) : 2
+FE_OFN626_n_4392
+use : 0
+dir : i
+shape : 
+(20200,0):(20400,255) : 3
+FE_OFN629_n_4495
+use : 0
+dir : i
+shape : 
+(0,38050):(255,38250) : 2
+FE_OFN631_n_4495
+use : 0
+dir : i
+shape : 
+(0,23050):(255,23250) : 2
+FE_OFN634_n_4505
+use : 0
+dir : i
+shape : 
+(0,39450):(255,39650) : 2
+FE_OFN635_n_4505
+use : 0
+dir : i
+shape : 
+(72200,49745):(72400,50000) : 3
+FE_OFN636_n_4505
+use : 0
+dir : i
+shape : 
+(34200,49745):(34400,50000) : 3
+FE_OFN649_n_4417
+use : 0
+dir : i
+shape : 
+(27650,49490):(27750,50000) : 1
+FE_OFN654_n_4438
+use : 0
+dir : i
+shape : 
+(26250,49490):(26350,50000) : 1
+FE_OFN656_n_4438
+use : 0
+dir : i
+shape : 
+(35600,0):(35800,255) : 3
+FE_OFN967_n_4655
+use : 0
+dir : i
+shape : 
+(55000,49745):(55200,50000) : 3
+FE_OFN968_n_4655
+use : 0
+dir : i
+shape : 
+(35000,0):(35200,255) : 3
+FE_RN_203_0
+use : 0
+dir : i
+shape : 
+(17650,49490):(17750,50000) : 1
+g62336_sb
+use : 0
+dir : i
+shape : 
+(19850,49490):(19950,50000) : 1
+g62345_da
+use : 0
+dir : i
+shape : 
+(0,42500):(510,42600) : 2
+g62362_db
+use : 0
+dir : i
+shape : 
+(0,42300):(510,42400) : 2
+g62362_sb
+use : 0
+dir : i
+shape : 
+(21450,49490):(21550,50000) : 1
+g62389_db
+use : 0
+dir : i
+shape : 
+(33250,49490):(33350,50000) : 1
+g62389_sb
+use : 0
+dir : i
+shape : 
+(32250,49490):(32350,50000) : 1
+g62410_db
+use : 0
+dir : i
+shape : 
+(0,29500):(510,29600) : 2
+g62485_sb
+use : 0
+dir : i
+shape : 
+(24650,49490):(24750,50000) : 1
+g62547_db
+use : 0
+dir : i
+shape : 
+(47650,49490):(47750,50000) : 1
+g62601_sb
+use : 0
+dir : i
+shape : 
+(0,42100):(510,42200) : 2
+g62911_db
+use : 0
+dir : i
+shape : 
+(11050,49490):(11150,50000) : 3
+g62923_db
+use : 0
+dir : i
+shape : 
+(16450,49490):(16550,50000) : 1
+g62923_sb
+use : 0
+dir : i
+shape : 
+(11050,49490):(11150,50000) : 1
+g62953_db
+use : 0
+dir : i
+shape : 
+(10850,49490):(10950,50000) : 3
+g62980_sb
+use : 0
+dir : i
+shape : 
+(71050,49490):(71150,50000) : 1
+g63183_da
+use : 0
+dir : i
+shape : 
+(0,35900):(510,36000) : 2
+g64800_sb
+use : 0
+dir : i
+shape : 
+(42650,49490):(42750,50000) : 1
+g64906_sb
+use : 0
+dir : i
+shape : 
+(50850,49490):(50950,50000) : 1
+g64907_sb
+use : 0
+dir : i
+shape : 
+(56450,49490):(56550,50000) : 1
+g64908_da
+use : 0
+dir : i
+shape : 
+(25050,49490):(25150,50000) : 1
+g64949_sb
+use : 0
+dir : i
+shape : 
+(0,27900):(510,28000) : 2
+g65335_da
+use : 0
+dir : i
+shape : 
+(10850,49490):(10950,50000) : 1
+g65351_sb
+use : 0
+dir : i
+shape : 
+(73650,49490):(73750,50000) : 1
+g65381_db
+use : 0
+dir : i
+shape : 
+(29650,49490):(29750,50000) : 1
+g65394_da
+use : 0
+dir : i
+shape : 
+(72250,49490):(72350,50000) : 1
+g65394_db
+use : 0
+dir : i
+shape : 
+(72450,49490):(72550,50000) : 1
+g66098_p
+use : 0
+dir : i
+shape : 
+(31050,49490):(31150,50000) : 1
+g66128_p
+use : 0
+dir : i
+shape : 
+(21050,49490):(21150,50000) : 1
+g66134_p
+use : 0
+dir : i
+shape : 
+(10650,49490):(10750,50000) : 3
+ispd_clk
+use : 0
+dir : i
+shape : 
+(20250,49490):(20350,50000) : 1
+n_12001
+use : 0
+dir : i
+shape : 
+(0,26500):(510,26600) : 4
+n_12010
+use : 0
+dir : i
+shape : 
+(0,30650):(255,30850) : 4
+n_12042
+use : 0
+dir : i
+shape : 
+(10650,49490):(10750,50000) : 1
+n_12105
+use : 0
+dir : i
+shape : 
+(38450,49490):(38550,50000) : 1
+n_12356
+use : 0
+dir : i
+shape : 
+(0,33300):(510,33400) : 2
+n_12403
+use : 0
+dir : i
+shape : 
+(19250,0):(19350,510) : 1
+n_12433
+use : 0
+dir : i
+shape : 
+(49850,49490):(49950,50000) : 1
+n_12458
+use : 0
+dir : i
+shape : 
+(0,28500):(510,28600) : 4
+n_12612
+use : 0
+dir : i
+shape : 
+(0,25900):(510,26000) : 2
+n_12645
+use : 0
+dir : i
+shape : 
+(0,32100):(510,32200) : 4
+n_12685
+use : 0
+dir : i
+shape : 
+(62450,49490):(62550,50000) : 1
+n_12695
+use : 0
+dir : i
+shape : 
+(18450,49490):(18550,50000) : 1
+n_12865
+use : 0
+dir : i
+shape : 
+(0,32300):(510,32400) : 4
+n_12866
+use : 0
+dir : i
+shape : 
+(0,25700):(510,25800) : 2
+n_13058
+use : 0
+dir : i
+shape : 
+(10450,49490):(10550,50000) : 3
+n_13144
+use : 0
+dir : i
+shape : 
+(19850,0):(19950,510) : 1
+n_13402
+use : 0
+dir : i
+shape : 
+(16050,0):(16150,510) : 1
+n_13760
+use : 0
+dir : i
+shape : 
+(28250,49490):(28350,50000) : 1
+n_14309
+use : 0
+dir : i
+shape : 
+(40850,49490):(40950,50000) : 1
+n_14313
+use : 0
+dir : i
+shape : 
+(29050,49490):(29150,50000) : 1
+n_14317
+use : 0
+dir : i
+shape : 
+(36850,49490):(36950,50000) : 1
+n_14353
+use : 0
+dir : i
+shape : 
+(0,41900):(510,42000) : 2
+n_156
+use : 0
+dir : i
+shape : 
+(11250,49490):(11350,50000) : 1
+n_3464
+use : 0
+dir : i
+shape : 
+(12200,49745):(12400,50000) : 3
+n_3752
+use : 0
+dir : i
+shape : 
+(51000,49745):(51200,50000) : 3
+n_3755
+use : 0
+dir : i
+shape : 
+(56200,49745):(56400,50000) : 3
+n_3770
+use : 0
+dir : i
+shape : 
+(70000,49745):(70200,50000) : 3
+n_3774
+use : 0
+dir : i
+shape : 
+(72600,49745):(72800,50000) : 3
+n_3777
+use : 0
+dir : i
+shape : 
+(11800,49745):(12000,50000) : 3
+n_3785
+use : 0
+dir : i
+shape : 
+(18250,49490):(18350,50000) : 1
+n_3792
+use : 0
+dir : i
+shape : 
+(55400,49745):(55600,50000) : 3
+n_4308
+use : 0
+dir : i
+shape : 
+(0,31900):(510,32000) : 4
+n_4357
+use : 0
+dir : i
+shape : 
+(15050,0):(15150,510) : 1
+n_4373
+use : 0
+dir : i
+shape : 
+(17450,49490):(17550,50000) : 1
+n_4442
+use : 0
+dir : i
+shape : 
+(0,22450):(255,22650) : 2
+n_4444
+use : 0
+dir : i
+shape : 
+(49200,49745):(49400,50000) : 3
+n_4450
+use : 0
+dir : i
+shape : 
+(37000,49745):(37200,50000) : 3
+n_4452
+use : 0
+dir : i
+shape : 
+(36600,49745):(36800,50000) : 3
+n_4465
+use : 0
+dir : i
+shape : 
+(34200,0):(34400,255) : 3
+n_4476
+use : 0
+dir : i
+shape : 
+(34600,0):(34800,255) : 3
+n_4479
+use : 0
+dir : i
+shape : 
+(11400,49745):(11600,50000) : 3
+n_4488
+use : 0
+dir : i
+shape : 
+(55800,49745):(56000,50000) : 3
+n_4493
+use : 0
+dir : i
+shape : 
+(18000,0):(18200,255) : 3
+n_4645
+use : 0
+dir : i
+shape : 
+(0,32050):(255,32250) : 2
+n_6189
+use : 0
+dir : i
+shape : 
+(19650,49490):(19750,50000) : 1
+n_6232
+use : 0
+dir : i
+shape : 
+(53200,49745):(53400,50000) : 3
+n_6287
+use : 0
+dir : i
+shape : 
+(0,41450):(255,41650) : 2
+n_6319
+use : 0
+dir : i
+shape : 
+(30400,49745):(30600,50000) : 3
+n_6388
+use : 0
+dir : i
+shape : 
+(15850,0):(15950,510) : 1
+n_6645
+use : 0
+dir : i
+shape : 
+(13000,49745):(13200,50000) : 3
+n_7631
+use : 0
+dir : i
+shape : 
+(28850,49490):(28950,50000) : 1
+n_7671
+use : 0
+dir : i
+shape : 
+(25650,49490):(25750,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_0__0__Q
+use : 0
+dir : i
+shape : 
+(18050,49490):(18150,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_10__29__Q
+use : 0
+dir : i
+shape : 
+(22050,49490):(22150,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_12__8__Q
+use : 0
+dir : i
+shape : 
+(10450,49490):(10550,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_15__12__Q
+use : 0
+dir : i
+shape : 
+(15650,49490):(15750,50000) : 3
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_4__21__Q
+use : 0
+dir : i
+shape : 
+(48850,49490):(48950,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_4__29__Q
+use : 0
+dir : i
+shape : 
+(22850,49490):(22950,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_6__30__Q
+use : 0
+dir : i
+shape : 
+(63450,49490):(63550,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_7__16__Q
+use : 0
+dir : i
+shape : 
+(70650,49490):(70750,50000) : 1
+wishbone_slave_unit_fifos_wbr_fifo_storage_mem_reg_9__14__Q
+use : 0
+dir : i
+shape : 
+(0,21500):(510,21600) : 2
+hh4
+--pins(140)
+FE_OCP_RBN2106_n_9155
+use : ;
+dir : o
+shape : 
+(352090,63750):(352600,63850) : 2
+FE_OFN1262_n_8567
+use : 0
+dir : o
+shape : 
+(352090,63950):(352600,64050) : 2
+FE_OFN1316_n_8567
+use : 0
+dir : o
+shape : 
+(182200,159745):(182400,160000) : 3
+FE_OFN1334_n_9372
+use : 0
+dir : o
+shape : 
+(352090,66150):(352600,66250) : 2
+FE_OFN1336_n_9372
+use : 0
+dir : o
+shape : 
+(352345,38900):(352600,39100) : 2
+FE_OFN1337_n_9372
+use : 9
+dir : o
+shape : 
+(352345,39300):(352600,39500) : 2
+FE_OFN1340_n_9372
+use : ú
+dir : o
+shape : 
+(352345,64300):(352600,64500) : 2
+FE_OFN1498_n_9864
+use : 0
+dir : o
+shape : 
+(286450,0):(286550,510) : 1
+FE_OFN1499_n_9864
+use : ó
+dir : o
+shape : 
+(352345,64700):(352600,64900) : 2
+FE_OFN1537_n_9428
+use : Q
+dir : o
+shape : 
+(171600,159745):(171800,160000) : 3
+FE_OFN222_n_9844
+use : \
+dir : o
+shape : 
+(352345,13300):(352600,13500) : 2
+FE_OFN248_n_9114
+use : C
+dir : o
+shape : 
+(352345,138700):(352600,138900) : 2
+FE_OFN257_n_8969
+use : 
+dir : o
+shape : 
+(261850,159490):(261950,160000) : 1
+FE_OFN448_n_10853
+use : ?
+dir : o
+shape : 
+(352090,65150):(352600,65250) : 2
+FE_OFN523_n_9690
+use : m
+dir : o
+shape : 
+(289200,0):(289400,255) : 3
+FE_OFN534_n_9864
+use : P
+dir : o
+shape : 
+(131800,0):(132000,255) : 3
+FE_OFN566_n_9692
+use : 0
+dir : o
+shape : 
+(352345,65500):(352600,65700) : 2
+g57223_da
+use : 0
+dir : o
+shape : 
+(202050,0):(202150,510) : 1
+g57530_db
+use : 0
+dir : o
+shape : 
+(95850,159490):(95950,160000) : 1
+g57535_sb
+use : 0
+dir : o
+shape : 
+(82850,0):(82950,510) : 1
+g57913_db
+use : 0
+dir : o
+shape : 
+(59050,0):(59150,510) : 1
+g58063_sb
+use : 0
+dir : o
+shape : 
+(24450,0):(24550,510) : 1
+g58199_da
+use : 0
+dir : o
+shape : 
+(128650,0):(128750,510) : 1
+g58376_db
+use : 0
+dir : o
+shape : 
+(126850,159490):(126950,160000) : 1
+g58389_da
+use : 0
+dir : o
+shape : 
+(105850,159490):(105950,160000) : 1
+g58428_sb
+use : 0
+dir : o
+shape : 
+(159050,159490):(159150,160000) : 1
+g58439_db
+use : 0
+dir : o
+shape : 
+(161050,159490):(161150,160000) : 1
+g58439_sb
+use : 0
+dir : o
+shape : 
+(164450,159490):(164550,160000) : 1
+g58481_db
+use : 0
+dir : o
+shape : 
+(278850,159490):(278950,160000) : 1
+g58832_da
+use : 0
+dir : o
+shape : 
+(266250,159490):(266350,160000) : 1
+n_10185
+use : 0
+dir : o
+shape : 
+(231050,0):(231150,510) : 1
+n_10627
+use : 0
+dir : o
+shape : 
+(257450,0):(257550,510) : 1
+n_10753
+use : 0
+dir : o
+shape : 
+(0,138350):(510,138450) : 2
+n_11005
+use : A
+dir : o
+shape : 
+(265450,0):(265550,510) : 1
+n_11236
+use : 0
+dir : o
+shape : 
+(166850,0):(166950,510) : 1
+n_11410
+use : 0
+dir : o
+shape : 
+(321450,0):(321550,510) : 1
+n_12573
+use : 0
+dir : o
+shape : 
+(176650,0):(176750,510) : 1
+n_12578
+use : ﬁ
+dir : o
+shape : 
+(278450,0):(278550,510) : 1
+n_2933
+use : Z
+dir : o
+shape : 
+(352090,113350):(352600,113450) : 2
+n_8714
+use : —
+dir : o
+shape : 
+(78650,159490):(78750,160000) : 1
+n_8884
+use : 0
+dir : o
+shape : 
+(223800,159745):(224000,160000) : 3
+n_9228
+use : ò
+dir : o
+shape : 
+(232250,159490):(232350,160000) : 1
+n_9419
+use : r
+dir : o
+shape : 
+(98250,159490):(98350,160000) : 1
+n_9440
+use : 0
+dir : o
+shape : 
+(118250,0):(118350,510) : 1
+wbu_sel_in_312
+use : ‡
+dir : o
+shape : 
+(238250,0):(238350,510) : 1
+wishbone_slave_unit_del_sync_addr_out_reg_5__Q
+use : ç
+dir : o
+shape : 
+(112850,159490):(112950,160000) : 1
+wishbone_slave_unit_fifos_wbr_be_in_264
+use : 0
+dir : o
+shape : 
+(352090,112950):(352600,113050) : 2
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_10__16__Q
+use : ã
+dir : o
+shape : 
+(298450,0):(298550,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_13__31__Q
+use : 0
+dir : o
+shape : 
+(352090,90150):(352600,90250) : 2
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_13__33__Q
+use : 
+dir : o
+shape : 
+(80450,159490):(80550,160000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_15__10__Q
+use : 0
+dir : o
+shape : 
+(275450,0):(275550,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_4__22__Q
+use : N
+dir : o
+shape : 
+(186450,0):(186550,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_5__20__Q
+use : 0
+dir : o
+shape : 
+(0,89550):(510,89650) : 2
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_6__5__Q
+use : 0
+dir : o
+shape : 
+(0,89350):(510,89450) : 2
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_7__27__Q
+use : 0
+dir : o
+shape : 
+(220850,0):(220950,510) : 1
+wishbone_slave_unit_pcim_if_wbw_addr_data_in_388
+use : 
+dir : o
+shape : 
+(352090,90350):(352600,90450) : 2
+FE_OCPN1879_n_9991
+use : Ö
+dir : i
+shape : 
+(0,138550):(510,138650) : 2
+FE_OCPN1936_n_15566
+use : l
+dir : i
+shape : 
+(257600,0):(257800,255) : 3
+FE_OCP_RBN2104_n_9155
+use : f
+dir : i
+shape : 
+(352090,63550):(352600,63650) : 2
+FE_OFN1251_n_16439
+use : ã
+dir : i
+shape : 
+(267850,159490):(267950,160000) : 1
+FE_OFN1253_n_8567
+use : ÷
+dir : i
+shape : 
+(352090,63350):(352600,63450) : 2
+FE_OFN1282_n_8567
+use : à
+dir : i
+shape : 
+(179050,159490):(179150,160000) : 1
+FE_OFN1285_n_8567
+use : D
+dir : i
+shape : 
+(0,112900):(255,113100) : 2
+FE_OFN1287_n_8567
+use : M
+dir : i
+shape : 
+(211800,0):(212000,255) : 3
+FE_OFN1289_n_8567
+use : 0
+dir : i
+shape : 
+(331000,0):(331200,255) : 3
+FE_OFN1296_n_8567
+use : 0
+dir : i
+shape : 
+(88600,0):(88800,255) : 3
+FE_OFN1298_n_8567
+use : 0
+dir : i
+shape : 
+(65600,159745):(65800,160000) : 3
+FE_OFN1308_n_8567
+use : 0
+dir : i
+shape : 
+(95400,159745):(95600,160000) : 3
+FE_OFN1315_n_8567
+use : 0
+dir : i
+shape : 
+(133200,0):(133400,255) : 3
+FE_OFN1341_n_9372
+use : 0
+dir : i
+shape : 
+(269400,159745):(269600,160000) : 3
+FE_OFN1377_n_10853
+use : 0
+dir : i
+shape : 
+(352090,62950):(352600,63050) : 4
+FE_OFN13_n_11877
+use : 0
+dir : i
+shape : 
+(255200,0):(255400,255) : 3
+FE_OFN1400_n_10566
+use : 0
+dir : i
+shape : 
+(196450,0):(196550,510) : 1
+FE_OFN1496_n_9864
+use : 0
+dir : i
+shape : 
+(132050,0):(132150,510) : 1
+FE_OFN1497_n_9864
+use : 0
+dir : i
+shape : 
+(352090,62950):(352600,63050) : 2
+FE_OFN1534_n_9428
+use : 0
+dir : i
+shape : 
+(174050,159490):(174150,160000) : 1
+FE_OFN1541_n_9502
+use : 0
+dir : i
+shape : 
+(137850,159490):(137950,160000) : 1
+FE_OFN1572_n_9477
+use : 0
+dir : i
+shape : 
+(116200,159745):(116400,160000) : 3
+FE_OFN1632_n_9862
+use : 0
+dir : i
+shape : 
+(128000,159745):(128200,160000) : 3
+FE_OFN1687_n_15534
+use : 0
+dir : i
+shape : 
+(285850,0):(285950,510) : 1
+FE_OFN1692_n_16992
+use : 0
+dir : i
+shape : 
+(286250,0):(286350,510) : 1
+FE_OFN1713_n_9320
+use : 0
+dir : i
+shape : 
+(195850,0):(195950,510) : 1
+FE_OFN1807_n_9899
+use : 0
+dir : i
+shape : 
+(0,113900):(255,114100) : 2
+FE_OFN199_n_9228
+use : 0
+dir : i
+shape : 
+(161250,159490):(161350,160000) : 1
+FE_OFN214_n_9856
+use : 0
+dir : i
+shape : 
+(117400,0):(117600,255) : 3
+FE_OFN220_n_9846
+use : 0
+dir : i
+shape : 
+(128400,159745):(128600,160000) : 3
+FE_OFN224_n_9122
+use : 0
+dir : i
+shape : 
+(137400,159745):(137600,160000) : 3
+FE_OFN233_n_9876
+use : 0
+dir : i
+shape : 
+(108600,0):(108800,255) : 3
+FE_OFN236_n_9834
+use : 0
+dir : i
+shape : 
+(171200,159745):(171400,160000) : 3
+FE_OFN498_n_9697
+use : 0
+dir : i
+shape : 
+(196200,159745):(196400,160000) : 3
+FE_OFN519_n_9690
+use : 0
+dir : i
+shape : 
+(289450,0):(289550,510) : 1
+FE_OFN548_n_9502
+use : 0
+dir : i
+shape : 
+(152600,159745):(152800,160000) : 3
+FE_OFN555_n_9902
+use : 0
+dir : i
+shape : 
+(162200,0):(162400,255) : 3
+FE_OFN559_n_9531
+use : 0
+dir : i
+shape : 
+(109000,0):(109200,255) : 3
+FE_OFN561_n_9692
+use : 0
+dir : i
+shape : 
+(352090,63150):(352600,63250) : 2
+FE_OFN571_n_9694
+use : 0
+dir : i
+shape : 
+(165200,159745):(165400,160000) : 3
+FE_OFN581_n_9904
+use : 0
+dir : i
+shape : 
+(0,88900):(255,89100) : 2
+g57041_da
+use : 0
+dir : i
+shape : 
+(306250,0):(306350,510) : 1
+g57341_db
+use : 0
+dir : i
+shape : 
+(321050,0):(321150,510) : 1
+g58063_da
+use : 0
+dir : i
+shape : 
+(0,38950):(510,39050) : 2
+g58082_db
+use : 0
+dir : i
+shape : 
+(171250,0):(171350,510) : 1
+g58361_da
+use : 0
+dir : i
+shape : 
+(142650,0):(142750,510) : 1
+g58389_sb
+use : 0
+dir : i
+shape : 
+(106250,159490):(106350,160000) : 1
+g58393_da
+use : 0
+dir : i
+shape : 
+(118450,0):(118550,510) : 1
+g58428_da
+use : 0
+dir : i
+shape : 
+(98450,159490):(98550,160000) : 1
+g58829_db
+use : 0
+dir : i
+shape : 
+(210850,159490):(210950,160000) : 1
+g59091_da
+use : 0
+dir : i
+shape : 
+(78850,159490):(78950,160000) : 1
+g59091_db
+use : 0
+dir : i
+shape : 
+(79050,159490):(79150,160000) : 1
+g63585_da
+use : 0
+dir : i
+shape : 
+(244450,0):(244550,510) : 1
+ispd_clk
+use : 0
+dir : i
+shape : 
+(251000,0):(251200,255) : 3
+n_10051
+use : 0
+dir : i
+shape : 
+(160650,0):(160750,510) : 1
+n_10054
+use : 0
+dir : i
+shape : 
+(166050,0):(166150,510) : 1
+n_10057
+use : 0
+dir : i
+shape : 
+(165050,0):(165150,510) : 1
+n_10314
+use : 0
+dir : i
+shape : 
+(111450,159490):(111550,160000) : 1
+n_10693
+use : 0
+dir : i
+shape : 
+(0,138750):(510,138850) : 2
+n_11223
+use : 0
+dir : i
+shape : 
+(276450,0):(276550,510) : 1
+n_11264
+use : 0
+dir : i
+shape : 
+(352090,89950):(352600,90050) : 2
+n_12153
+use : 0
+dir : i
+shape : 
+(278650,0):(278750,510) : 1
+n_1252
+use : 0
+dir : i
+shape : 
+(352090,89750):(352600,89850) : 2
+n_12825
+use : 0
+dir : i
+shape : 
+(352090,89550):(352600,89650) : 2
+n_1340
+use : 0
+dir : i
+shape : 
+(352090,89350):(352600,89450) : 2
+n_1342
+use : 0
+dir : i
+shape : 
+(352090,89150):(352600,89250) : 2
+n_1354
+use : 0
+dir : i
+shape : 
+(352090,88950):(352600,89050) : 2
+n_15568
+use : 0
+dir : i
+shape : 
+(258250,0):(258350,510) : 1
+n_2401
+use : 0
+dir : i
+shape : 
+(352090,113150):(352600,113250) : 2
+n_8605
+use : 0
+dir : i
+shape : 
+(251650,159490):(251750,160000) : 1
+n_8831
+use : 0
+dir : i
+shape : 
+(231000,159745):(231200,160000) : 3
+n_8832
+use : 0
+dir : i
+shape : 
+(245050,159490):(245150,160000) : 1
+n_8927
+use : 0
+dir : i
+shape : 
+(231250,0):(231350,510) : 1
+n_9116
+use : 0
+dir : i
+shape : 
+(279050,159490):(279150,160000) : 1
+n_9269
+use : 0
+dir : i
+shape : 
+(165650,0):(165750,510) : 1
+n_9372
+use : 0
+dir : i
+shape : 
+(352090,65950):(352600,66050) : 2
+n_9407
+use : 0
+dir : i
+shape : 
+(92850,0):(92950,510) : 1
+n_9586
+use : 0
+dir : i
+shape : 
+(314850,0):(314950,510) : 1
+n_9844
+use : 0
+dir : i
+shape : 
+(313850,0):(313950,510) : 1
+wbu_addr_in_254
+use : 0
+dir : i
+shape : 
+(303250,159490):(303350,160000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_14__29__Q
+use : 0
+dir : i
+shape : 
+(133050,0):(133150,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_2__29__Q
+use : 0
+dir : i
+shape : 
+(196250,0):(196350,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_6__27__Q
+use : 0
+dir : i
+shape : 
+(59250,0):(59350,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_6__29__Q
+use : 0
+dir : i
+shape : 
+(258650,0):(258750,510) : 1
+h5
+--pins(105)
+FE_OCPN1988_FE_OFN1264_n_8567
+use : z
+dir : o
+shape : 
+(309200,0):(309400,255) : 3
+FE_OFN1299_n_8567
+use : 0
+dir : o
+shape : 
+(117400,0):(117600,255) : 3
+FE_OFN1504_n_9531
+use : 0
+dir : o
+shape : 
+(31850,0):(31950,510) : 1
+FE_OFN1675_n_10588
+use : 0
+dir : o
+shape : 
+(78050,0):(78150,510) : 1
+FE_OFN538_n_9895
+use : z
+dir : o
+shape : 
+(0,90900):(255,91100) : 2
+g57182_da
+use : z
+dir : o
+shape : 
+(61650,0):(61750,510) : 1
+g57202_db
+use : z
+dir : o
+shape : 
+(60850,153490):(60950,154000) : 1
+g57368_db
+use : z
+dir : o
+shape : 
+(237250,0):(237350,510) : 1
+g57569_db
+use : Z
+dir : o
+shape : 
+(149450,0):(149550,510) : 1
+g57942_sb
+use : —
+dir : o
+shape : 
+(71650,0):(71750,510) : 1
+g58061_db
+use : 0
+dir : o
+shape : 
+(74050,153490):(74150,154000) : 1
+g58210_db
+use : ò
+dir : o
+shape : 
+(55050,0):(55150,510) : 1
+g58235_db
+use : r
+dir : o
+shape : 
+(0,21750):(510,21850) : 2
+g58319_db
+use : 0
+dir : o
+shape : 
+(47850,153490):(47950,154000) : 1
+g58425_da
+use : ‡
+dir : o
+shape : 
+(163050,0):(163150,510) : 1
+g61860_da
+use : ç
+dir : o
+shape : 
+(333250,153490):(333350,154000) : 1
+n_10554
+use : 0
+dir : o
+shape : 
+(0,57550):(510,57650) : 2
+n_11097
+use : 0
+dir : o
+shape : 
+(163450,153490):(163550,154000) : 1
+n_11198
+use : 0
+dir : o
+shape : 
+(358490,57150):(359000,57250) : 2
+n_11261
+use : 0
+dir : o
+shape : 
+(358490,57350):(359000,57450) : 2
+n_12158
+use : 0
+dir : o
+shape : 
+(189450,0):(189550,510) : 1
+n_12530
+use : 0
+dir : o
+shape : 
+(109050,153490):(109150,154000) : 1
+n_2151
+use : 0
+dir : o
+shape : 
+(159850,153490):(159950,154000) : 1
+n_7842
+use : 0
+dir : o
+shape : 
+(338250,0):(338350,510) : 1
+n_9878
+use : 0
+dir : o
+shape : 
+(0,57750):(510,57850) : 2
+n_9971
+use : 0
+dir : o
+shape : 
+(256850,0):(256950,510) : 1
+pci_target_unit_fifos_pcir_fifo_storage_mem_reg_0__8__Q
+use : 0
+dir : o
+shape : 
+(139650,153490):(139750,154000) : 1
+pci_target_unit_fifos_pcir_fifo_storage_mem_reg_1__22__Q
+use : 0
+dir : o
+shape : 
+(173650,0):(173750,510) : 1
+pci_target_unit_pcit_if_pcir_fifo_data_in_766
+use : 0
+dir : o
+shape : 
+(136250,153490):(136350,154000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_0__6__Q
+use : 0
+dir : o
+shape : 
+(216450,0):(216550,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_10__6__Q
+use : 0
+dir : o
+shape : 
+(83250,153490):(83350,154000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_4__21__Q
+use : 0
+dir : o
+shape : 
+(101650,0):(101750,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_4__6__Q
+use : 0
+dir : o
+shape : 
+(292050,0):(292150,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_6__17__Q
+use : 0
+dir : o
+shape : 
+(129050,0):(129150,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_9__2__Q
+use : 0
+dir : o
+shape : 
+(234450,0):(234550,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_9__6__Q
+use : 0
+dir : o
+shape : 
+(27450,153490):(27550,154000) : 1
+FE_OCPN1987_FE_OFN1264_n_8567
+use : 0
+dir : i
+shape : 
+(308650,0):(308750,510) : 1
+FE_OCP_RBN2065_n_16572
+use : 0
+dir : i
+shape : 
+(173450,0):(173550,510) : 1
+FE_OFN1068_n_8176
+use : 0
+dir : i
+shape : 
+(358490,90950):(359000,91050) : 2
+FE_OFN1077_n_7845
+use : 0
+dir : i
+shape : 
+(329200,0):(329400,255) : 3
+FE_OFN1265_n_8567
+use : 0
+dir : i
+shape : 
+(358745,57700):(359000,57900) : 2
+FE_OFN1271_n_8567
+use : 0
+dir : i
+shape : 
+(0,90500):(255,90700) : 2
+FE_OFN1281_n_8567
+use : 0
+dir : i
+shape : 
+(64400,0):(64600,255) : 3
+FE_OFN1283_n_8567
+use : 0
+dir : i
+shape : 
+(117650,0):(117750,510) : 1
+FE_OFN1322_n_8567
+use : 0
+dir : i
+shape : 
+(237600,0):(237800,255) : 3
+FE_OFN1323_n_8567
+use : 0
+dir : i
+shape : 
+(274800,0):(275000,255) : 3
+FE_OFN1349_n_9163
+use : 0
+dir : i
+shape : 
+(113850,153490):(113950,154000) : 1
+FE_OFN1353_n_15558
+use : 0
+dir : i
+shape : 
+(147850,0):(147950,510) : 1
+FE_OFN1365_n_15587
+use : 0
+dir : i
+shape : 
+(257450,0):(257550,510) : 1
+FE_OFN1376_n_10853
+use : 0
+dir : i
+shape : 
+(0,57350):(510,57450) : 2
+FE_OFN1502_n_9531
+use : 0
+dir : i
+shape : 
+(32050,0):(32150,510) : 1
+FE_OFN1503_n_9531
+use : 0
+dir : i
+shape : 
+(301450,153490):(301550,154000) : 1
+FE_OFN1543_n_9502
+use : 0
+dir : i
+shape : 
+(358745,126900):(359000,127100) : 2
+FE_OFN1544_n_9502
+use : 0
+dir : i
+shape : 
+(49200,153745):(49400,154000) : 3
+FE_OFN1678_n_10588
+use : 0
+dir : i
+shape : 
+(0,57150):(510,57250) : 2
+FE_OFN1682_n_16891
+use : 0
+dir : i
+shape : 
+(258050,0):(258150,510) : 1
+FE_OFN1717_n_16637
+use : 0
+dir : i
+shape : 
+(113250,153490):(113350,154000) : 1
+FE_OFN1842_n_9828
+use : 0
+dir : i
+shape : 
+(301200,153745):(301400,154000) : 3
+FE_OFN222_n_9844
+use : 0
+dir : i
+shape : 
+(48050,153490):(48150,154000) : 1
+FE_OFN239_n_9118
+use : 0
+dir : i
+shape : 
+(211200,153745):(211400,154000) : 3
+FE_OFN521_n_9690
+use : 0
+dir : i
+shape : 
+(0,21300):(255,21500) : 2
+FE_OFN535_n_9895
+use : 0
+dir : i
+shape : 
+(0,91750):(510,91850) : 2
+FE_OFN536_n_9895
+use : 0
+dir : i
+shape : 
+(88050,0):(88150,510) : 1
+FE_OFN551_n_9902
+use : 0
+dir : i
+shape : 
+(209200,0):(209400,255) : 3
+FE_OFN568_n_9694
+use : 0
+dir : i
+shape : 
+(55400,0):(55600,255) : 3
+FE_OFN579_n_9904
+use : 0
+dir : i
+shape : 
+(74450,153490):(74550,154000) : 1
+FE_OFN680_n_8060
+use : 0
+dir : i
+shape : 
+(238400,153745):(238600,154000) : 3
+g57065_db
+use : 0
+dir : i
+shape : 
+(0,91550):(510,91650) : 2
+g57353_da
+use : 0
+dir : i
+shape : 
+(82250,0):(82350,510) : 1
+g57473_db
+use : 0
+dir : i
+shape : 
+(358490,56950):(359000,57050) : 2
+g57932_da
+use : 0
+dir : i
+shape : 
+(0,56950):(510,57050) : 2
+g57942_da
+use : 0
+dir : i
+shape : 
+(0,91350):(510,91450) : 2
+g58425_sb
+use : 0
+dir : i
+shape : 
+(163450,0):(163550,510) : 1
+g61866_da
+use : 0
+dir : i
+shape : 
+(107650,0):(107750,510) : 1
+g62004_sb
+use : 0
+dir : i
+shape : 
+(292050,153490):(292150,154000) : 1
+g62027_db
+use : 0
+dir : i
+shape : 
+(338650,0):(338750,510) : 1
+g65976_da
+use : 0
+dir : i
+shape : 
+(318050,0):(318150,510) : 1
+g65976_db
+use : 0
+dir : i
+shape : 
+(318250,0):(318350,510) : 1
+ispd_clk
+use : 0
+dir : i
+shape : 
+(102000,0):(102200,255) : 3
+n_10151
+use : 0
+dir : i
+shape : 
+(190250,0):(190350,510) : 1
+n_10154
+use : 0
+dir : i
+shape : 
+(190050,0):(190150,510) : 1
+n_10381
+use : 0
+dir : i
+shape : 
+(291050,0):(291150,510) : 1
+n_10414
+use : 0
+dir : i
+shape : 
+(217450,0):(217550,510) : 1
+n_10426
+use : 0
+dir : i
+shape : 
+(28450,153490):(28550,154000) : 1
+n_10588
+use : 0
+dir : i
+shape : 
+(78250,0):(78350,510) : 1
+n_11040
+use : 0
+dir : i
+shape : 
+(110650,153490):(110750,154000) : 1
+n_11041
+use : 0
+dir : i
+shape : 
+(110050,153490):(110150,154000) : 1
+n_11572
+use : 0
+dir : i
+shape : 
+(130050,0):(130150,510) : 1
+n_11773
+use : 0
+dir : i
+shape : 
+(109650,153490):(109750,154000) : 1
+n_12548
+use : 0
+dir : i
+shape : 
+(137250,153490):(137350,154000) : 1
+n_1851
+use : 0
+dir : i
+shape : 
+(333450,153490):(333550,154000) : 1
+n_2053
+use : 0
+dir : i
+shape : 
+(189200,153745):(189400,154000) : 3
+n_2299
+use : 0
+dir : i
+shape : 
+(173200,153745):(173400,154000) : 3
+n_7853
+use : 0
+dir : i
+shape : 
+(140650,153490):(140750,154000) : 1
+n_8407
+use : 0
+dir : i
+shape : 
+(129200,0):(129400,255) : 3
+n_9307
+use : 0
+dir : i
+shape : 
+(189650,0):(189750,510) : 1
+n_9744
+use : 0
+dir : i
+shape : 
+(61850,0):(61950,510) : 1
+pci_target_unit_fifos_pcir_data_in_165
+use : 0
+dir : i
+shape : 
+(173050,153490):(173150,154000) : 1
+pci_target_unit_fifos_pcir_data_in_179
+use : 0
+dir : i
+shape : 
+(269250,153490):(269350,154000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_10__26__Q
+use : 0
+dir : i
+shape : 
+(41850,0):(41950,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_13__3__Q
+use : 0
+dir : i
+shape : 
+(314250,153490):(314350,154000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_15__3__Q
+use : 0
+dir : i
+shape : 
+(266250,0):(266350,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_6__3__Q
+use : 0
+dir : i
+shape : 
+(74250,153490):(74350,154000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_7__17__Q
+use : 0
+dir : i
+shape : 
+(163250,0):(163350,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_8__16__Q
+use : 0
+dir : i
+shape : 
+(0,20950):(510,21050) : 2
+h3
+--pins(120)
+FE_OFN1630_n_9862
+use : a
+dir : o
+shape : 
+(85850,177490):(85950,178000) : 1
+FE_OFN199_n_9228
+use : 0
+dir : o
+shape : 
+(0,46500):(255,46700) : 2
+FE_RN_189_0
+use : 0
+dir : o
+shape : 
+(100250,0):(100350,510) : 1
+g57181_sb
+use : 0
+dir : o
+shape : 
+(34850,0):(34950,510) : 1
+g57242_db
+use : 0
+dir : o
+shape : 
+(173450,0):(173550,510) : 1
+g57370_da
+use : 0
+dir : o
+shape : 
+(81650,0):(81750,510) : 1
+g57404_db
+use : 0
+dir : o
+shape : 
+(175050,177490):(175150,178000) : 1
+g57508_sb
+use : 0
+dir : o
+shape : 
+(95050,0):(95150,510) : 1
+g57581_db
+use : 0
+dir : o
+shape : 
+(123850,0):(123950,510) : 1
+g57909_da
+use : 0
+dir : o
+shape : 
+(0,15350):(510,15450) : 2
+g57912_db
+use : 0
+dir : o
+shape : 
+(222850,0):(222950,510) : 1
+g58049_da
+use : 0
+dir : o
+shape : 
+(0,45950):(510,46050) : 2
+g58066_da
+use : 0
+dir : o
+shape : 
+(0,74950):(510,75050) : 2
+g58066_db
+use : 0
+dir : o
+shape : 
+(277850,0):(277950,510) : 1
+g58107_da
+use : 0
+dir : o
+shape : 
+(75650,177490):(75750,178000) : 1
+g58339_da
+use : 0
+dir : o
+shape : 
+(227850,177490):(227950,178000) : 1
+g58434_da
+use : 0
+dir : o
+shape : 
+(134650,0):(134750,510) : 1
+g58437_da
+use : 0
+dir : o
+shape : 
+(184850,0):(184950,510) : 1
+n_10060
+use : 0
+dir : o
+shape : 
+(161050,0):(161150,510) : 1
+n_10608
+use : 0
+dir : o
+shape : 
+(121250,0):(121350,510) : 1
+n_11362
+use : 0
+dir : o
+shape : 
+(255450,0):(255550,510) : 1
+n_11544
+use : 0
+dir : o
+shape : 
+(250250,0):(250350,510) : 1
+n_11582
+use : 0
+dir : o
+shape : 
+(276250,0):(276350,510) : 1
+n_12129
+use : 0
+dir : o
+shape : 
+(75050,0):(75150,510) : 1
+n_12140
+use : 0
+dir : o
+shape : 
+(21050,0):(21150,510) : 1
+n_9427
+use : 0
+dir : o
+shape : 
+(116850,177490):(116950,178000) : 1
+n_9435
+use : 0
+dir : o
+shape : 
+(64250,177490):(64350,178000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_13__35__Q
+use : 0
+dir : o
+shape : 
+(0,102950):(510,103050) : 2
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_13__8__Q
+use : 0
+dir : o
+shape : 
+(233850,177490):(233950,178000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_14__0__Q
+use : 0
+dir : o
+shape : 
+(313050,0):(313150,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_15__33__Q
+use : 0
+dir : o
+shape : 
+(171250,177490):(171350,178000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_15__35__Q
+use : 0
+dir : o
+shape : 
+(45450,177490):(45550,178000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_7__14__Q
+use : 0
+dir : o
+shape : 
+(150250,177490):(150350,178000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_7__32__Q
+use : 0
+dir : o
+shape : 
+(202850,0):(202950,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_9__20__Q
+use : 0
+dir : o
+shape : 
+(100050,177490):(100150,178000) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_9__35__Q
+use : 0
+dir : o
+shape : 
+(56050,0):(56150,510) : 1
+wishbone_slave_unit_pcim_if_wbw_addr_data_in_393
+use : 0
+dir : o
+shape : 
+(107050,0):(107150,510) : 1
+wishbone_slave_unit_pcim_if_wbw_addr_data_in_397
+use : 0
+dir : o
+shape : 
+(0,133150):(510,133250) : 2
+wishbone_slave_unit_pcim_if_wbw_addr_data_in_398
+use : 0
+dir : o
+shape : 
+(0,163150):(510,163250) : 2
+wishbone_slave_unit_pcim_if_wbw_addr_data_in_403
+use : 0
+dir : o
+shape : 
+(0,46150):(510,46250) : 2
+FE_OCPN1936_n_15566
+use : 0
+dir : i
+shape : 
+(57200,0):(57400,255) : 3
+FE_OCP_RBN2062_n_16572
+use : 0
+dir : i
+shape : 
+(98450,0):(98550,510) : 1
+FE_OFN1257_n_8567
+use : 0
+dir : i
+shape : 
+(271000,0):(271200,255) : 3
+FE_OFN1273_n_8567
+use : 0
+dir : i
+shape : 
+(0,73900):(255,74100) : 2
+FE_OFN1274_n_8567
+use : 0
+dir : i
+shape : 
+(356145,102900):(356400,103100) : 2
+FE_OFN1285_n_8567
+use : 0
+dir : i
+shape : 
+(0,74300):(255,74500) : 2
+FE_OFN1286_n_8567
+use : 0
+dir : i
+shape : 
+(144200,177745):(144400,178000) : 3
+FE_OFN1288_n_8567
+use : 0
+dir : i
+shape : 
+(163800,177745):(164000,178000) : 3
+FE_OFN1289_n_8567
+use : 0
+dir : i
+shape : 
+(35000,0):(35200,255) : 3
+FE_OFN1292_n_8567
+use : 0
+dir : i
+shape : 
+(95200,0):(95400,255) : 3
+FE_OFN1308_n_8567
+use : 0
+dir : i
+shape : 
+(0,7500):(255,7700) : 2
+FE_OFN1311_n_8567
+use : 0
+dir : i
+shape : 
+(231000,0):(231200,255) : 3
+FE_OFN1312_n_8567
+use : 0
+dir : i
+shape : 
+(356145,132900):(356400,133100) : 2
+FE_OFN1319_n_8567
+use : 0
+dir : i
+shape : 
+(124200,0):(124400,255) : 3
+FE_OFN1320_n_8567
+use : 0
+dir : i
+shape : 
+(238400,177745):(238600,178000) : 3
+FE_OFN1354_n_15558
+use : 0
+dir : i
+shape : 
+(122050,0):(122150,510) : 1
+FE_OFN1355_n_15558
+use : 0
+dir : i
+shape : 
+(99050,0):(99150,510) : 1
+FE_OFN1367_n_15587
+use : 0
+dir : i
+shape : 
+(85050,0):(85150,510) : 1
+FE_OFN1368_n_15587
+use : 0
+dir : i
+shape : 
+(63450,0):(63550,510) : 1
+FE_OFN1378_n_10853
+use : 0
+dir : i
+shape : 
+(207650,0):(207750,510) : 1
+FE_OFN1505_n_9531
+use : 0
+dir : i
+shape : 
+(25250,177490):(25350,178000) : 1
+FE_OFN1537_n_9428
+use : 0
+dir : i
+shape : 
+(105650,0):(105750,510) : 1
+FE_OFN1538_n_9428
+use : 0
+dir : i
+shape : 
+(183000,0):(183200,255) : 3
+FE_OFN1565_n_9477
+use : 0
+dir : i
+shape : 
+(356145,44900):(356400,45100) : 2
+FE_OFN1629_n_9862
+use : 0
+dir : i
+shape : 
+(86050,177490):(86150,178000) : 1
+FE_OFN1677_n_10588
+use : 0
+dir : i
+shape : 
+(207050,0):(207150,510) : 1
+FE_OFN1685_n_16891
+use : 0
+dir : i
+shape : 
+(85650,0):(85750,510) : 1
+FE_OFN1688_n_15534
+use : 0
+dir : i
+shape : 
+(210050,177490):(210150,178000) : 1
+FE_OFN1693_n_16992
+use : 0
+dir : i
+shape : 
+(210650,177490):(210750,178000) : 1
+FE_OFN198_n_9228
+use : 0
+dir : i
+shape : 
+(0,45750):(510,45850) : 2
+FE_OFN201_n_9140
+use : 0
+dir : i
+shape : 
+(263000,177745):(263200,178000) : 3
+FE_OFN203_n_9865
+use : 0
+dir : i
+shape : 
+(356145,45300):(356400,45500) : 2
+FE_OFN210_n_9858
+use : 0
+dir : i
+shape : 
+(239250,0):(239350,510) : 1
+FE_OFN212_n_9124
+use : 0
+dir : i
+shape : 
+(145400,0):(145600,255) : 3
+FE_OFN216_n_9889
+use : 0
+dir : i
+shape : 
+(0,14900):(255,15100) : 2
+FE_OFN254_n_9868
+use : 0
+dir : i
+shape : 
+(82000,177745):(82200,178000) : 3
+FE_OFN268_n_9884
+use : 0
+dir : i
+shape : 
+(0,45300):(255,45500) : 2
+FE_OFN539_n_9895
+use : 0
+dir : i
+shape : 
+(356145,74700):(356400,74900) : 2
+FE_OFN548_n_9502
+use : 0
+dir : i
+shape : 
+(219200,0):(219400,255) : 3
+FE_OFN554_n_9902
+use : 0
+dir : i
+shape : 
+(231400,0):(231600,255) : 3
+FE_OFN560_n_9531
+use : 0
+dir : i
+shape : 
+(82400,177745):(82600,178000) : 3
+FE_OFN571_n_9694
+use : 0
+dir : i
+shape : 
+(0,15700):(255,15900) : 2
+FE_OFN572_n_9694
+use : 0
+dir : i
+shape : 
+(274800,177745):(275000,178000) : 3
+FE_OFN576_n_9687
+use : 0
+dir : i
+shape : 
+(0,103300):(255,103500) : 2
+FE_OFN580_n_9904
+use : 0
+dir : i
+shape : 
+(278200,0):(278400,255) : 3
+FE_OFN581_n_9904
+use : 0
+dir : i
+shape : 
+(75200,0):(75400,255) : 3
+g57213_db
+use : 0
+dir : i
+shape : 
+(250650,0):(250750,510) : 1
+g57221_da
+use : 0
+dir : i
+shape : 
+(119050,177490):(119150,178000) : 1
+g57544_da
+use : 0
+dir : i
+shape : 
+(55450,177490):(55550,178000) : 1
+g57944_da
+use : 0
+dir : i
+shape : 
+(355890,103350):(356400,103450) : 2
+g58060_da
+use : 0
+dir : i
+shape : 
+(124450,0):(124550,510) : 1
+g58073_db
+use : 0
+dir : i
+shape : 
+(237250,0):(237350,510) : 1
+g58333_da
+use : 0
+dir : i
+shape : 
+(77650,177490):(77750,178000) : 1
+g58333_db
+use : 0
+dir : i
+shape : 
+(77850,177490):(77950,178000) : 1
+g58341_sb
+use : 0
+dir : i
+shape : 
+(330450,0):(330550,510) : 1
+g58402_db
+use : 0
+dir : i
+shape : 
+(64650,177490):(64750,178000) : 1
+g58438_db
+use : 0
+dir : i
+shape : 
+(201050,0):(201150,510) : 1
+ispd_clk
+use : 0
+dir : i
+shape : 
+(0,46900):(255,47100) : 2
+n_10002
+use : 0
+dir : i
+shape : 
+(21650,0):(21750,510) : 1
+n_11259
+use : 0
+dir : i
+shape : 
+(234850,177490):(234950,178000) : 1
+n_11337
+use : 0
+dir : i
+shape : 
+(162850,177490):(162950,178000) : 1
+n_11516
+use : 0
+dir : i
+shape : 
+(186250,177490):(186350,178000) : 1
+n_12841
+use : 0
+dir : i
+shape : 
+(0,44950):(510,45050) : 2
+n_12847
+use : 0
+dir : i
+shape : 
+(0,162950):(510,163050) : 2
+n_12848
+use : 0
+dir : i
+shape : 
+(0,132950):(510,133050) : 2
+n_12852
+use : 0
+dir : i
+shape : 
+(108050,0):(108150,510) : 1
+n_16840
+use : 0
+dir : i
+shape : 
+(21250,0):(21350,510) : 1
+n_16841
+use : 0
+dir : i
+shape : 
+(22250,0):(22350,510) : 1
+n_9551
+use : 0
+dir : i
+shape : 
+(245250,0):(245350,510) : 1
+n_9726
+use : 0
+dir : i
+shape : 
+(259850,0):(259950,510) : 1
+n_9868
+use : 0
+dir : i
+shape : 
+(182850,0):(182950,510) : 1
+n_9908
+use : 0
+dir : i
+shape : 
+(0,74750):(510,74850) : 2
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_0__34__Q
+use : 0
+dir : i
+shape : 
+(63650,0):(63750,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_0__8__Q
+use : 0
+dir : i
+shape : 
+(86050,0):(86150,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_4__8__Q
+use : 0
+dir : i
+shape : 
+(42650,0):(42750,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_6__0__Q
+use : 0
+dir : i
+shape : 
+(297450,0):(297550,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_6__28__Q
+use : 0
+dir : i
+shape : 
+(162250,0):(162350,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_7__10__Q
+use : 0
+dir : i
+shape : 
+(113450,0):(113550,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_7__28__Q
+use : 0
+dir : i
+shape : 
+(134850,0):(134950,510) : 1
+wishbone_slave_unit_fifos_wbw_fifo_storage_mem_reg_8__1__Q
+use : 0
+dir : i
+shape : 
+(265850,0):(265950,510) : 1
+h2
+--pins(154)
+FE_OCP_RBN2122_n_16966
+use : 0
+dir : o
+shape : 
+(0,15550):(510,15650) : 2
+FE_OFN741_n_2678
+use : 0
+dir : o
+shape : 
+(225850,0):(225950,510) : 1
+FE_OFN752_n_2547
+use : 0
+dir : o
+shape : 
+(55650,0):(55750,510) : 1
+FE_RN_232_0
+use : 0
+dir : o
+shape : 
+(360090,162750):(360600,162850) : 2
+configuration_pci_err_addr_471
+use : 0
+dir : o
+shape : 
+(139650,0):(139750,510) : 1
+configuration_sync_cache_lsize_to_wb_bits_reg_3__Q
+use : 0
+dir : o
+shape : 
+(360090,45150):(360600,45250) : 2
+g53255_p
+use : 0
+dir : o
+shape : 
+(46650,0):(46750,510) : 1
+g53301_p
+use : 0
+dir : o
+shape : 
+(110850,177490):(110950,178000) : 1
+g61965_da
+use : 0
+dir : o
+shape : 
+(0,162550):(510,162650) : 2
+g62827_da
+use : 0
+dir : o
+shape : 
+(56650,177490):(56750,178000) : 1
+g62837_da
+use : 0
+dir : o
+shape : 
+(0,132950):(510,133050) : 2
+g62837_db
+use : 0
+dir : o
+shape : 
+(0,133150):(510,133250) : 2
+g63077_da
+use : 0
+dir : o
+shape : 
+(87850,0):(87950,510) : 1
+g63080_db
+use : 0
+dir : o
+shape : 
+(0,72550):(510,72650) : 2
+g63568_db
+use : 0
+dir : o
+shape : 
+(37650,177490):(37750,178000) : 1
+g64259_db
+use : 0
+dir : o
+shape : 
+(0,45150):(510,45250) : 2
+g64259_sb
+use : 0
+dir : o
+shape : 
+(0,103350):(510,103450) : 2
+g64301_db
+use : 0
+dir : o
+shape : 
+(61050,177490):(61150,178000) : 1
+g64332_db
+use : 0
+dir : o
+shape : 
+(0,42950):(510,43050) : 2
+g64332_sb
+use : 0
+dir : o
+shape : 
+(0,45350):(510,45450) : 2
+g65212_da
+use : 0
+dir : o
+shape : 
+(293650,0):(293750,510) : 1
+g65234_sb
+use : 0
+dir : o
+shape : 
+(216850,0):(216950,510) : 1
+g65240_db
+use : 0
+dir : o
+shape : 
+(181650,0):(181750,510) : 1
+g66184_p
+use : 0
+dir : o
+shape : 
+(360090,103950):(360600,104050) : 2
+g66726_p
+use : 0
+dir : o
+shape : 
+(360090,14950):(360600,15050) : 2
+n_10825
+use : 0
+dir : o
+shape : 
+(220250,0):(220350,510) : 1
+n_1159
+use : 0
+dir : o
+shape : 
+(260250,0):(260350,510) : 1
+n_1196
+use : 0
+dir : o
+shape : 
+(360090,102950):(360600,103050) : 2
+n_13304
+use : 0
+dir : o
+shape : 
+(114050,0):(114150,510) : 1
+n_13701
+use : 0
+dir : o
+shape : 
+(31650,0):(31750,510) : 1
+n_13859
+use : 0
+dir : o
+shape : 
+(70050,0):(70150,510) : 1
+n_13980
+use : 0
+dir : o
+shape : 
+(98450,177490):(98550,178000) : 1
+n_14413
+use : 0
+dir : o
+shape : 
+(85850,177490):(85950,178000) : 1
+n_14690
+use : 0
+dir : o
+shape : 
+(162250,177490):(162350,178000) : 1
+n_14804
+use : 0
+dir : o
+shape : 
+(143250,177490):(143350,178000) : 1
+n_1507
+use : 0
+dir : o
+shape : 
+(176450,177490):(176550,178000) : 1
+n_1552
+use : 0
+dir : o
+shape : 
+(360090,104150):(360600,104250) : 2
+n_15611
+use : 0
+dir : o
+shape : 
+(252050,0):(252150,510) : 1
+n_16275
+use : 0
+dir : o
+shape : 
+(290450,177490):(290550,178000) : 1
+n_16280
+use : 0
+dir : o
+shape : 
+(234450,0):(234550,510) : 1
+n_16507
+use : 0
+dir : o
+shape : 
+(205450,0):(205550,510) : 1
+n_16748
+use : 0
+dir : o
+shape : 
+(108200,0):(108400,255) : 3
+n_16975
+use : 0
+dir : o
+shape : 
+(0,15750):(510,15850) : 2
+n_177
+use : 0
+dir : o
+shape : 
+(284650,0):(284750,510) : 1
+n_2597
+use : 0
+dir : o
+shape : 
+(206650,0):(206750,510) : 1
+n_2598
+use : 0
+dir : o
+shape : 
+(209450,0):(209550,510) : 1
+n_2729
+use : 0
+dir : o
+shape : 
+(258050,0):(258150,510) : 1
+n_2776
+use : 0
+dir : o
+shape : 
+(125450,0):(125550,510) : 1
+n_3123
+use : 0
+dir : o
+shape : 
+(360090,103350):(360600,103450) : 2
+n_3319
+use : 0
+dir : o
+shape : 
+(214450,0):(214550,510) : 1
+n_3320
+use : 0
+dir : o
+shape : 
+(193650,0):(193750,510) : 1
+n_8498
+use : 0
+dir : o
+shape : 
+(300650,0):(300750,510) : 1
+n_8757
+use : 0
+dir : o
+shape : 
+(147200,0):(147400,255) : 3
+n_8759
+use : 0
+dir : o
+shape : 
+(102650,0):(102750,510) : 1
+n_8800
+use : 0
+dir : o
+shape : 
+(288450,177490):(288550,178000) : 1
+n_8879
+use : 0
+dir : o
+shape : 
+(146850,0):(146950,510) : 1
+n_9175
+use : 0
+dir : o
+shape : 
+(360090,75350):(360600,75450) : 2
+pci_target_unit_fifos_pciw_addr_data_in_121
+use : 0
+dir : o
+shape : 
+(0,103550):(510,103650) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_1__35__Q
+use : 0
+dir : o
+shape : 
+(0,102950):(510,103050) : 2
+pci_target_unit_pcit_if_strd_bc_in
+use : 0
+dir : o
+shape : 
+(270450,177490):(270550,178000) : 1
+pci_target_unit_pcit_if_strd_bc_in_718
+use : 0
+dir : o
+shape : 
+(203050,177490):(203150,178000) : 1
+pci_target_unit_pcit_if_strd_bc_in_719
+use : 0
+dir : o
+shape : 
+(166450,0):(166550,510) : 1
+wbm_sel_o_0_
+use : 0
+dir : o
+shape : 
+(0,68550):(510,68650) : 2
+wbm_sel_o_3_
+use : 0
+dir : o
+shape : 
+(0,103750):(510,103850) : 2
+FE_OCP_RBN2123_n_16966
+use : 0
+dir : i
+shape : 
+(0,15950):(510,16050) : 2
+FE_OFN1017_g64577_p
+use : 0
+dir : i
+shape : 
+(0,72100):(255,72300) : 2
+FE_OFN1019_g64577_p
+use : 0
+dir : i
+shape : 
+(101600,177745):(101800,178000) : 3
+FE_OFN1112_n_3476
+use : 0
+dir : i
+shape : 
+(119800,0):(120000,255) : 3
+FE_OFN1463_n_13736
+use : 0
+dir : i
+shape : 
+(96850,0):(96950,510) : 1
+FE_OFN1520_n_4730
+use : 0
+dir : i
+shape : 
+(66400,177745):(66600,178000) : 3
+FE_OFN1776_n_13971
+use : 0
+dir : i
+shape : 
+(98600,177745):(98800,178000) : 3
+FE_OFN189_n_1193
+use : 0
+dir : i
+shape : 
+(301250,177490):(301350,178000) : 1
+FE_OFN747_n_2678
+use : 0
+dir : i
+shape : 
+(186400,0):(186600,255) : 3
+FE_OFN751_n_2547
+use : 0
+dir : i
+shape : 
+(55850,0):(55950,510) : 1
+FE_OFN860_n_4734
+use : 0
+dir : i
+shape : 
+(0,133700):(255,133900) : 2
+FE_OFN959_n_16760
+use : 0
+dir : i
+shape : 
+(110450,0):(110550,510) : 1
+FE_OFN973_n_4727
+use : 0
+dir : i
+shape : 
+(0,44500):(255,44700) : 2
+FE_RN_285_0
+use : 0
+dir : i
+shape : 
+(234650,0):(234750,510) : 1
+FE_RN_286_0
+use : 0
+dir : i
+shape : 
+(234850,0):(234950,510) : 1
+FE_RN_345_0
+use : 0
+dir : i
+shape : 
+(311650,0):(311750,510) : 1
+FE_RN_427_0
+use : 0
+dir : i
+shape : 
+(119850,177490):(119950,178000) : 1
+configuration_meta_cache_lsize_to_wb_bits_926
+use : 0
+dir : i
+shape : 
+(360090,44950):(360600,45050) : 2
+configuration_sync_cache_lsize_to_wb_bits_reg_2__Q
+use : 0
+dir : i
+shape : 
+(244650,0):(244750,510) : 1
+g60615_db
+use : 0
+dir : i
+shape : 
+(158450,0):(158550,510) : 1
+g63564_sb
+use : 0
+dir : i
+shape : 
+(161450,177490):(161550,178000) : 1
+g65215_da
+use : 0
+dir : i
+shape : 
+(227650,177490):(227750,178000) : 1
+g65225_da
+use : 0
+dir : i
+shape : 
+(220650,177490):(220750,178000) : 1
+g65234_da
+use : 0
+dir : i
+shape : 
+(227250,0):(227350,510) : 1
+ispd_clk
+use : 0
+dir : i
+shape : 
+(140000,0):(140200,255) : 3
+n_1219
+use : 0
+dir : i
+shape : 
+(176650,177490):(176750,178000) : 1
+n_1304
+use : 0
+dir : i
+shape : 
+(360090,133150):(360600,133250) : 2
+n_13122
+use : 0
+dir : i
+shape : 
+(114250,0):(114350,510) : 1
+n_13484
+use : 0
+dir : i
+shape : 
+(134250,0):(134350,510) : 1
+n_1366
+use : 0
+dir : i
+shape : 
+(360090,103150):(360600,103250) : 2
+n_13919
+use : 0
+dir : i
+shape : 
+(322050,177490):(322150,178000) : 1
+n_13955
+use : 0
+dir : i
+shape : 
+(46850,0):(46950,510) : 1
+n_13971
+use : 0
+dir : i
+shape : 
+(123250,177490):(123350,178000) : 1
+n_1435
+use : 0
+dir : i
+shape : 
+(360090,75150):(360600,75250) : 2
+n_14529
+use : 0
+dir : i
+shape : 
+(301050,177490):(301150,178000) : 1
+n_14829
+use : 0
+dir : i
+shape : 
+(134050,0):(134150,510) : 1
+n_14837
+use : 0
+dir : i
+shape : 
+(102850,0):(102950,510) : 1
+n_14895
+use : 0
+dir : i
+shape : 
+(133650,0):(133750,510) : 1
+n_14897
+use : 0
+dir : i
+shape : 
+(0,72750):(510,72850) : 2
+n_15114
+use : 0
+dir : i
+shape : 
+(32250,0):(32350,510) : 1
+n_1513
+use : 0
+dir : i
+shape : 
+(279450,0):(279550,510) : 1
+n_15292
+use : 0
+dir : i
+shape : 
+(323450,0):(323550,510) : 1
+n_15302
+use : 0
+dir : i
+shape : 
+(258450,0):(258550,510) : 1
+n_1551
+use : 0
+dir : i
+shape : 
+(360090,103750):(360600,103850) : 2
+n_15607
+use : 0
+dir : i
+shape : 
+(278850,0):(278950,510) : 1
+n_16205
+use : 0
+dir : i
+shape : 
+(32450,0):(32550,510) : 1
+n_16331
+use : 0
+dir : i
+shape : 
+(360090,103550):(360600,103650) : 2
+n_16738
+use : 0
+dir : i
+shape : 
+(108450,0):(108550,510) : 1
+n_16966
+use : 0
+dir : i
+shape : 
+(0,15350):(510,15450) : 2
+n_16970
+use : 0
+dir : i
+shape : 
+(0,15150):(510,15250) : 2
+n_16974
+use : 0
+dir : i
+shape : 
+(0,14950):(510,15050) : 2
+n_2031
+use : 0
+dir : i
+shape : 
+(258250,0):(258350,510) : 1
+n_2301
+use : 0
+dir : i
+shape : 
+(360345,74100):(360600,74300) : 2
+n_2337
+use : 0
+dir : i
+shape : 
+(302850,0):(302950,510) : 1
+n_2353
+use : 0
+dir : i
+shape : 
+(297850,0):(297950,510) : 1
+n_2599
+use : 0
+dir : i
+shape : 
+(176650,0):(176750,510) : 1
+n_2675
+use : 0
+dir : i
+shape : 
+(293850,0):(293950,510) : 1
+n_2677
+use : 0
+dir : i
+shape : 
+(167450,0):(167550,510) : 1
+n_2678
+use : 0
+dir : i
+shape : 
+(268650,0):(268750,510) : 1
+n_2730
+use : 0
+dir : i
+shape : 
+(125650,0):(125750,510) : 1
+n_2779
+use : 0
+dir : i
+shape : 
+(360090,74950):(360600,75050) : 2
+n_4592
+use : 0
+dir : i
+shape : 
+(0,162750):(510,162850) : 2
+n_5092
+use : 0
+dir : i
+shape : 
+(0,103150):(510,103250) : 2
+n_657
+use : 0
+dir : i
+shape : 
+(341850,0):(341950,510) : 1
+n_7698
+use : 0
+dir : i
+shape : 
+(360090,132950):(360600,133050) : 2
+n_8487
+use : 0
+dir : i
+shape : 
+(332850,0):(332950,510) : 1
+n_8538
+use : 0
+dir : i
+shape : 
+(298250,0):(298350,510) : 1
+n_8819
+use : 0
+dir : i
+shape : 
+(279250,0):(279350,510) : 1
+n_9178
+use : 0
+dir : i
+shape : 
+(318850,177490):(318950,178000) : 1
+output_backup_trdy_out_reg_Q
+use : 0
+dir : i
+shape : 
+(192650,0):(192750,510) : 1
+parchk_pci_ad_reg_in
+use : 0
+dir : i
+shape : 
+(263650,177490):(263750,178000) : 1
+parchk_pci_ad_reg_in_1205
+use : 0
+dir : i
+shape : 
+(243450,0):(243550,510) : 1
+pci_target_unit_del_sync_bc_in
+use : 0
+dir : i
+shape : 
+(233250,177490):(233350,178000) : 1
+pci_target_unit_del_sync_be_out_reg_3__Q
+use : 0
+dir : i
+shape : 
+(181850,0):(181950,510) : 1
+pci_target_unit_fifos_pciw_addr_data_in_123
+use : 0
+dir : i
+shape : 
+(61250,177490):(61350,178000) : 1
+pci_target_unit_fifos_pciw_addr_data_in_126
+use : 0
+dir : i
+shape : 
+(0,44950):(510,45050) : 2
+pci_target_unit_fifos_pciw_cbe_in
+use : 0
+dir : i
+shape : 
+(0,43150):(510,43250) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_1__1__Q
+use : 0
+dir : i
+shape : 
+(70450,0):(70550,510) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_1__32__Q
+use : 0
+dir : i
+shape : 
+(56850,0):(56950,510) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_1__3__Q
+use : 0
+dir : i
+shape : 
+(83450,0):(83550,510) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_1__6__Q
+use : 0
+dir : i
+shape : 
+(96650,0):(96750,510) : 1
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_4__32__Q
+use : 0
+dir : i
+shape : 
+(0,133350):(510,133450) : 2
+pci_target_unit_fifos_pciw_fifo_storage_mem_reg_4__3__Q
+use : 0
+dir : i
+shape : 
+(75650,177490):(75750,178000) : 1
+pci_target_unit_pcit_if_req_req_pending_in
+use : 0
+dir : i
+shape : 
+(341650,0):(341750,510) : 1
+pci_target_unit_pcit_if_strd_bc_in_717
+use : 0
+dir : i
+shape : 
+(290250,177490):(290350,178000) : 1
+pci_target_unit_wbm_sm_pciw_fifo_addr_data_in
+use : 0
+dir : i
+shape : 
+(124650,177490):(124750,178000) : 1
+pci_target_unit_wbm_sm_pciw_fifo_addr_data_in_50
+use : 0
+dir : i
+shape : 
+(163450,177490):(163550,178000) : 1
+pciu_cache_lsize_not_zero_in
+use : 0
+dir : i
+shape : 
+(205850,0):(205950,510) : 1
+wbm_adr_o_0_
+use : 0
+dir : i
+shape : 
+(92450,0):(92550,510) : 1
+wbm_adr_o_1_
+use : 0
+dir : i
+shape : 
+(0,122550):(510,122650) : 2
+ms00f80
+--pins(3)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 1
+ck
+use : 0
+dir : i
+shape : 
+(450,500):(550,1500) : 0
+d
+use : 0
+dir : i
+shape : 
+(1050,500):(1150,1500) : 0
+in01f01
+--pins(2)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+no02f01
+--pins(3)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : z
+dir : i
+shape : 
+(450,500):(550,1500) : 0
+na02f01
+--pins(3)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : 0
+dir : i
+shape : 
+(450,500):(550,1500) : 0
+ao12f01
+--pins(4)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : 
+dir : i
+shape : 
+(650,500):(750,1500) : 0
+c
+use : ü
+dir : i
+shape : 
+(850,500):(950,1500) : 0
+na03f01
+--pins(4)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : 0
+dir : i
+shape : 
+(650,500):(750,1500) : 0
+c
+use : 0
+dir : i
+shape : 
+(850,500):(950,1500) : 0
+oa12f01
+--pins(4)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : 0
+dir : i
+shape : 
+(650,500):(750,1500) : 0
+c
+use : 0
+dir : i
+shape : 
+(850,500):(950,1500) : 0
+na04m01
+--pins(5)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : 0
+dir : i
+shape : 
+(650,500):(750,1500) : 0
+c
+use : 0
+dir : i
+shape : 
+(850,500):(950,1500) : 0
+d
+use : 0
+dir : i
+shape : 
+(1250,500):(1350,1500) : 0
+no04s01
+--pins(5)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : 0
+dir : i
+shape : 
+(650,500):(750,1500) : 0
+c
+use : 0
+dir : i
+shape : 
+(850,500):(950,1500) : 0
+d
+use : 0
+dir : i
+shape : 
+(1250,500):(1350,1500) : 0
+no03m01
+--pins(4)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : 0
+dir : i
+shape : 
+(650,500):(750,1500) : 0
+c
+use : 0
+dir : i
+shape : 
+(850,500):(950,1500) : 0
+ao22s01
+--pins(5)
+o
+use : 0
+dir : o
+shape : 
+(50,500):(150,1500) : 0
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : 0
+dir : i
+shape : 
+(650,500):(750,1500) : 0
+c
+use : 0
+dir : i
+shape : 
+(850,500):(950,1500) : 0
+d
+use : 0
+dir : i
+shape : 
+(1250,500):(1350,1500) : 0
+oa22f01
+--pins(5)
+o
+use : 0
+dir : o
+shape : 
+(1350,950):(1550,1050) : 1
+(1250,500):(1350,1050) : 1
+a
+use : 0
+dir : i
+shape : 
+(250,500):(350,1500) : 0
+b
+use : 0
+dir : i
+shape : 
+(650,500):(750,1500) : 0
+c
+use : 0
+dir : i
+shape : 
+(850,500):(950,1500) : 0
+d
+use : 0
+dir : i
+shape : 
+(50,500):(150,1500) : 0
+Metal1 (H) p200,200 w100 s110 a41000 prefer: srt200 stp200 num4529 wrong: srt100 stp200 num4530
+Metal2 (V) p200,200 w100 s120 a51000 prefer: srt100 stp200 num4530 wrong: srt200 stp200 num4529
+Metal3 (H) p200,200 w100 s120 a51000 prefer: srt200 stp200 num4529 wrong: srt100 stp200 num4530
+Metal4 (V) p200,200 w100 s120 a51000 prefer: srt100 stp200 num4530 wrong: srt200 stp200 num4529
+Metal5 (H) p200,200 w100 s120 a51000 prefer: srt200 stp200 num4529 wrong: srt100 stp200 num4530
