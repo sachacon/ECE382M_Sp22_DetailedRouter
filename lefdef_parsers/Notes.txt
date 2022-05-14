@@ -2,4 +2,6 @@
 - ispd2019_opensource parser 
 - jinwookyungs lef def parser
 
+Credit to https://github.com/jinwookjungs/lefdef_util for LEF/DEF parser
+
 Parsers were used well before and results of parsers were stored in the parsed_benchmarks/ directory 
